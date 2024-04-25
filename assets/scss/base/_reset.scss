@@ -1,0 +1,39 @@
+// /**=====================
+//      Reset css start
+// ==========================**/
+
+$label-name: theme,
+primary,
+secondary,
+success,
+danger,
+info,
+light,
+dark,
+warning;
+$label-color: $primary-color,
+$primary-color,
+$secondary-color,
+$success-color,
+$danger-color,
+$info-color,
+$light-color,
+$dark-color,
+$warning-color;
+
+@each $var in $label-name {
+    $i: index($label-name, $var);
+
+    .label-#{$var} {
+        background-color: nth($label-color, $i);
+    }
+}
+
+// /*======= Label-color css ends  ======= */
+
+.online {
+    background-color: $success-color;
+}
+// /**=====================
+//        Reset css Ends
+//   ==========================**/
