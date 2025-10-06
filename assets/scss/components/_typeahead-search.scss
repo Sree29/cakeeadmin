@@ -55,7 +55,7 @@
     padding: 5px 8px;
     font-size: 24px;
     line-height: 30px;
-    border: 1px solid #024e6a;
+    border: 1px dashed #024e6a;
     border-radius: 8px;
     position: absolute;
     top: 0;
@@ -86,7 +86,7 @@
 
     + {
         .Typeahead-selectable {
-            border-top: 1px solid #ccd6dd;
+            border-top: 1px dashed #ccd6dd;
         }
     }
 }

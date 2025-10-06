@@ -1,11 +1,12 @@
 /**=====================
     Sidebar CSS Start
 ==========================**/
+
 %sidebar-after {
     @include pos;
     top: 48%;
     width: 6px;
-    border-top: 2px solid $white;
+    border-top: 2px dashed $white;
 }
 
 %horizontal-after {
@@ -37,9 +38,9 @@
 
     &:before {
         @include pseudowh($width: 0, $height: 0);
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-bottom: 7px solid $white;
+        border-left: 7px dashed transparent;
+        border-right: 7px dashed transparent;
+        border-bottom: 7px dashed $white;
         @include pos;
         top: -7px;
         left: 10px;
@@ -48,9 +49,9 @@
 
     &:after {
         @include pseudowh($width: 0, $height: 0);
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-bottom: 7px solid $light-background;
+        border-left: 7px dashed transparent;
+        border-right: 7px dashed transparent;
+        border-bottom: 7px dashed $light-background;
         @include pos;
         top: -7px;
         left: 10px;
@@ -93,82 +94,19 @@
             align-items: center;
             padding: $header-wrapper-padding;
             position: relative;
+            border-bottom: 1px solid $v-light-silver;
 
-            .search-full {
-                position: relative;
-                z-index: 1;
-                @include pseudowh($width: 40%, $height: auto);
-                transition: all 0.3s ease;
-
-                &.open {
-                    display: block;
-                    @include pseudowh;
-                    animation: zoomIn 0.5s ease-in-out;
-                    transform: scale(1);
-                    transition: all 0.3s ease;
+            .welcome-title{
+                @media (max-width: 991px) {
+                    display: none;
                 }
-
-                input {
-                    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
-                    line-height: 32px;
-                    padding-left: 30px;
-                    width: 100% !important;
-                    background-color: $inner-bg;
-                    border-radius: calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320)));
-                    padding-right: 60px;
-
-                    @include mq-max(lg) {
-                        padding-left: 17px;
-
-                        [dir="rtl"] & {
-                            padding-left: unset;
-                            padding-right: 17px;
-                        }
-                    }
-
-                    &:focus {
-                        outline: none !important;
-                    }
-                }
-
-                .form-group {
-                    .close-search {
-                        @include center(vertical);
-                        @include pseudowh($width: 18px, $height: 25px);
-                        position: absolute;
-                        font-size: 15px;
-                        right: 20px;
-                        display: none;
-                        color: $dark-gray;
-                        cursor: pointer;
-                    }
-
-                    &:before {
-                        @include pos($pos: absolute, $content: "\F0D1");
-                        @include center(vertical);
-                        right: 0;
-                        z-index: 1;
-                        cursor: pointer;
-                        font-size: 18px;
-                        color: $white;
-                        font-family: remixicon !important;
-                        font-style: normal;
-                        background-color: #ffa53b;
-                        padding: 10px 18px 9px;
-                        border-radius: 0 8px 8px 0;
-
-                        [dir="rtl"] & {
-                            border-radius: 8px 0px 0px 8px;
-                        }
-
-                        @media only screen and (max-width: 762px) {
-                            content: none;
-                        }
-
-                        [dir="rtl"] & {
-                            left: 0;
-                            right: unset;
-                        }
+                h5 {
+                    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+                    color: $theme-font-color;
+                    font-weight: 600;
+                    img {
+                        height: 20px;
+                        vertical-align: baseline;
                     }
                 }
             }
@@ -188,6 +126,7 @@
                         svg {
                             vertical-align: $header-wrapper-nav-icon-align;
                             width: $header-wrapper-nav-icon-size;
+                            stroke: $theme-body-font-color;
 
                             path {
                                 color: $header-wrapper-nav-icon-color;
@@ -200,7 +139,8 @@
                     ul {
                         li {
                             i {
-                                font-size: 21px;
+                                vertical-align: middle;
+                                font-size: 18px;
                             }
 
                             .mode {
@@ -224,7 +164,7 @@
 
                             .header-search {
                                 cursor: pointer;
-                                display: none;
+                                display: block;
                             }
 
                             .profile-media {
@@ -271,11 +211,22 @@
                     @include flex_common($dis: flex, $align: center, $justify: flex-end);
 
                     > li {
-                        padding: 0 8px;
                         margin-right: 10px;
                         font-size: 18px;
                         display: inline-block;
                         position: relative;
+                        height: 35px;
+                        width: 40px;
+                        border-radius: 4px;
+                        background-color: rgba($dark-gray , 0.1);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:last-child {
+                            height: unset;
+                            width: unset;
+                            background-color: transparent;
+                        }
 
                         @media only screen and (max-width: 575.98px) {
                             margin-right: 4px;
@@ -397,7 +348,7 @@
 
                                 &:last-child {
                                     padding: 20px 0;
-                                    border-top: 1px solid $gray-light;
+                                    border-top: 1px dashed $gray-light;
                                 }
                             }
 
@@ -410,7 +361,7 @@
                                     border-radius: 25px;
                                     padding: 6px 12px;
                                     width: 100%;
-                                    border: 1px solid $gray-light;
+                                    border: 1px dashed $gray-light;
                                 }
                             }
                         }
@@ -428,19 +379,19 @@
                 .onhover-show-div:not(.profile-dropdown) {
                     li {
                         &:first-child {
-                            padding: 20px;
-                            background-color: $primary-color;
-                            color: $white;
-                            font-weight: 600 !important;
-
+                            padding: 16px  20px;
+                            color: $theme-font-color;
+                            margin-bottom: 10px;
+                            border-bottom: 1px dashed rgba($dark-gray , 0.2);
                             span,
                             i {
                                 position: absolute;
                                 @include pseudowh($width: 50px, $height: 50px);
-                                top: -5px;
+                                top: -10px;
                                 right: -10px;
-                                opacity: 0.15;
+                                opacity: 0.08;
                                 font-size: 50px;
+                                transform: rotate(20deg);
 
                                 [dir="rtl"] & {
                                     right: unset;
@@ -459,19 +410,9 @@
                     left: unset;
 
                     li {
-                        padding: 0 20px 0 17px;
 
-                        h6 {
-                            font-weight: 700;
-                        }
-
-                        p {
-                            opacity: 0.6;
-                        }
-
-                        & + li {
-                            padding-top: 15px;
-                            padding-bottom: 0px;
+                        h4 {
+                            font-weight: 500;
                         }
 
                         &:last-child {
@@ -577,15 +518,24 @@
                 .notification-dropdown {
                     top: 52px;
                     width: 300px;
-                    right: -20px !important;
+                    right: -20px;
                     left: unset;
 
                     li {
                         & + li {
-                            padding-top: 8px;
+                            padding: 0 15px;
 
                             p {
-                                margin-bottom: 8px;
+                                padding: 8px 12px;
+                                background-color: rgba($dark-gray , 0.06);
+                                margin-bottom: 10px;
+                                border-radius: 4px;
+                                color: $theme-font-color;
+                                font-weight: 500;
+                                span {
+                                    color: $theme-body-sub-title-color;
+                                    font-weight: 400;
+                                }
 
                                 i {
                                     font-size: 11px;
@@ -595,12 +545,59 @@
 
                         &:last-child {
                             text-align: center;
-                            border-top: 1px solid $light-gray;
+                            border-top: 1px dashed $light-gray;
+                            padding-top: 10px;
                         }
 
                         p {
                             span {
                                 color: $light-font;
+                            }
+                        }
+                    }
+
+                    &:before,
+                    &:after {
+                        right: 28px !important;
+                        left: unset !important;
+                    }
+                }
+                .messages-dropdown {
+                    top: 52px;
+                    width: 300px;
+                    right: -20px;
+                    left: unset;
+
+                    li {
+                        padding: 0 15px;
+                        &:last-child {
+                            text-align: center;
+                            border-top: 1px dashed $light-gray;
+                            padding: 10px 15px 15px;
+                        }
+                        > div {
+                            padding: 8px;
+                            border: 1px dashed $light-gray;
+                            border-radius: 8px;
+                            margin-bottom: 10px;
+                            img {
+                                width: 55px;
+                                border-radius: 10px;
+                            }
+                            div {
+                                h5 {
+                                    color: $theme-font-color;
+                                    font-weight: 500;
+                                }
+                                p {
+                                    text-overflow:ellipsis;
+                                    overflow:hidden;
+                                    display: -webkit-box !important;
+                                    -webkit-line-clamp: 1;
+                                    -webkit-box-orient: vertical;
+                                    white-space: normal;
+                                    margin-bottom: 0;
+                                }
                             }
                         }
                     }
@@ -660,6 +657,43 @@
                             }
                         }
                     }
+                }
+            }
+            .input-box{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                width: 0;
+                visibility: hidden;
+                opacity: 0;
+                box-shadow: 0 2px 14px -3px rgba($black,0.1);
+                transition: all .4s ease-in-out;
+                input {
+                    padding: 16px 38px;
+                    border-radius: 6px;
+                    background-color: $white;
+                    border: 1px dashed rgba($dark-gray , 0.2);
+                    width: 100%;
+                }
+                i {
+                    position: absolute;
+                    font-size: 20px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    left: 10px;
+                }
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                    cursor: pointer;
+                }
+                &.open {
+                    visibility: visible;
+                    opacity: 1;
+                    width: 97%;
                 }
             }
         }
@@ -748,23 +782,6 @@
         }
     }
 
-    &.material-icon {
-        .left-header {
-            .level-menu,
-            .mega-menu {
-                .nav-link {
-                    border-radius: 10px;
-                }
-            }
-        }
-
-        .card {
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba($primary-color, 0.1);
-        }
-    }
-
     .sidebar-main-title {
         &-2 {
             margin: 10px 0 15px;
@@ -808,8 +825,8 @@
             width: calc(100% - 280px);
 
             &.close_icon {
-                margin-left: 90px;
-                width: calc(100% - 90px);
+                margin-left: 74px;
+                width: calc(100% - 74px);
             }
 
             .header-wrapper {
@@ -830,22 +847,15 @@
                     top: 0;
                     z-index: 7;
                     line-height: inherit;
-                    background: var(--theme-color);
+                    background-color: rgb(32, 32, 32);
                     @include pseudowh($width: 280px, $height: auto);
                     text-align: left;
                     box-shadow: 0 0 21px 0 rgba($semi-dark, 0.1);
-                    background: linear-gradient(-45deg, #F07054, #F2A93E, #ffa53b);
-                    background-size: 400% 400%;
-                    animation: gradient 15s ease infinite;
+                    background-image: url(../images/sidebanner.png);
+                    background-position: bottom;
+                    background-size: cover;
+                    background-repeat: no-repeat;
                     overflow: hidden;
-
-                    #sidebarEffect {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        @include pseudowh;
-                        opacity: 0.04;
-                    }
 
                     @keyframes gradient {
                         0% {
@@ -869,10 +879,10 @@
                             display: block;
 
                             img {
-                                width: 70%;
+                                width: 58%;
 
                                 &.main-logo {
-                                    width: 100%;
+                                    width: 94%;
                                 }
                             }
                         }
@@ -1147,7 +1157,7 @@
                                     color: $theme-font-color;
                                     font-weight: 700;
                                     text-transform: uppercase;
-                                    border-bottom: 1px solid #efefef;
+                                    border-bottom: 1px dashed #efefef;
                                     cursor: pointer;
                                 }
                             }
@@ -1312,7 +1322,10 @@
                                                             text-overflow: ellipsis;
 
                                                             &.active {
-                                                                color: $white !important;
+                                                                color: $primary-color !important;
+                                                                &:after {
+                                                                    border-color: $primary-color;
+                                                                }
                                                             }
 
                                                             &:after {
@@ -1356,7 +1369,7 @@
                                                                     transition: all 0.3s ease;
 
                                                                     &:after {
-                                                                        border-top: 2px solid var(--theme-color);
+                                                                        border-top: 2px dashed var(--theme-color);
                                                                         transition: all 0.3s ease;
                                                                     }
                                                                 }
@@ -1444,13 +1457,24 @@
                                                         top: 0;
                                                         left: 0;
                                                         @include pseudowh;
-                                                        background-color: $white;
+                                                        background-color: rgba($primary-color, 1);
                                                         opacity: 0;
                                                         z-index: -1;
                                                     }
 
                                                     &:hover {
-                                                        background-color: rgba($white, $alpha: 0.06);
+                                                        background-color: rgba($primary-color, $alpha: 0.06);
+                                                        i {
+                                                            color: rgba($primary-color, 1);
+                                                        }
+                                                        span {
+                                                            color: rgba($primary-color, 1);
+                                                        }
+                                                        .according-menu {
+                                                            i {
+                                                                color: $primary-color;
+                                                            }
+                                                        }
                                                     }
 
                                                     &.active {
@@ -1464,7 +1488,7 @@
 
                                                         .according-menu {
                                                             i {
-                                                                color: $white;
+                                                                color: $primary-color;
 
                                                                 [dir="rtl"] & {
                                                                     margin-left: unset;
@@ -1475,12 +1499,12 @@
 
                                                         svg,
                                                         i {
-                                                            color: $white;
+                                                            color: $primary-color;
                                                             transition: all 0.3s ease-in-out;
                                                         }
 
                                                         span {
-                                                            color: $white;
+                                                            color: $primary-color;
                                                             transition: all 0.3s ease-in-out;
                                                         }
                                                     }
@@ -1679,430 +1703,35 @@
             }
         }
     }
-
-    // compact icon css
-    &.compact-sidebar {
-        ~ .bg-overlay1 {
-            transition: 0.8s;
-
-            &.active {
-                z-index: 8;
-                @include pseudowh($width: 100vw, $height: 100vh);
-                background-color: rgba($black, 0.2);
-                position: fixed;
-                top: 0;
-            }
-        }
-
-        .toggle-sidebar {
-            position: relative;
-            right: unset;
-            top: unset;
-            margin-right: 15px;
-        }
-
-        .sidebar-main-title {
-            display: none;
-        }
-
-        .logo-wrapper {
-            display: none;
-        }
-
-        .logo-icon-wrapper {
-            display: block;
-            text-align: center;
-            padding: 33px 30px;
-            box-shadow: -9px 0 20px rgba(89, 102, 122, 0.1);
-        }
-
-        .page-header {
-            margin-left: 150px;
-            width: calc(100% - 150px);
-
-            .header-wrapper {
-                .logo-wrapper {
-                    display: none;
-                }
-            }
-
-            &.close_icon {
-                margin-left: 0;
-                width: calc(100% - 0px);
-            }
-        }
-
+}
+.page-wrapper{
+    &.compact-wrapper {
         .page-body-wrapper {
-            .page-body {
-                margin-top: 80px;
-                margin-left: 150px;
-            }
-
-            .footer {
-                margin-left: 0;
-            }
-
-            div.sidebar-wrapper {
-                position: fixed;
-                top: 0;
-                z-index: 9;
-
-                > div {
-                    @include pseudowh($width: 150px, $height: auto);
-                    line-height: inherit;
-                    background: $white;
-                    text-align: left;
-                    transition: 0.3s;
-                    box-shadow: 0 0 21px 0 rgba(89, 102, 122, 0.1);
-                }
-
-                .sidebar-main {
-                    .left-arrow,
-                    .right-arrow {
-                        display: none;
-                    }
-
-                    .sidebar-links {
-                        margin: 30px 0;
-                        height: calc(100vh - 113px);
-                        overflow: auto;
-
-                        li {
-                            a {
-                                color: $dark-color;
-
-                                span {
-                                    letter-spacing: 0.7px;
-                                    font-family: $poppins-sans;
-                                    text-transform: capitalize;
-                                    color: $dark-color;
-                                    font-size: 13px;
-                                }
-
-                                &.active {
-                                    background: rgba($primary-color, 0.1);
-                                    color: $primary-color;
-                                    border-radius: 20px;
-                                    margin: 0 10px;
-
-                                    span {
-                                        color: $primary-color;
-                                    }
-
-                                    ~ .sidebar-submenu,
-                                    ~ .mega-menu-container {
-                                        animation: fadeInLeft 300ms ease-in-out;
-                                    }
-                                }
-                            }
-
-                            .sidebar-title {
-                                display: block;
-                                padding: 20px 0;
-                                border-bottom: 1px solid #f3f3f3;
-                            }
-
-                            .sidebar-submenu,
-                            .mega-menu-container {
-                                position: fixed;
-                                top: 0px;
-                                overflow: auto;
-                                left: 150px;
-                                @include pseudowh($width: 230px, $height: calc(100vh - 0px));
-                                background-color: $white;
-                                box-shadow: 0 16px 15px 15px rgba(126, 55, 216, 0.03);
-                                transition: all 0.5s ease-in-out;
-                                display: none;
-                                padding-top: 20px;
-                                z-index: -1;
-
-                                li {
-                                    a {
-                                        padding: 15px 15px 15px 40px;
-                                        display: block;
-                                        position: relative;
-                                        border-bottom: 1px solid #f1f1f1;
-
-                                        .sub-arrow {
-                                            display: none;
-                                        }
-
-                                        .according-menu {
-                                            position: absolute;
-                                            right: 20px;
-                                            top: 16px;
-                                        }
-
-                                        &.active {
-                                            background-color: rgba($primary-color, 0.1);
-                                            color: $primary-color;
-                                            transition: all 0.3s ease;
-                                        }
-                                    }
-
-                                    .submenu-content {
-                                        li {
-                                            a {
-                                                &.active {
-                                                    background-color: $transparent-color;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-
-                                > li {
-                                    > a {
-                                        &::after {
-                                            @include pos;
-                                            left: 20px;
-                                            top: 48%;
-                                            width: 6px;
-                                            border-top: 2px solid $white;
-                                        }
-                                    }
-                                }
-
-                                .mega-box {
-                                    flex: 0 0 100%;
-                                    max-width: 100%;
-                                    padding: 0;
-
-                                    .link-section {
-                                        text-align: left;
-
-                                        .submenu-title {
-                                            h5 {
-                                                position: relative;
-                                                font-size: 14px;
-                                                font-weight: 400;
-                                                padding: 15px 15px 15px 40px;
-                                                letter-spacing: 1px;
-                                                margin-bottom: 0;
-
-                                                &::after {
-                                                    @include pos;
-                                                    left: 20px;
-                                                    top: 48%;
-                                                    width: 6px;
-                                                    border-top: 2px solid $white;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .sidebar-list {
-                            position: relative;
-
-                            .badge {
-                                position: absolute;
-                                left: 53%;
-                                top: 7px;
-                                font-weight: 500;
-                                font-size: 9px;
-                            }
-
-                            .sidebar-link {
-                                text-align: center;
-
-                                svg {
-                                    display: block;
-                                    margin: 0 auto 6px;
-                                }
-
-                                > span {
-                                    display: block;
-                                    font-weight: 500;
-                                    letter-spacing: 1px;
-                                    font-size: 14px;
-                                }
-
-                                .according-menu {
-                                    display: none;
-                                }
-                            }
-                        }
-
-                        .mega-menu {
-                            text-align: center;
-                            padding: 0;
-
-                            svg {
-                                display: block;
-                                margin: 0 auto 6px;
-                            }
-
-                            .according-menu {
-                                position: absolute;
-                                right: 20px;
-                                top: 13px;
-                            }
-                        }
-                    }
-                }
-
+            div.sidebar-wrapper{
                 &.close_icon {
-                    transform: translateX(-150px);
-
-                    ~ .page-body,
-                    ~ .footer {
-                        margin-left: 0px;
-                    }
-                }
-            }
-        }
-    }
-
-    // only body css
-    &.only-body {
-        background-color: #f2f0fa;
-
-        .page-body-wrapper {
-            background-color: #f2f0fa;
-        }
-
-        .page-header {
-            position: relative;
-
-            .nav-menus {
-                .profile-nav {
-                    .media-body {
-                        > span,
-                        > p {
-                            color: $white !important;
-                        }
-                    }
-                }
-
-                > li {
-                    > svg {
-                        stroke: $white;
-                    }
-
-                    > a {
-                        > svg {
-                            stroke: $white;
-                        }
-                    }
-
-                    > div,
-                    > span {
-                        .lang-txt {
-                            color: $white;
-                        }
-
-                        i {
-                            color: $white;
-                        }
-
-                        svg {
-                            stroke: $white;
-                        }
-                    }
-                }
-            }
-
-            .left-header,
-            .header-logo-wrapper {
-                display: none;
-            }
-
-            .header-wrapper {
-                padding: 0 !important;
-
-                .nav-right {
-                    position: absolute;
-                    right: 60px;
-                    top: 58px;
-                }
-
-                .search-full {
-                    top: 37px;
-                    width: calc(100% - 50px);
-                    left: 25px;
-
-                    .form-group {
-                        .Typeahead {
-                            .u-posRelative {
-                                background-color: $white;
-                                border-radius: 15px;
+                    .sidebar-main{
+                        .sidebar-links {
+                            .sidebar-list {
+                                .sidebar-submenu {
+                                    display: none !important;   
+                                }
                             }
                         }
                     }
-
-                    .Typeahead-menu {
-                        top: 78px;
-                        width: calc(100% - 30px);
-                        margin: 0 auto;
-                        right: 0;
-                    }
                 }
-            }
-        }
-
-        .page-body-wrapper {
-            .breadcrumb-item + .breadcrumb-item::before {
-                color: $white;
-            }
-
-            .page-title {
-                padding-top: 20px;
-                padding-bottom: 20px;
-
-                .breadcrumb {
-                    li {
-                        color: $white;
-                    }
-                }
-
-                .breadcrumb-item {
-                    a {
-                        svg {
-                            color: $white;
+                &:hover {
+                    &.close_icon {
+                        .sidebar-main{
+                            .sidebar-links {
+                                .sidebar-list {
+                                    .sidebar-title.active 
+                                    ~ .sidebar-submenu {
+                                        display: block !important;   
+                                    }
+                                }
+                            }
                         }
                     }
-                }
-
-                .row {
-                    h3 {
-                        color: $white;
-                    }
-                }
-            }
-        }
-
-        .sidebar-wrapper,
-        footer {
-            display: none;
-        }
-
-        .page-body-wrapper {
-            .page-body {
-                margin-top: 0px;
-                min-height: calc(100vh - 0px);
-            }
-
-            .page-title {
-                background: linear-gradient(26deg, var(--theme-color) 0%, #a26cf8 100%);
-                padding-left: 30px;
-                padding-right: 30px;
-                margin-bottom: 30px;
-                border-radius: 15px;
-                margin-top: 30px;
-
-                > .row {
-                    .col-6 {
-                        flex: 0 0 100%;
-                        max-width: 100%;
-                    }
-                }
-
-                .breadcrumb {
-                    margin-top: 5px;
-                    justify-content: flex-start;
                 }
             }
         }
@@ -2181,7 +1810,7 @@
             display: flex !important;
             justify-content: space-between;
             padding: 20px 30px 17px;
-            border-bottom: 1px solid $gray-light;
+            border-bottom: 1px dashed $gray-light;
             margin: 0 -15px;
 
             h5 {
@@ -2208,154 +1837,6 @@
 
     .responsive-btn {
         display: none;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    // material icon css
-    .page-wrapper {
-        &.material-icon {
-            position: relative;
-
-            &::before {
-                @include pos;
-                left: 0;
-                @include pseudowh($width: 100%, $height: 240px);
-                background: $gradient-primary;
-            }
-
-            .toggle-sidebar {
-                color: rgba($white, 0.8);
-
-                &:hover {
-                    > svg {
-                        color: $white !important;
-                        stroke: $white !important;
-                    }
-                }
-            }
-
-            .left-header {
-                .mega-menu,
-                .level-menu {
-                    .nav-link {
-                        background-color: rgba($white, 0.09);
-                        color: rgba($white, 0.7);
-
-                        svg {
-                            stroke: rgba($white, 0.7);
-                        }
-                    }
-                }
-            }
-
-            .page-header {
-                position: relative;
-                background: transparent;
-                padding-left: 90px;
-                max-width: 1660px;
-                margin: 0 auto;
-                width: calc(100% - 0px);
-
-                .header-wrapper {
-                    .nav-right {
-                        > ul {
-                            > li {
-                                color: $white;
-
-                                .notification-box,
-                                .cart-box {
-                                    svg {
-                                        stroke: $white;
-                                    }
-                                }
-
-                                > a {
-                                    > svg {
-                                        stroke: $white;
-                                    }
-                                }
-
-                                > svg {
-                                    stroke: $white;
-                                }
-                            }
-                        }
-
-                        .language-nav {
-                            .more_lang {
-                                color: $theme-body-font-color;
-                            }
-                        }
-
-                        .onhover-show-div {
-                            color: $theme-body-font-color;
-                        }
-
-                        &.right-header {
-                            ul {
-                                li {
-                                    .profile-media {
-                                        .media-body {
-                                            p {
-                                                color: rgba($white, 0.7);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &.close_icon {
-                    padding-left: 0;
-                    margin: 0 auto !important;
-                }
-            }
-
-            .page-body-wrapper {
-                .page-body {
-                    margin-top: 0 !important;
-                    padding-left: 90px;
-                    max-width: 1660px;
-                    margin: 0 auto;
-                }
-
-                div.sidebar-wrapper {
-                    &.close_icon {
-                        ~ .page-body {
-                            padding-left: 15px;
-                            margin: 0 auto !important;
-                        }
-                    }
-                }
-
-                .page-title {
-                    color: $white;
-
-                    .breadcrumb {
-                        .breadcrumb-item {
-                            a {
-                                svg {
-                                    color: $white;
-                                }
-                            }
-
-                            &.active {
-                                color: rgba($white, 0.6);
-                            }
-
-                            + .breadcrumb-item {
-                                &::before {
-                                    color: rgba($white, 0.8);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -2391,7 +1872,7 @@
 }
 
 .cke_1 {
-    border: 1px solid $light-semi-gray !important;
+    border: 1px dashed $light-semi-gray !important;
 }
 
 /**=====================

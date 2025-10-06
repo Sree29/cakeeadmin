@@ -1,106 +1,3 @@
-//bar chart
-var options = {
-    series: [{
-        // name: "High - 2013",
-        data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
-    },
-
-    {
-        // name: "Low - 2013",
-        data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
-    }
-    ],
-
-    chart: {
-        toolbar: {
-            show: false
-        }
-    },
-
-    chart: {
-        height: 320,
-    },
-
-    legend: {
-        show: false,
-    },
-
-    colors: ['#0da487', '#2483e2'],
-
-    markers: {
-        size: 1,
-    },
-
-    // grid: {
-    //     show: false,
-    //     xaxis: {
-    //         lines: {
-    //             show: false
-    //         }
-    //     },
-    // },
-
-    xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-        labels: {
-            show: false,
-        }
-    },
-
-    responsive: [{
-        breakpoint: 1400,
-        options: {
-            chart: {
-                height: 300,
-            },
-        },
-    },
-
-    {
-        breakpoint: 992,
-        options: {
-            chart: {
-                height: 210,
-                width: "100%",
-                offsetX: 0,
-            },
-        },
-    },
-
-    {
-        breakpoint: 578,
-        options: {
-            chart: {
-                height: 200,
-                width: "105%",
-                offsetX: -20,
-                offsetY: 10,
-            },
-        },
-    },
-
-    {
-        breakpoint: 430,
-        options: {
-            chart: {
-                width: "108%",
-            },
-        },
-    },
-
-    {
-        breakpoint: 330,
-        options: {
-            chart: {
-                width: "112%",
-            },
-        },
-    },
-    ],
-};
-
-var chart = new ApexCharts(document.querySelector("#bar-chart-earning"), options);
-chart.render();
 
 // expenses cart
 var options = {
@@ -218,425 +115,6 @@ var options = {
     }
 };
 
-var options = {
-    series: [{
-        name: 'series1',
-        data: [60, 70, 54, 51, 42, 109, 100]
-    }],
-    chart: {
-        height: 320,
-        type: 'area',
-        dropShadow: {
-            enabled: true,
-            top: 10,
-            left: 0,
-            blur: 3,
-            color: '#720f1e',
-            opacity: 0.15
-        },
-        toolbar: {
-            show: false
-        },
-        zoom: {
-            enabled: false
-        },
-    },
-    markers: {
-        strokeWidth: 4,
-        strokeColors: "#ffffff",
-        hover: {
-            size: 9,
-        }
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        curve: 'smooth',
-        lineCap: 'butt',
-        width: 4,
-    },
-    legend: {
-        show: false
-    },
-    colors: ["#0da487"],
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0.6,
-            stops: [0, 90, 100]
-        }
-    },
-    grid: {
-        xaxis: {
-            lines: {
-                borderColor: 'transparent',
-                show: true
-            }
-        },
-        yaxis: {
-            lines: {
-                borderColor: 'transparent',
-                show: false,
-            }
-
-        },
-        padding: {
-            right: -112,
-            bottom: 0,
-            left: 15
-        }
-    },
-    responsive: [{
-        breakpoint: 1200,
-        options: {
-            grid: {
-                padding: {
-                    right: -95,
-                }
-            },
-        },
-    },
-    {
-        breakpoint: 992,
-        options: {
-            grid: {
-                padding: {
-                    right: -69,
-                }
-            },
-        },
-    },
-    {
-        breakpoint: 767,
-        options: {
-            chart: {
-                height: 200,
-            }
-        },
-    },
-    {
-        breakpoint: 576,
-        options: {
-            yaxis: {
-                labels: {
-                    show: false,
-                },
-            },
-        },
-    }
-    ],
-    yaxis: {
-        labels: {
-            formatter: function (value) {
-                return "$" + value;
-            }
-        },
-        crosshairs: {
-            show: true,
-            position: 'back',
-            stroke: {
-                color: '#b6b6b6',
-                width: 1,
-                dashArray: 5,
-            },
-        },
-        tooltip: {
-            enabled: true,
-        },
-    },
-    xaxis: {
-        categories: ["Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec",],
-        range: undefined,
-        axisBorder: {
-            low: 0,
-            offsetX: 0,
-            show: false,
-        },
-        axisTicks: {
-            show: false,
-        },
-    },
-};
-
-var chart = new ApexCharts(document.querySelector("#report-chart"), options);
-chart.render();
-
-
-//pie chart for visitors
-var options = {
-    series: [44, 55, 41, 17],
-    labels: ['The Passersby', 'The Occasionals', 'The Regulars', 'The Superfans'],
-    chart: {
-        width: "100%",
-        height: 275,
-        type: 'donut',
-    },
-
-    legend: {
-        fontSize: '12px',
-        position: 'bottom',
-        offsetX: 1,
-        offsetY: -1,
-
-        markers: {
-            width: 10,
-            height: 10,
-        },
-
-        itemMargin: {
-            vertical: 2
-        },
-    },
-
-    colors: ['#28c870', '#ffa044', '#9e65c2', '#6670bd', '#FF9800'],
-
-    plotOptions: {
-        pie: {
-            startAngle: -90,
-            endAngle: 270
-        }
-    },
-
-    dataLabels: {
-        enabled: false
-    },
-
-    responsive: [{
-        breakpoint: 1835,
-        options: {
-            chart: {
-                height: 245,
-            },
-
-            legend: {
-                position: 'bottom',
-
-                itemMargin: {
-                    horizontal: 5,
-                    vertical: 1
-                },
-            },
-        },
-    },
-
-    {
-        breakpoint: 1388,
-        options: {
-            chart: {
-                height: 330,
-            },
-
-            legend: {
-                position: 'bottom',
-            },
-        },
-    },
-
-    {
-        breakpoint: 1275,
-        options: {
-            chart: {
-                height: 300,
-            },
-
-            legend: {
-                position: 'bottom',
-            },
-        },
-    },
-
-    {
-        breakpoint: 1158,
-        options: {
-            chart: {
-                height: 280,
-            },
-
-            legend: {
-                fontSize: '10px',
-                position: 'bottom',
-                offsetY: 10,
-            },
-        },
-    },
-
-    {
-        theme: {
-            mode: 'dark',
-            palette: 'palette1',
-            monochrome: {
-                enabled: true,
-                color: '#255aee',
-                shadeTo: 'dark',
-                shadeIntensity: 0.65
-            },
-        },
-    },
-
-    {
-        breakpoint: 598,
-        options: {
-            chart: {
-                height: 280,
-            },
-
-            legend: {
-                fontSize: '12px',
-                position: 'bottom',
-                offsetX: 5,
-                offsetY: -5,
-
-                markers: {
-                    width: 10,
-                    height: 10,
-                },
-
-                itemMargin: {
-                    vertical: 1
-                },
-            },
-        },
-    },
-    ],
-};
-
-var chart = new ApexCharts(document.querySelector("#pie-chart-visitors"), options);
-chart.render();
-
-
-var optionsLine = {
-    chart: {
-        height: 350,
-        type: "line",
-        stacked: true,
-        animations: {
-            enabled: true,
-            easing: "linear",
-            dynamicAnimation: {
-                speed: 1000
-            }
-        },
-        dropShadow: {
-            enabled: true,
-            opacity: 0.3,
-            blur: 5,
-            left: -7,
-            top: 22
-        },
-        events: {
-            animationEnd: function (chartCtx) {
-                const newData1 = chartCtx.w.config.series[0].data.slice();
-                newData1.shift();
-                const newData2 = chartCtx.w.config.series[1].data.slice();
-                newData2.shift();
-                window.setTimeout(function () {
-                    chartCtx.updateOptions({
-                        series: [{
-                            data: newData1
-                        },
-                        {
-                            data: newData2
-                        }
-                        ],
-                        subtitle: {
-                            text: parseInt(getRandom() * Math.random()).toString()
-                        }
-                    },
-                        false,
-                        false
-                    );
-                }, 300);
-            }
-        },
-        toolbar: {
-            show: false
-        },
-        zoom: {
-            enabled: false
-        }
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        curve: "straight",
-        width: 5
-    },
-    grid: {
-        padding: {
-            left: 0,
-            right: 0
-        }
-    },
-    markers: {
-        size: 0,
-        hover: {
-            size: 0
-        }
-    },
-    series: [{
-        name: "Running",
-        data: generateMinuteWiseTimeSeries(
-            new Date("12/12/2016 00:20:00").getTime(),
-            12, {
-            min: 30,
-            max: 110
-        }
-        )
-    },
-    {
-        name: "Waiting",
-        data: generateMinuteWiseTimeSeries(
-            new Date("12/12/2016 00:20:00").getTime(),
-            12, {
-            min: 30,
-            max: 110
-        }
-        )
-    }
-    ],
-    xaxis: {
-        type: "datetime",
-        range: 2700000
-    },
-    title: {
-        text: "Processes",
-        align: "left",
-        style: {
-            fontSize: "12px"
-        }
-    },
-    subtitle: {
-        text: "20",
-        floating: true,
-        align: "right",
-        offsetY: 0,
-        style: {
-            fontSize: "22px"
-        }
-    },
-    legend: {
-        show: true,
-        floating: true,
-        horizontalAlign: "left",
-        onItemClick: {
-            toggleDataSeries: false
-        },
-        position: "top",
-        offsetY: -33,
-        offsetX: 60
-    }
-};
-
-var chartLine = new ApexCharts(
-    document.querySelector("#linechart"),
-    optionsLine
-);
-chartLine.render();
-
 
 window.Apex = {
     chart: {
@@ -730,156 +208,502 @@ function getNewData(baseval, yrange) {
 }
 
 
-
-var optionsLine = {
+var admissionRatioOption = {
+    series: [
+        {
+            name: '',
+            data: [30, 29.31, 29.7, 29.7, 31.32, 31.65, 31.13, 29.8, 31.79, 31.67, 32.39, 30.63, 32.89, 31.99, 31.23, 31.57, 30.84, 31.07, 31.41, 31.17, 34, 34.50, 34.50, 32.53, 31.37, 32.43, 32.44, 30.2,
+                30.14, 30.65, 30.4, 30.65, 31.43, 31.89, 31.38, 30.64, 31.02, 30.33, 32.95, 31.89, 30.01, 30.88, 30.69, 30.58, 32.02, 32.14, 30.37, 30.51, 32.65, 32.64, 32.27, 32.1, 32.91, 30.65, 30.8, 31.92
+            ],
+        },
+    ],
     chart: {
-        height: 350,
-        type: "line",
-        stacked: true,
-        animations: {
-            enabled: true,
-            easing: "linear",
-            dynamicAnimation: {
-                speed: 1000
-            }
-        },
-        dropShadow: {
-            enabled: true,
-            opacity: 0.3,
-            blur: 5,
-            left: -7,
-            top: 22
-        },
-        events: {
-            animationEnd: function (chartCtx) {
-                const newData1 = chartCtx.w.config.series[0].data.slice();
-                newData1.shift();
-                const newData2 = chartCtx.w.config.series[1].data.slice();
-                newData2.shift();
-                window.setTimeout(function () {
-                    chartCtx.updateOptions({
-                        series: [{
-                            data: newData1
-                        },
-                        {
-                            data: newData2
-                        }
-                        ],
-                        subtitle: {
-                            text: parseInt(getRandom() * Math.random()).toString()
-                        }
-                    },
-                        false,
-                        false
-                    );
-                }, 300);
-            }
-        },
+        type: 'area',
+        height: 90,
+        offsetY: -10,
+        offsetX: 0,
         toolbar: {
-            show: false
+            show: false,
         },
-        zoom: {
-            enabled: false
+    },
+    stroke: {
+        width: 2,
+        curve: 'smooth'
+    },
+    grid: {
+        show: false,
+        borderColor: '#dedbdb',
+        padding: {
+            top: 5,
+            right: 0,
+            bottom: -30,
+            left: 0,
+        },
+    },
+    fill: {
+        type: "gradient",
+        gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.5,
+            opacityTo: 0.1,
+            stops: [0, 90, 100]
         }
     },
     dataLabels: {
-        enabled: false
+        enabled: false,
     },
-    stroke: {
-        curve: "straight",
-        width: 5
-    },
-    grid: {
-        padding: {
-            left: 0,
-            right: 0
-        }
-    },
-    markers: {
-        size: 0,
-        hover: {
-            size: 0
-        }
-    },
-    series: [{
-        name: "Running",
-        data: generateMinuteWiseTimeSeries(
-            new Date("12/12/2016 00:20:00").getTime(),
-            12, {
-            min: 30,
-            max: 110
-        }
-        )
-    },
-    {
-        name: "Waiting",
-        data: generateMinuteWiseTimeSeries(
-            new Date("12/12/2016 00:20:00").getTime(),
-            12, {
-            min: 30,
-            max: 110
-        }
-        )
-    }
-    ],
+    colors: ['#ef3f3e'],
     xaxis: {
-        type: "datetime",
-        range: 2700000
+        labels: {
+            show: false,
+        },
+        tooltip: {
+            enabled: false,
+        },
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
     },
-    title: {
-        text: "Processes",
-        align: "left",
-        style: {
-            fontSize: "12px"
-        }
-    },
-    subtitle: {
-        text: "20",
-        floating: true,
-        align: "right",
-        offsetY: 0,
-        style: {
-            fontSize: "22px"
-        }
+    yaxis: {
+        opposite: false,
+        min: 29,
+        max: 35,
+        logBase: 100,
+        tickAmount: 4,
+        forceNiceScale: false,
+        floating: false,
+        decimalsInFloat: undefined,
+        labels: {
+            show: false,
+            offsetX: -12,
+            offsetY: -15,
+            rotate: 0,
+        },
     },
     legend: {
-        show: true,
-        floating: true,
-        horizontalAlign: "left",
-        onItemClick: {
-            toggleDataSeries: false
-        },
-        position: "top",
-        offsetY: -33,
-        offsetX: 60
-    }
+        horizontalAlign: 'left',
+    },
+    responsive: [
+
+    ],
 };
 
-var chartLine = new ApexCharts(
-    document.querySelector("#linechart1"),
-    optionsLine
+var admissionRatio = new ApexCharts(document.querySelector('#daily-value'), admissionRatioOption);
+admissionRatio.render();
+
+var admissionRatioOption = {
+    series: [
+        {
+            name: '',
+            data: [30, 32.31, 31.47, 30.69, 29.32, 31.65, 31.13, 31.77, 31.79, 31.67, 32.39, 32.63, 32.89, 31.99, 31.23, 31.57, 30.84, 31.07, 31.41, 31.17, 32.37, 32.19, 32.51, 32.53, 31.37, 30.43, 30.44, 30.2,
+                30.14, 30.65, 30.4, 30.65, 31.43, 31.89, 31.38, 30.64, 30.02, 30.33, 30.95, 31.89, 31.01, 30.88, 30.69, 30.58, 32.02, 32.14, 32.37, 32.51, 32.65, 32.64, 32.27, 32.1, 32.91, 33.65, 33.8, 33.92
+            ],
+        },
+    ],
+    chart: {
+        type: 'area',
+        height: 90,
+        offsetY: -10,
+        offsetX: 0,
+        toolbar: {
+            show: false,
+        },
+    },
+    stroke: {
+        width: 2,
+        curve: 'smooth'
+    },
+    grid: {
+        show: false,
+        borderColor: '#dedbdb',
+        padding: {
+            top: 5,
+            right: 0,
+            bottom: -30,
+            left: 0,
+        },
+    },
+    fill: {
+        type: "gradient",
+        gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.5,
+            opacityTo: 0.1,
+            stops: [0, 80, 100]
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    colors: ['#277d2a'],
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        tooltip: {
+            enabled: false,
+        },
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
+    },
+    yaxis: {
+        opposite: false,
+        min: 29,
+        max: 35,
+        logBase: 100,
+        tickAmount: 4,
+        forceNiceScale: false,
+        floating: false,
+        decimalsInFloat: undefined,
+        labels: {
+            show: false,
+            offsetX: -12,
+            offsetY: -15,
+            rotate: 0,
+        },
+    },
+    legend: {
+        horizontalAlign: 'left',
+    },
+    responsive: [
+
+    ],
+};
+
+var admissionRatio = new ApexCharts(document.querySelector('#order-value'), admissionRatioOption);
+admissionRatio.render();
+
+var admissionRatioOption = {
+    series: [
+        {
+            name: '',
+            data: [30, 29.31, 29.7, 29.7, 31.32, 31.65, 31.13, 29.8, 31.79, 31.67, 32.39, 30.63, 32.89, 31.99, 31.23, 31.57, 30.84, 31.07, 31.41, 31.17, 34, 34.50, 34.50, 32.53, 31.37, 32.43, 32.44, 30.2,
+                30.14, 30.65, 30.4, 30.65, 31.43, 31.89, 31.38, 30.64, 31.02, 30.33, 32.95, 31.89, 30.01, 30.88, 30.69, 30.58, 32.02, 32.14, 30.37, 30.51, 32.65, 32.64, 32.27, 32.1, 32.91, 30.65, 30.8, 31.92
+            ],
+        },
+    ],
+    chart: {
+        type: 'area',
+        height: 90,
+        offsetY: -10,
+        offsetX: 0,
+        toolbar: {
+            show: false,
+        },
+    },
+    stroke: {
+        width: 2,
+        curve: 'smooth'
+    },
+    grid: {
+        show: false,
+        borderColor: '#dedbdb',
+        padding: {
+            top: 5,
+            right: 0,
+            bottom: -30,
+            left: 0,
+        },
+    },
+    fill: {
+        type: "gradient",
+        gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.5,
+            opacityTo: 0.1,
+            stops: [0, 90, 100]
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    colors: ['#cc3300'],
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        tooltip: {
+            enabled: false,
+        },
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
+    },
+    yaxis: {
+        opposite: false,
+        min: 29,
+        max: 35,
+        logBase: 100,
+        tickAmount: 4,
+        forceNiceScale: false,
+        floating: false,
+        decimalsInFloat: undefined,
+        labels: {
+            show: false,
+            offsetX: -12,
+            offsetY: -15,
+            rotate: 0,
+        },
+    },
+    legend: {
+        horizontalAlign: 'left',
+    },
+};
+
+var admissionRatioOption = {
+    series: [
+        {
+            name: '',
+            data: [30, 29.31, 29.7, 29.7, 31.32, 31.65, 31.13, 29.8, 31.79, 31.67, 32.39, 30.63, 32.89, 31.99, 31.23, 31.57, 30.84, 31.07, 31.41, 31.17, 34, 34.50, 34.50, 32.53, 31.37, 32.43, 32.44, 30.2,
+                30.14, 30.65, 30.4, 30.65, 31.43, 31.89, 31.38, 30.64, 31.02, 30.33, 32.95, 31.89, 30.01, 30.88, 30.69, 30.58, 32.02, 32.14, 30.37, 30.51, 32.65, 32.64, 32.27, 32.1, 32.91, 30.65, 30.8, 31.92
+            ],
+        },
+    ],
+    chart: {
+        type: 'area',
+        height: 90,
+        offsetY: -10,
+        offsetX: 0,
+        toolbar: {
+            show: false,
+        },
+    },
+    stroke: {
+        width: 2,
+        curve: 'smooth'
+    },
+    grid: {
+        show: false,
+        borderColor: '#dedbdb',
+        padding: {
+            top: 5,
+            right: 0,
+            bottom: -30,
+            left: 0,
+        },
+    },
+    fill: {
+        type: "gradient",
+        gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.5,
+            opacityTo: 0.1,
+            stops: [0, 90, 100]
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    colors: ["#cc3300"],
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        tooltip: {
+            enabled: false,
+        },
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
+    },
+    yaxis: {
+        opposite: false,
+        min: 29,
+        max: 35,
+        logBase: 100,
+        tickAmount: 4,
+        forceNiceScale: false,
+        floating: false,
+        decimalsInFloat: undefined,
+        labels: {
+            show: false,
+            offsetX: -12,
+            offsetY: -15,
+            rotate: 0,
+        },
+    },
+    legend: {
+        horizontalAlign: 'left',
+    },
+};
+
+var admissionRatio = new ApexCharts(document.querySelector('#admissionRatio'), admissionRatioOption);
+admissionRatio.render();
+
+
+// earning chart
+var options_earning = {
+    series: [
+        {
+            data: [20, 40, 60, 20, 100, 60, 20, 80, 40, 10, 80, 100, 100],
+        },
+    ],
+    chart: {
+        type: "line",
+        height: 134,
+        toolbar: {
+            show: false,
+        },
+        dropShadow: {
+            enabled: true,
+            top: 0,
+            left: 0,
+            blur: 20,
+            color: "#ef3f3e",
+            opacity: 0.3,
+        },
+    },
+    grid: {
+        show: true,
+        borderColor: "#f5f5f5",
+        strokeDashArray: 6,
+        position: "back",
+        xaxis: {
+            lines: {
+                show: true,
+            },
+        },
+        padding: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+        },
+    },
+    stroke: {
+        curve: "stepline",
+        width: 2,
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        },
+        tooltip: {
+            enabled: false,
+        },
+    },
+    yaxis: {
+        labels: {
+            show: false,
+        },
+        min: 0,
+        tickAmount: 5,
+        tickPlacement: "between",
+    },
+    markers: {
+        size: 4,
+        colors: "#fff",
+        strokeColors: "#ef3f3e",
+        strokeWidth: 2,
+        strokeOpacity: 0.9,
+        strokeDashArray: 0,
+        fillOpacity: 1,
+        shape: "circle",
+        offsetX: 2,
+        offsetY: 2,
+        radius: 2,
+        hover: {
+            size: 3,
+        },
+    },
+    colors: ["#ef3f3e"],
+
+    responsive: [
+        {
+            breakpoint: 1750,
+            options: {
+                chart: {
+                    height: 150,
+                },
+            },
+        },
+        {
+            breakpoint: 1650,
+            options: {
+                chart: {
+                    height: 170,
+                },
+            },
+        },
+        {
+            breakpoint: 1550,
+            options: {
+                chart: {
+                    height: 180,
+                },
+            },
+        },
+        {
+            breakpoint: 1410,
+            options: {
+                chart: {
+                    height: 190,
+                },
+            },
+        },
+        {
+            breakpoint: 1400,
+            options: {
+                chart: {
+                    height: 110,
+                },
+            },
+        },
+        {
+            breakpoint: 1200,
+            options: {
+                chart: {
+                    height: 122,
+                },
+            },
+        },
+        {
+            breakpoint: 768,
+            options: {
+                chart: {
+                    height: 160,
+                },
+            },
+        },
+    ],
+};
+
+var chart_earning = new ApexCharts(
+    document.querySelector("#earning-average"),
+    options_earning
 );
-chartLine.render();
-
-
-
-// window.setInterval(function () {
-//     iteration++;
-
-
-//     chartLine.updateSeries([
-//         {
-//             data: [
-//                 ...chartLine.w.config.series[0].data,
-//                 [chartLine.w.globals.maxX + 300000, getRandom()]
-//             ]
-//         },
-//         {
-//             data: [
-//                 ...chartLine.w.config.series[1].data,
-//                 [chartLine.w.globals.maxX + 300000, getRandom()]
-//             ]
-//         }
-//     ]);
-
-// }, 3000);
+chart_earning.render();

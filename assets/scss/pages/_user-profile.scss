@@ -10,7 +10,7 @@
     }
 
     .border-right {
-        border-right: 1px solid $light-color;
+        border-right: 1px dashed $light-color;
     }
 
     hr {
@@ -37,7 +37,7 @@
                     max-width: 155px;
                     max-height: 155px;
                     border-radius: 50%;
-                    border: 7px solid $white;
+                    border: 7px dashed $white;
                 }
             }
 

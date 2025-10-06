@@ -1,2 +1,0 @@
-# zomo_admin
- zomo

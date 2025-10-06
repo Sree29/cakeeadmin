@@ -29,6 +29,14 @@
             display: flex;
             justify-content: center;
             font-weight: 500;
+            @media (min-width: 576px) {
+                text-overflow:ellipsis;
+                overflow:hidden;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                white-space: normal;
+            }
 
             @include mq-max(sm) {
                 display: block;
@@ -67,7 +75,7 @@
 
         &.progtrckr-todo {
             color: silver;
-            border-top: 4px solid silver;
+            border-top: 2px dashed silver;
             width: 100% !important;
 
             @include mq-max(sm) {
@@ -78,11 +86,11 @@
                 padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
                 padding-left: 30px;
                 border-top: unset;
-                border-left: 4px solid silver;
+                border-left: 2px dashed silver;
 
                 [dir="rtl"] & {
                     border-left: none;
-                    border-right: 4px solid silver;
+                    border-right: 2px dashed silver;
                     margin-left: 0;
                     margin-right: 30px;
                     align-items: flex-end;
@@ -121,7 +129,7 @@
 
         &.progtrckr-done {
             color: $black1;
-            border-top: 4px solid var(--theme-color);
+            border-top: 2px dashed var(--theme-color);
             width: 100% !important;
 
             @include mq-max(sm) {
@@ -131,14 +139,14 @@
                 align-items: self-start;
                 padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
                 border-top: unset;
-                border-left: 4px solid var(--theme-color);
+                border-left: 2px dashed var(--theme-color);
 
                 [dir="rtl"] & {
                     margin-left: 0;
                     margin-right: 30px;
                     text-align: right;
                     border-left: none;
-                    border-right: 4px solid var(--theme-color);
+                    border-right: 2px dashed var(--theme-color);
                     align-items: flex-end;
                 }
             }
@@ -172,7 +180,7 @@
     .to-do-item {
         display: flex;
         margin-bottom: 20px;
-        border-bottom: 1px solid $lavender;
+        border-bottom: 1px dashed $lavender;
         padding-bottom: 10px;
 
         &:nth-child(n + 4) {
@@ -214,7 +222,7 @@
     .brower-item {
         @include flex_common ($dis: flex, $align: center, $justify: space-between);
         margin-bottom: 19px;
-        border-bottom: 1px solid $gray-light;
+        border-bottom: 1px dashed $gray-light;
         padding-bottom: 20px;
 
         &:last-child {

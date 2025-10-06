@@ -617,7 +617,7 @@
         .mega-menu-container {
             position: fixed;
             @include pseudowh($width: 300px, $height: 100vh);
-            border: 1px solid rgb(238, 238, 238);
+            border: 1px dashed rgb(238, 238, 238);
             top: 0px;
             left: unset;
             right: -300px;
@@ -979,7 +979,7 @@
 
     .chat-menu {
         right: 0;
-        border-top: 1px solid $light-semi-gray;
+        border-top: 1px dashed $light-semi-gray;
         opacity: 0;
         transform: translateY(-30px);
         visibility: hidden;
@@ -1084,7 +1084,17 @@
 }
 
 @media only screen and (max-width: 991.98px) {
+    .footer{
+        width: 100% !important;
+    }
+    .page-wrapper{
+        .page-header{
+            .header-wrapper {
+                padding: 10px 30px !important;
+            }
+        }
 
+    }
     .simplebar-mask {
         top: 57px;
     }
@@ -1120,53 +1130,6 @@
         &.modern-type {
             .simplebar-mask {
                 top: 70px;
-            }
-        }
-
-        &.compact-sidebar {
-            .simplebar-mask {
-                top: 87px;
-            }
-
-            .page-header {
-                margin-left: 0;
-                width: calc(100% - 0px);
-            }
-
-            .page-body-wrapper {
-                div.sidebar-wrapper {
-                    &.close_icon {
-                        .sidebar-main {
-                            .sidebar-links {
-                                li {
-                                    .sidebar-link {
-                                        &.active {
-                                            ~ .sidebar-submenu {
-                                                display: none !important;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .page-body {
-                    margin-top: 60px;
-                }
-            }
-        }
-
-        &.only-body {
-            .page-header {
-                .header-wrapper {
-                    .search-full {
-                        .Typeahead-menu {
-                            top: 65px;
-                        }
-                    }
-                }
             }
         }
 
@@ -1305,7 +1268,6 @@
             margin-bottom: 30px;
 
             .card-body {
-                padding: calc(0px + (20 - 0) * ((100vw - 320px) / (991.98 - 320)));
 
                 .tab-content {
                     .m-t-30 {
@@ -1360,10 +1322,8 @@
                     }
 
                     .toggle-sidebar {
+                        cursor: pointer;
                         position: unset;
-                        margin-right: 15px;
-                        border-right: 1px solid #ddd;
-                        padding-right: 15px;
                         display: flex !important;
                         align-items: center;
 
@@ -1418,6 +1378,7 @@
                                 position: relative;
                                 font-size: 20px;
                                 color: $white;
+                                cursor: pointer;
                             }
 
                             .toggle-sidebar {
@@ -1444,18 +1405,8 @@
                 }
 
                 .page-body {
-                    margin: 105px 0 0 !important;
+                    margin: 72px 0 0 !important;
                     padding: 0 15px;
-                }
-            }
-        }
-
-        &.compact-sidebar {
-            .page-header {
-                .header-wrapper {
-                    .maximize {
-                        display: none;
-                    }
                 }
             }
         }
@@ -1468,18 +1419,6 @@
                     .logo-wrapper {
                         display: block;
                     }
-                }
-            }
-        }
-
-        &.material-icon {
-            .page-header {
-                padding-left: 0;
-            }
-
-            .page-body-wrapper {
-                .page-body {
-                    padding-left: 15px;
                 }
             }
         }
@@ -1734,10 +1673,6 @@
 
     h3 {
         font-size: 26px;
-    }
-
-    h4 {
-        font-size: 22px;
     }
 
     h5 {
@@ -2183,8 +2118,7 @@
     }
 
     .page-wrapper {
-        &.compact-wrapper,
-        &.compact-sidebar {
+        &.compact-wrapper{
             .left-header {
                 position: unset;
 
@@ -2196,7 +2130,7 @@
                     .nav-link {
                         min-width: auto;
                         background-color: transparent;
-                        border-left: 1px solid #ddd;
+                        border-left: 1px dashed #ddd;
                         padding-right: 0;
                         border-radius: 0;
                     }
@@ -2227,24 +2161,6 @@
             .page-body-wrapper {
                 .page-body {
                     margin-top: 0 !important;
-                }
-            }
-        }
-
-        &.only-body {
-            .page-header {
-                .header-wrapper {
-                    .nav-right {
-                        > ul {
-                            > li {
-                                margin-right: -2px;
-                            }
-                        }
-
-                        .nav-menus {
-                            margin-right: -10px;
-                        }
-                    }
                 }
             }
         }
@@ -3023,20 +2939,15 @@
 }
 
 @media only screen and (max-width: 575.98px) {
-    .page-wrapper.only-body {
-        .page-header {
-            .header-wrapper {
-                .nav-right {
-                    right: 30px;
-
-                    .nav-menus {
-                        margin-right: 0;
-                    }
+    .page-wrapper{
+        &.compact-wrapper {
+            .page-body-wrapper {
+                .page-body {
+                    margin: 102px 0 0 !important;
                 }
             }
         }
     }
-
     .date-picker {
         .theme-form {
             > .row {
@@ -3056,7 +2967,6 @@
     }
 
     .btn {
-        padding: 6px 7px;
 
         &--package-page {
             padding: 6px;
@@ -3191,7 +3101,7 @@
                                 transition: all linear 0.3s;
                                 left: -14px;
                                 background-color: $white;
-                                border: 1px solid var(--theme-color);
+                                border: 1px dashed var(--theme-color);
                                 transform: translateY(-35px) scaleY(0);
                                 opacity: 0;
                                 visibility: hidden;
@@ -3246,8 +3156,7 @@
             }
         }
 
-        &.compact-wrapper,
-        &.compact-sidebar {
+        &.compact-wrapper {
             .left-header .mega-menu {
                 top: 17px;
 
@@ -3273,30 +3182,6 @@
 
                         svg {
                             width: 18px;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.compact-sidebar {
-            .sidebar-wrapper {
-                .back-btn {
-                    display: none;
-                }
-
-                .sidebar-main {
-                    .sidebar-links {
-                        .simplebar-wrapper {
-                            .simplebar-mask {
-                                .simplebar-content-wrapper {
-                                    .simplebar-content {
-                                        > li {
-                                            margin-right: 0;
-                                        }
-                                    }
-                                }
-                            }
                         }
                     }
                 }
@@ -3674,12 +3559,6 @@
         }
     }
 
-    .nav {
-        display: inherit;
-        text-align: center;
-        border-bottom: none;
-    }
-
     // editor_container
     .editor_container {
         .CodeMirror {
@@ -3724,7 +3603,7 @@
         &.nav {
             display: flex;
             flex-wrap: wrap;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px dashed #ddd;
         }
     }
 
@@ -4066,8 +3945,8 @@
                 padding: 20px;
 
                 .user-designation {
-                    border-top: 1px solid $light-color;
-                    border-bottom: 1px solid $light-color;
+                    border-top: 1px dashed $light-color;
+                    border-bottom: 1px dashed $light-color;
                     margin-bottom: 15px;
                     padding: 15px 0px;
                 }
@@ -4375,10 +4254,11 @@
                     ul {
                         &.profile-dropdown,
                         &.chat-dropdown,
-                        &.notification-dropdown {
+                        &.notification-dropdown,
+                        &.messages-dropdown {
                             width: calc(100vw - 30px);
                             position: fixed;
-                            top: 60px;
+                            top: 76px;
                             left: 15px !important;
                         }
                     }
@@ -4422,10 +4302,6 @@
         right: 20px;
         width: 280px;
         position: fixed;
-    }
-
-    .page-wrapper.only-body .page-header .header-wrapper .nav-right {
-        display: none;
     }
 
     .pagination-lg {
@@ -4660,11 +4536,6 @@
         }
     }
 
-    // bootstrap notify page
-    .notify-alert {
-        width: 90%;
-    }
-
     .package-card {
         display: block !important;
 
@@ -4677,7 +4548,19 @@
 }
 
 @media only screen and (max-width: 420px) {
-
+    .page-wrapper {
+        .page-header {
+            .header-wrapper {
+                .nav-right{
+                    >ul{
+                        >li {
+                            width: unset !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .alert-theme {
         font-size: 12px;
         min-width: 300px;
@@ -4734,27 +4617,6 @@
 
     // compact sidebar css
     .page-wrapper {
-        &.compact-sidebar {
-            .page-body-wrapper {
-                div.sidebar-wrapper {
-                    > div {
-                        width: 112px;
-                    }
-
-                    .sidebar-main {
-                        .sidebar-links {
-                            li {
-                                .sidebar-submenu,
-                                .mega-menu-container {
-                                    left: 112px;
-                                    width: 190px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
 
         &.compact-small {
             .page-body-wrapper {
@@ -4792,6 +4654,68 @@
 }
 
 @media only screen and (max-width: 360px) {
+    .footer{
+        p {
+            font-size: 14px !important;
+        }
+    }
+    .page-wrapper{
+        &.compact-wrapper {
+            .page-body-wrapper {
+                .page-body {
+                    margin: 90px 0 0 !important;
+                }
+            }
+        }
+    }
+    .page-header {
+        .header-wrapper {
+            .nav-right {
+                &.right-header {
+                    ul {
+                        &.profile-dropdown,
+                        &.chat-dropdown,
+                        &.notification-dropdown,
+                        &.messages-dropdown {
+                            top: 63px;
+                        }
+                    }
+                }
+
+                .profile-dropdown {
+                    top: 43px;
+                }
+            }
+        }
+    }
+    .page-wrapper{
+        &.compact-wrapper {
+            .page-header {
+                .header-wrapper {
+                    .toggle-sidebar{
+                        >a {
+                            width: 85px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page-wrapper {
+        .page-header {
+            .header-wrapper {
+                .nav-right{
+                    >ul{
+                        >li {
+                            background-color: transparent !important;
+                            padding: 0 4px !important;
+                            margin-right: 2px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .product-box {
         .modal {
             .modal-header {
@@ -5087,8 +5011,6 @@
 
     //modal footer
     .modal-footer {
-        display: block;
-        text-align: center;
 
         button:first-child {
             margin-bottom: 10px;

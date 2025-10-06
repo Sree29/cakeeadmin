@@ -6,10 +6,11 @@ body {
     overflow-x: hidden;
     font-family: $poppins-sans;
     color: $theme-body-font-color;
+    background-color: $inner-bg;
 
     ::selection {
-        background-color: transparent;
-        color: var(--theme-color);
+        background-color: var(--theme-color2);
+        color: $white;
     }
 }
 
@@ -134,32 +135,65 @@ label {
         margin-bottom: 30px;
     }
 }
+h1 {
+    font-weight: 700;
+    font-size: calc(25px + (80 - 25) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 0;
+}
 
-.typography {
-    h1,
-    .h1,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    .h5,
-    h6,
-    .h6 {
-        margin: 20px 0;
-        margin-top: 0;
+h2 {
+    font-weight: 600;
+    font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 0;
+}
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+h3 {
+    font-weight: 500;
+    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 0;
+}
 
-    small {
-        padding-left: $small-tag-padding;
-        color: $small-tag-color;
-    }
+h4 {
+    font-weight: 500;
+    font-size: calc(17px + (24 - 17) * ((100vw - 320px) / (1920 - 320)));
+    margin-bottom: 0;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+h6 {
+    font-weight: 400;
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/*====== Font-weight css starts ======*/
+$i: 100,
+  200, 
+  300,
+  500,
+  400,
+  600,
+  700,
+  800,
+  900;
+
+@each $val in $i {
+  .f-w-#{$val} {
+    font-weight: $val;
+  }
+}
+
+
+small {
+    padding-left: $small-tag-padding;
+    color: $small-tag-color;
 }
 
 pre {
@@ -277,7 +311,7 @@ pre {
 }
 
 .alert-copy {
-    border: 1px solid var(--theme-color);
+    border: 1px dashed var(--theme-color);
     line-height: 1;
     display: inline-block;
     width: 300px;
@@ -452,6 +486,20 @@ span {
 
 .theme-bg-color {
     background-color: var(--theme-color);
+}
+.font-black {
+    color: $theme-font-color;
+}
+.sticky {
+    position: sticky;
+    top: 100px;
+    left: 0;
+    &.off-50 {
+      top: 50px;
+    }
+    &.off-88 {
+      top: 88px;
+    }
 }
 
 /**=====================

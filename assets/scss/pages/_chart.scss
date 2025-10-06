@@ -104,7 +104,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
         padding: 6px;
         color: $dark-gray;
         background: $white;
-        border: solid 1px $light-gray;
+        border: dashed 1px $light-gray;
         font-family: $font-serif;
         font-size: 12px;
         text-align: center;
@@ -133,7 +133,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
     text-align: left;
     white-space: nowrap;
     padding: 5px;
-    border: 1px solid rgba(49, 49, 49, 0.75);
+    border: 1px dashed rgba(49, 49, 49, 0.75);
     ;
     box-sizing: content-box;
     z-index: 10000;
@@ -440,7 +440,7 @@ p {
 .ct-series-a {
 
     .ct-slice-pie,
-    .ct-slice-donut-solid,
+    .ct-slice-donut-dashed,
     .ct-area {
         fill: var(--theme-color);
     }
@@ -463,7 +463,7 @@ p {
     }
 
     .ct-slice-pie,
-    .ct-slice-donut-solid,
+    .ct-slice-donut-dashed,
     .ct-area {
         fill: var(--theme-secondary);
     }

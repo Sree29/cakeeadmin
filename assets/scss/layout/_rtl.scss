@@ -15,15 +15,27 @@ html[dir="rtl"] {
             margin-right: 16px;
         }
     }
-
-    ul {
-        padding-right: 0;
+    .categories-section {
+        .categories-style {
+            direction: ltr;
+        }
+    }
+    .swiper-pointer-events{
+        direction: ltr;
     }
 
     .f-right {
         float: left;
     }
-
+    .tap-top{
+        right: unset;
+        left: 25px;
+    }
+    .customizer-links {
+        .rtl-btn {
+            border-radius: 5px 5px 0 0;
+        }
+    }
     .form-check-inline {
         margin-right: unset;
         margin-left: 1rem;
@@ -270,17 +282,6 @@ html[dir="rtl"] {
                 }
             }
         }
-
-        &.only-body {
-            .page-header {
-                .header-wrapper {
-                    .nav-right {
-                        right: unset;
-                        left: 30px;
-                    }
-                }
-            }
-        }
     }
 
     .modal-body .btn--no {
@@ -459,127 +460,6 @@ html[dir="rtl"] {
             }
         }
 
-        &.compact-sidebar {
-            .toggle-sidebar {
-                margin-left: 15px;
-                margin-right: unset;
-            }
-
-            .page-header {
-                margin-left: unset;
-                margin-right: 150px;
-
-                &.close_icon {
-                    margin-right: 0;
-                }
-            }
-
-            .page-body-wrapper {
-                .page-body {
-                    margin-left: unset;
-                    margin-right: 150px;
-                }
-
-                .footer {
-                    margin-left: unset;
-                    margin-right: 150px;
-                }
-
-                div.sidebar-wrapper {
-                    >div {
-                        text-align: right;
-                    }
-
-                    .sidebar-main {
-                        .sidebar-links {
-                            li {
-                                a {
-                                    &.active {
-
-                                        ~.sidebar-submenu,
-                                        ~.mega-menu-container {
-                                            animation: fadeInRight 1000ms ease-in-out;
-                                        }
-                                    }
-                                }
-
-                                .sidebar-submenu,
-                                .mega-menu-container {
-                                    right: 150px;
-                                    left: unset;
-
-                                    li {
-                                        a {
-                                            padding: 15px 40px 15px 15px;
-
-                                            .according-menu {
-                                                right: 20px;
-                                            }
-                                        }
-                                    }
-
-                                    >li {
-                                        >a {
-                                            &::after {
-                                                left: unset;
-                                                right: 20px;
-                                            }
-                                        }
-                                    }
-
-                                    .mega-box {
-                                        .link-section {
-                                            text-align: right;
-
-                                            .submenu-title {
-                                                h5 {
-                                                    padding: 15px 40px 15px 15px;
-
-                                                    &::after {
-                                                        left: unset;
-                                                        right: 20px;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .sidebar-list {
-                                .badge {
-                                    left: unset;
-                                    right: 53%;
-                                }
-
-                                .sidebar-link {
-                                    text-align: center;
-                                }
-                            }
-
-                            .mega-menu {
-                                text-align: center;
-
-                                .according-menu {
-                                    right: unset;
-                                    left: 20px;
-                                }
-                            }
-                        }
-                    }
-
-                    &.close_icon {
-                        transform: translateX(150px);
-
-                        ~.page-body,
-                        ~.footer {
-                            margin-right: 0px;
-                        }
-                    }
-                }
-            }
-        }
-
         &.compact-small {
             .page-header {
                 margin-right: 90px;
@@ -603,35 +483,6 @@ html[dir="rtl"] {
                 .footer,
                 .page-body {
                     margin-right: 90px;
-                }
-            }
-        }
-
-        &.material-icon {
-            .page-header {
-                padding-left: unset;
-                padding-right: 90px;
-                margin: 0 auto;
-
-                &.close_icon {
-                    padding-right: 0;
-                }
-            }
-
-            .page-body-wrapper {
-                .page-body {
-                    padding-left: 15px;
-                    padding-right: 90px;
-                    margin: 0 auto;
-                }
-
-                div.sidebar-wrapper {
-                    &.close_icon {
-                        ~.page-body {
-                            padding-right: 15px;
-                            margin: 0 auto !important;
-                        }
-                    }
                 }
             }
         }
@@ -676,7 +527,7 @@ html[dir="rtl"] {
 
                 .earning-content {
                     border-right: unset;
-                    border-left: 1px solid $light-gray;
+                    border-left: 1px dashed $light-gray;
                 }
             }
         }
@@ -688,7 +539,7 @@ html[dir="rtl"] {
             .chart-main {
                 .media {
                     border-right: unset;
-                    border-left: 1px solid $light-gray;
+                    border-left: 1px dashed $light-gray;
 
                     .media-body {
                         .right-chart-content {
@@ -931,10 +782,25 @@ html[dir="rtl"] {
             float: none;
         }
     }
-
-    .checkbox_animated,
-    .radio_animated {
-        margin: 0 8px 0 16px;
+    table.dataTable{
+        thead {
+            th {    
+                text-align: unset;
+                &:last-child {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .setting-main-box {
+        li {
+            .nav-link {
+                text-align: right;
+            }
+        }
+    }
+    .restaurant-button{
+        float: left;
     }
 
     .button.remove {
@@ -1022,7 +888,7 @@ html[dir="rtl"] {
     }
 
     .b-r-light {
-        border-left: 1px solid $light-color !important;
+        border-left: 1px dashed $light-color !important;
         border-right: unset !important;
     }
 
@@ -1039,7 +905,7 @@ html[dir="rtl"] {
     }
 
     .border-right {
-        border-left: 1px solid #dee2e6 !important;
+        border-left: 1px dashed #dee2e6 !important;
         border-right: unset !important;
     }
 
@@ -1149,7 +1015,7 @@ html[dir="rtl"] {
     }
 
     .b-l-light {
-        border-right: 1px solid $light-color !important;
+        border-right: 1px dashed $light-color !important;
         border-left: unset !important;
     }
 
@@ -1580,8 +1446,6 @@ html[dir="rtl"] {
     }
 
     .form-check {
-        padding-right: 1.25rem;
-        padding-left: unset;
 
         .form-check-input {
             float: right;
@@ -2062,9 +1926,9 @@ html[dir="rtl"] {
                 width: calc(100% - 280px);
 
                 &.close_icon {
-                    margin-right: 100px;
+                    margin-right: 74px;
                     margin-left: unset;
-                    width: calc(100% - 100px);
+                    width: calc(100% - 74px);
                 }
             }
         }
@@ -2157,7 +2021,7 @@ html[dir="rtl"] {
                     padding-left: unset;
                     padding-right: 30px;
                     border-left: unset;
-                    border-right: 1px solid $light-semi-gray;
+                    border-right: 1px dashed $light-semi-gray;
                 }
             }
         }
@@ -2465,7 +2329,7 @@ html[dir="rtl"] {
         .card-footer {
             &>div {
                 &+div {
-                    border-right: 1px solid $light-semi-gray;
+                    border-right: 1px dashed $light-semi-gray;
                     border-left: unset !important;
                 }
             }
@@ -2684,7 +2548,7 @@ html[dir="rtl"] {
         .ribbon-bookmark.ribbon-vertical-right:before {
             right: 0;
             left: unset;
-            border-left: 15px solid #2a3142;
+            border-left: 15px dashed #2a3142;
         }
 
         .ribbon-bookmark.ribbon-info:before {
@@ -2759,7 +2623,7 @@ html[dir="rtl"] {
     .widget-joins {
         .media {
             .details {
-                border-right: 1px solid $light-semi-gray;
+                border-right: 1px dashed $light-semi-gray;
                 border-left: unset;
             }
 
@@ -2989,7 +2853,7 @@ html[dir="rtl"] {
 
                 li {
                     &+li {
-                        border-right: 1px solid #a5afc6;
+                        border-right: 1px dashed #a5afc6;
                         border-left: unset;
                         padding-right: 8px;
                         padding-left: 0;
@@ -3168,7 +3032,7 @@ html[dir="rtl"] {
     // timeline page
     .cd-timeline-content {
         &::before {
-            border-right: 7px solid $light-color;
+            border-right: 7px dashed $light-color;
             border-left-color: transparent;
         }
     }
@@ -3282,7 +3146,7 @@ html[dir="rtl"] {
 
         .bottom-content {
             .b-r-light {
-                border-left: 1px solid #eeeeee !important;
+                border-left: 1px dashed #eeeeee !important;
                 border-right: unset !important;
             }
 
@@ -3308,7 +3172,7 @@ html[dir="rtl"] {
             &.dates {
                 li {
                     +li {
-                        border-right: 1px solid #ddd;
+                        border-right: 1px dashed #ddd;
                         padding-right: 10px;
                         margin-right: 5px;
                         border-left: unset;
@@ -3369,14 +3233,6 @@ html[dir="rtl"] {
 
     .apexcharts-canvas {
         direction: ltr;
-    }
-
-    .slick-slider {
-        direction: ltr;
-
-        .sub-section {
-            direction: rtl;
-        }
     }
 
     .footer-copyright {
@@ -3454,7 +3310,7 @@ html[dir="rtl"] {
         right: unset;
         left: 0;
         margin-right: unset;
-        margin-left: -10px;
+        margin-left: -12px;
 
         >.nav {
             padding-right: 10px;
@@ -3547,7 +3403,7 @@ html[dir="rtl"] {
             &.card {
                 .card-body {
                     .earning-content {
-                        border-left: 1px solid $dark-card-border;
+                        border-left: 1px dashed $dark-card-border;
                     }
                 }
             }
@@ -3558,7 +3414,7 @@ html[dir="rtl"] {
             .card-body {
                 .chart-main {
                     .media {
-                        border-left: 1px solid $dark-card-border;
+                        border-left: 1px dashed $dark-card-border;
                     }
                 }
             }
@@ -3568,7 +3424,7 @@ html[dir="rtl"] {
             .media {
                 .details {
                     border-left: unset !important;
-                    border-right: 1px solid $dark-card-border;
+                    border-right: 1px dashed $dark-card-border;
                 }
             }
         }
@@ -3577,7 +3433,7 @@ html[dir="rtl"] {
             .card-footer {
                 >div {
                     +div {
-                        border-right: 1px solid $dark-card-border;
+                        border-right: 1px dashed $dark-card-border;
                     }
                 }
             }
@@ -3591,7 +3447,7 @@ html[dir="rtl"] {
                         .b-r-light,
                         .border-right {
                             border-right: none !important;
-                            border-left: 1px solid $dark-card-border !important;
+                            border-left: 1px dashed $dark-card-border !important;
                         }
                     }
                 }
@@ -3632,43 +3488,6 @@ html[dir="rtl"] {
                                 &:first-child {
                                     margin-left: unset;
                                     margin-right: 0;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .page-wrapper {
-        &.compact-wrapper {
-            .page-body-wrapper {
-                div {
-                    &.sidebar-wrapper {
-                        .sidebar-main {
-                            .sidebar-links {
-                                .simplebar-wrapper {
-                                    .simplebar-mask {
-                                        .simplebar-content-wrapper {
-                                            .simplebar-content {
-                                                >li {
-                                                    // padding: 0 15px 0 0;
-
-                                                    // .sidebar-link {
-                                                    //     border-top-left-radius: unset;
-                                                    //     border-bottom-left-radius: unset;
-                                                    //     border-top-right-radius: 50px;
-                                                    //     border-bottom-right-radius: 50px;
-                                                    // }
-
-                                                    &.sidebar-main-title {
-                                                        padding: 0 15px 15px;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -3969,28 +3788,10 @@ html[dir="rtl"] {
                             margin-right: 0;
                             border-right: none;
                             padding-right: 0;
-                            border-left: 1px solid #ddd;
+                            border-left: 1px dashed #ddd;
                             margin-left: 15px;
                             padding-left: 15px;
                         }
-                    }
-                }
-            }
-
-            &.compact-sidebar {
-                .page-header {
-                    margin-right: 0;
-                }
-            }
-
-            &.material-icon {
-                .page-header {
-                    padding-right: 0;
-                }
-
-                .page-body-wrapper {
-                    .page-body {
-                        padding-right: 15px;
                     }
                 }
             }
@@ -4187,8 +3988,7 @@ html[dir="rtl"] {
                 }
             }
 
-            &.compact-wrapper,
-            &.compact-sidebar {
+            &.compact-wrapper {
                 .left-header {
                     .mega-menu {
                         right: unset;
@@ -4316,16 +4116,15 @@ html[dir="rtl"] {
                     .nav-right {
                         >ul {
                             li {
-                                margin-right: unset;
-                                margin-left: 4px;
+                                margin-right: unset !important;
+                                margin-left: 2px;
                             }
                         }
                     }
                 }
             }
 
-            &.compact-wrapper,
-            &.compact-sidebar {
+            &.compact-wrapper {
                 .page-header {
                     .header-wrapper {
                         .toggle-sidebar {
@@ -4493,23 +4292,6 @@ html[dir="rtl"] {
 
     @media only screen and (max-width: 420px) {
         .page-wrapper {
-            &.compact-sidebar {
-                .page-body-wrapper {
-                    div.sidebar-wrapper {
-                        .sidebar-main {
-                            .sidebar-links {
-                                li {
-
-                                    .sidebar-submenu,
-                                    .mega-menu-container {
-                                        right: 112px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
 
             &.compact-small {
                 .page-body-wrapper {

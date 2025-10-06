@@ -6,61 +6,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Fastkart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+        content="Zomo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
     <meta name="keywords"
-        content="admin template, Fastkart admin template, dashboard template, flat admin template, responsive admin template, web app">
+        content="admin template,Zomo admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <title>Fastkart - Profile Setting</title>
+    <title>Cakee - Dashboard</title>
 
-    <!-- Google font -->
+    <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Linear Icon css -->
     <link rel="stylesheet" href="assets/css/linearicon.css">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
+
+    <!-- Themify icon css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/themify.css">
+
+    <!-- ratio css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/ratio.css">
 
     <!-- remixicon css -->
     <link rel="stylesheet" type="text/css" href="assets/css/remixicon.css">
 
-    <!-- fontawesome css  -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
-
-    <!-- Themify icon css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/themify.css">
-
-    <!--Drop zon css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/dropzone.css">
-
-    <!-- Feather icon css -->
+    <!-- Feather icon css-->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
-
-    <!-- Select2 css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
 
     <!-- Plugins css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/chartist.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/date-picker.css">
 
-    <!-- Bootstrap css -->
+    <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
 
-    <!-- Bootstrap-tag input css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap-tagsinput.css">
+    <!-- vector map css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vector-map.css">
+
+    <!-- swiper slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/swiper-bundle.min.css">
+
+    <!-- Slick Slider Css -->
+    <link rel="stylesheet" href="assets/css/vendors/slick.css">
 
     <!-- App css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+    <style>
+        /* Active link text and icon */
+        .sidebar-links li .sidebar-link.active span,
+        .sidebar-links li .sidebar-link:hover span {
+            color: #ff5cba !important;
+        }
+
+        .sidebar-links li .sidebar-link.active i,
+        .sidebar-links li .sidebar-link:hover i {
+            color: #ff5cba !important;
+        }
+
+        /* Active link background */
+        .sidebar-links li .sidebar-link.active {
+            background-color: rgba(255, 92, 186, 0.1);
+            border-radius: 6px;
+        }
+
+        .customizer-links .rtl-btn {
+            background: #ff5cba;
+            /* solid pink background */
+            border: none;
+            outline: none;
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            /* white text */
+            border-radius: 0 0 5px 5px;
+            padding: 6px 18px;
+        }
+
+        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li .sidebar-submenu li a.active {
+            color: #ff5cba !important;
+        }
+    .setting-main-box li .nav-link.active {
+    background: #ff5cba !important;
+    color: #fff !important;
+    border-color: transparent;
+}
+
+
+    </style>
 </head>
 
 <body>
-    <!-- tap on top start-->
+    <!-- tap on top start -->
     <div class="tap-top">
-        <span class="lnr lnr-chevron-up"></span>
+        <i class="ri-arrow-up-double-fill"></i>
     </div>
-    <!-- tap on tap end-->
+    <!-- tap on tap end -->
+
+    <!-- loader start -->
+    <div class="loader-wrapper">
+        <img src="./assets/images/loader.gif" alt="">
+    </div>
+    <!-- loader end -->
 
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
@@ -70,41 +123,35 @@
                 <div class="header-logo-wrapper p-0">
                     <div class="logo-wrapper">
                         <a href="index.html">
-                            <img class="img-fluid main-logo" src="assets/images/logo/1.png" alt="logo">
-                            <img class="img-fluid white-logo" src="assets/images/logo/1-white.png" alt="logo">
+                            <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
+                            <img class="img-fluid white-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
                     <div class="toggle-sidebar">
                         <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
                         <a href="index.html">
-                            <img src="assets/images/logo/1.png" class="img-fluid" alt="">
+                            <img class="img-fluid for-light" src="assets/images/logo/logo.png" alt="logo">
+                            <img class="img-fluid for-dark" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
-
-                <form class="form-inline search-full" action="javascript:void(0)" method="get">
-                    <div class="form-group w-100">
-                        <div class="Typeahead Typeahead--twitterUsers">
-                            <div class="u-posRelative">
-                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
-                                    placeholder="Search Fastkart .." name="q" title="" autofocus>
-                                <i class="close-search" data-feather="x"></i>
-                                <div class="spinner-border Typeahead-spinner" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                            </div>
-                            <div class="Typeahead-menu"></div>
-                        </div>
-                    </div>
-                </form>
-                <div class="nav-right col-6 pull-right right-header p-0">
+                <div class="welcome-title">
+                    <h5>
+                        Food that's you loved!
+                        <img src="./assets/images/header.gif" alt="">
+                    </h5>
+                    <span>
+                        Delight your taste with our most famous food !!
+                    </span>
+                </div>
+                <div class="nav-right col-xl-6 col-5 pull-right right-header p-0">
                     <ul class="nav-menus">
-                        <li>
+                        <li class="search-icon">
                             <span class="header-search">
                                 <i class="ri-search-line"></i>
                             </span>
                         </li>
-                        <li class="onhover-dropdown">
+                        <!-- <li class="onhover-dropdown">
                             <div class="notification-box">
                                 <i class="ri-notification-line"></i>
                                 <span class="badge rounded-pill badge-theme">4</span>
@@ -112,7 +159,7 @@
                             <ul class="notification-dropdown onhover-show-div">
                                 <li>
                                     <i class="ri-notification-line"></i>
-                                    <h6 class="f-18 mb-0">Notitications</h6>
+                                    <h4 class="mb-0">Notitications</h4>
                                 </li>
                                 <li>
                                     <p>
@@ -142,8 +189,65 @@
                                     <a class="btn btn-primary" href="javascript:void(0)">Check all notification</a>
                                 </li>
                             </ul>
-                        </li>
-
+                        </li> -->
+                        <!-- <li class="onhover-dropdown">
+                            <div class="messages-box">
+                                <i class="ri-message-3-line"></i>
+                            </div>
+                            <ul class="messages-dropdown onhover-show-div">
+                                <li>
+                                    <i class="ri-message-3-line"></i>
+                                    <h4 class="mb-0">Messages</h4>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/1.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/2.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/3.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/4.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor 
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="btn btn-primary" href="javascript:void(0)">Go to Inbox</a>
+                                </li>
+                            </ul>
+                        </li> -->
                         <li>
                             <div class="mode">
                                 <i class="ri-moon-line"></i>
@@ -170,12 +274,12 @@
                                         <span>Orders</span>
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="support-ticket.html">
                                         <i data-feather="phone"></i>
                                         <span>Spports Tickets</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="profile-setting.html">
                                         <i data-feather="settings"></i>
@@ -193,6 +297,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="input-box">
+                    <i class="ri-search-line"></i>
+                    <input class="search-box" type="search" placeholder="What are you looking for?">
+                    <i class="close-icon" data-feather="x"></i>
+                </div>
             </div>
         </div>
         <!-- Page Header Ends-->
@@ -201,24 +310,21 @@
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper">
-                <div id="sidebarEffect"></div>
                 <div>
                     <div class="logo-wrapper logo-wrapper-center">
                         <a href="index.html" data-bs-original-title="" title="">
-                            <img class="img-fluid for-white" src="assets/images/logo/full-white.png" alt="logo">
+                            <img class="img-fluid for-white" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                         <div class="back-btn">
                             <i class="fa fa-angle-left"></i>
                         </div>
                         <div class="toggle-sidebar">
-                            <i class="ri-apps-line status_toggle middle sidebar-toggle"></i>
+                            <i class="ri-apps-2-line status_toggle middle sidebar-toggle"></i>
                         </div>
                     </div>
                     <div class="logo-icon-wrapper">
                         <a href="index.html">
-                            <img class="img-fluid main-logo main-white" src="assets/images/logo/1-white.png" alt="logo">
-                            <img class="img-fluid main-logo main-dark" src="assets/images/logo/logo-white.png"
-                                alt="logo">
+                            <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
                     <nav class="sidebar-main">
@@ -254,38 +360,6 @@
                                 </li>
 
                                 <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-list-check-2"></i>
-                                        <span>Category</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="category.html">Category List</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="add-new-category.html">Add New Category</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-list-settings-line"></i>
-                                        <span>Attributes</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="attributes.html">Attributes</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="add-new-attributes.html">Add Attributes</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-user-3-line"></i>
                                         <span>Users</span>
@@ -294,33 +368,19 @@
                                         <li>
                                             <a href="all-users.html">All users</a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="add-new-user.html">Add new user</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </li>
 
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
-                                        <span>Roles</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="role.html">All roles</a>
-                                        </li>
-                                        <li>
-                                            <a href="create-role.html">Create Role</a>
-                                        </li>
-                                    </ul>
-                                </li>
 
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="media.html">
-                                        <i class="ri-price-tag-3-line"></i>
-                                        <span>Media</span>
+                                <!-- <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
+                                        <i class="ri-road-map-line"></i>
+                                        <span>Live Traking</span>
                                     </a>
-                                </li>
+                                </li> -->
 
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
@@ -342,22 +402,6 @@
 
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-focus-3-line"></i>
-                                        <span>Localization</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="translation.html">Translation</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="currency-rates.html">Currency Rates</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-price-tag-3-line"></i>
                                         <span>Coupons</span>
                                     </a>
@@ -373,25 +417,32 @@
                                 </li>
 
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="taxes.html">
-                                        <i class="ri-price-tag-3-line"></i>
-                                        <span>Tax</span>
+                                    <a class="sidebar-link sidebar-title link-nav" href="testimonial.html">
+                                        <i class="ri-chat-quote-line"></i> <!-- testimonial icon -->
+                                        <span>Testimonial</span>
                                     </a>
                                 </li>
 
                                 <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="help.html">
+                                        <i class="ri-question-line"></i> <!-- help / support icon -->
+                                        <span>Help</span>
+                                    </a>
+                                </li>
+
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-line"></i>
                                         <span>Product Review</span>
                                     </a>
-                                </li>
+                                </li> -->
 
-                                <li class="sidebar-list">
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="support-ticket.html">
                                         <i class="ri-phone-line"></i>
                                         <span>Support Ticket</span>
                                     </a>
-                                </li>
+                                </li> -->
 
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
@@ -405,7 +456,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="sidebar-list">
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="reports.html">
                                         <i class="ri-file-chart-line"></i>
                                         <span>Reports</span>
@@ -417,7 +468,7 @@
                                         <i class="ri-list-check"></i>
                                         <span>List Page</span>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
 
@@ -434,216 +485,379 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <!-- Details Start -->
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="title-header option-title">
-                                                <h5>Profile Setting</h5>
-                                            </div>
-                                            <form class="theme-form theme-form-2 mega-form">
-                                                <div class="row">
-                                                    <div class="mb-4 row align-items-center">
-                                                        <label class="form-label-title col-sm-2 mb-0">First Name</label>
-                                                        <div class="col-sm-10">
-                                                            <input class="form-control" type="text"
-                                                                placeholder="Enter Your First Name">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mb-4 row align-items-center">
-                                                        <label class="form-label-title col-sm-2 mb-0">Last Name</label>
-                                                        <div class="col-sm-10">
-                                                            <input class="form-control" type="text"
-                                                                placeholder="Enter Your Last Name">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mb-4 row align-items-center">
-                                                        <label class="form-label-title col-sm-2 mb-0">Your Phone
-                                                            Number</label>
-                                                        <div class="col-sm-10">
-                                                            <input class="form-control" type="number"
-                                                                placeholder="Enter Your Number">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mb-4 row align-items-center">
-                                                        <label class="form-label-title col-sm-2 mb-0">Enter Email
-                                                            Address</label>
-                                                        <div class="col-sm-10">
-                                                            <input class="form-control" type="email"
-                                                                placeholder="Enter Your Email Address">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mb-4 row align-items-center">
-                                                        <label
-                                                            class="col-sm-2 col-form-label form-label-title">Photo</label>
-                                                        <div class="col-sm-10">
-                                                            <input class="form-control form-choose" type="file"
-                                                                id="formFileMultiple" multiple>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mb-4 row align-items-center">
-                                                        <label class="form-label-title col-sm-2 mb-0">Password</label>
-                                                        <div class="col-sm-10">
-                                                            <input class="form-control" type="password"
-                                                                placeholder="Enter Your Password">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mb-4 row align-items-center">
-                                                        <label class="form-label-title col-sm-2 mb-0">Confirm
-                                                            Password</label>
-                                                        <div class="col-sm-10">
-                                                            <input class="form-control" type="password"
-                                                                placeholder="Enter Your Confirm Passowrd">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <!-- Details End -->
-
-                                    <!-- Address Start -->
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="card-header-2 mb-3">
-                                                <h5>Address</h5>
-                                            </div>
-
-                                            <div class="save-details-box">
-                                                <div class="row g-4">
-                                                    <div class="col-xl-4 col-md-6">
-                                                        <div class="save-details">
-                                                            <div class="save-name">
-                                                                <h5>Mark Jugal</h5>
-                                                            </div>
-
-                                                            <div class="save-position">
-                                                                <h6>Home</h6>
-                                                            </div>
-
-                                                            <div class="save-address">
-                                                                <p>549 Sulphur Springs Road</p>
-                                                                <p>Downers Grove, IL</p>
-                                                                <p>60515</p>
-                                                            </div>
-
-                                                            <div class="mobile">
-                                                                <p class="mobile">Mobile No. +1-123-456-7890</p>
-                                                            </div>
-
-                                                            <div class="button">
-                                                                <a href="javascript:void(0)" class="btn btn-sm">Edit</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="btn btn-sm">Remove</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-xl-4 col-md-6">
-                                                        <div class="save-details">
-                                                            <div class="save-name">
-                                                                <h5>Method Zaki</h5>
-                                                            </div>
-
-                                                            <div class="save-position">
-                                                                <h6>Office</h6>
-                                                            </div>
-
-                                                            <div class="save-address">
-                                                                <p>549 Sulphur Springs Road</p>
-                                                                <p>Downers Grove, IL</p>
-                                                                <p>60515</p>
-                                                            </div>
-
-                                                            <div class="mobile">
-                                                                <p class="mobile">Mobile No. +1-123-456-7890</p>
-                                                            </div>
-
-                                                            <div class="button">
-                                                                <a href="javascript:void(0)" class="btn btn-sm">Edit</a>
-                                                                <a href="javascript:void(0)" class="btn btn-sm">
-                                                                    Remove</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-xl-4 col-md-6">
-                                                        <div class="save-details">
-                                                            <div class="save-name">
-                                                                <h5>Mark Jugal</h5>
-                                                            </div>
-
-                                                            <div class="save-position">
-                                                                <h6>Home</h6>
-                                                            </div>
-
-                                                            <div class="save-address">
-                                                                <p>549 Sulphur Springs Road</p>
-                                                                <p>Downers Grove, IL</p>
-                                                                <p>60515</p>
-                                                            </div>
-
-                                                            <div class="mobile">
-                                                                <p class="mobile">Mobile No. +1-123-456-7890</p>
-                                                            </div>
-
-                                                            <div class="button">
-                                                                <a href="javascript:void(0)" class="btn btn-sm">Edit</a>
-                                                                <a href="javascript:void(0)"
-                                                                    class="btn btn-sm">Remove</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Address End -->
+                            <div class="card">
+                                <div class="card-header card-no-border">
+                                    <h5>Setting</h5>
                                 </div>
-                            </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-xxl-3 col-xl-4">
+                                            <ul class="nav setting-main-box sticky theme-scrollbar" id="v-pills-tab"
+                                                role="tablist" aria-orientation="vertical">
+                                                <li>
+                                                    <button class="nav-link active" id="general-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#general" role="tab"
+                                                        aria-controls="general" aria-selected="true">
+                                                        <i class="ri-settings-line"></i> General</button>
+                                                </li>
+                                                <!-- <li>
+                                                    <button class="nav-link" id="activation-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#activation" role="tab"
+                                                        aria-controls="activation" aria-selected="false">
+                                                        <i class="ri-radio-button-line"></i>Activation </button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="wallet-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#wallet" role="tab" aria-controls="wallet"
+                                                        aria-selected="false">
+                                                        <i class="ri-wallet-line"></i> Wallet Points</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="email-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#email" role="tab" aria-controls="email"
+                                                        aria-selected="false">
+                                                        <i class="ri-mail-open-line"></i>Email Configuration</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="vendor-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#vendor" role="tab" aria-controls="vendor"
+                                                        aria-selected="false">
+                                                        <i class="ri-user-line"></i>Vendor Commissions</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="refund-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#refund" role="tab" aria-controls="refund"
+                                                        aria-selected="false">
+                                                        <i class="ri-exchange-dollar-line"></i>Refund</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="newsletter-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#newsletter" role="tab"
+                                                        aria-controls="newsletter" aria-selected="false">
+                                                        <i class="ri-mail-unread-line"></i>Newsletter</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="delivery-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#delivery" role="tab" aria-controls="delivery"
+                                                        aria-selected="false">
+                                                        <i class="ri-truck-line"></i> Delivery</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="payment-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#payment" role="tab" aria-controls="payment"
+                                                        aria-selected="false">
+                                                        <i class="ri-bank-card-line"></i>Payment Method</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="analytics-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#analytics" role="tab" aria-controls="analytics"
+                                                        aria-selected="false">
+                                                        <i class="ri-line-chart-line"></i>Analytics</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="reCaptcha-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#reCaptcha" role="tab" aria-controls="reCaptcha"
+                                                        aria-selected="false">
+                                                        <i class="ri-google-fill"></i>ReCaptcha</button>
+                                                </li>
+                                                <li>
+                                                    <button class="nav-link" id="maintenance-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#maintenance" role="tab"
+                                                        aria-controls="maintenance" aria-selected="false">
+                                                        <i class="ri-alert-line"></i>Maintenance</button>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                        <div class="col-xxl-9 col-xl-8">
+    <div class="setting-box">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                <div class="general-details">
+                    <div class="row gy-md-4 gy-2 align-items-center">
+
+                        <!-- Name -->
+                        <div class="col-xxl-3 col-xl-4 col-md-3">
+                            <h5>Full Name :</h5>
                         </div>
+                        <div class="col-xxl-9 col-xl-8 col-md-9">
+                            <input type="text" class="form-control" name="name" value="John Doe" placeholder="Enter your full name">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-xxl-3 col-xl-4 col-md-3">
+                            <h5>Email :</h5>
+                        </div>
+                        <div class="col-xxl-9 col-xl-8 col-md-9">
+                            <input type="email" class="form-control" name="email" value="john@example.com" placeholder="Enter your email address">
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="col-xxl-3 col-xl-4 col-md-3">
+                            <h5>Phone Number :</h5>
+                        </div>
+                        <div class="col-xxl-9 col-xl-8 col-md-9">
+                            <input type="text" class="form-control" name="phone" value="+91 9876543210" placeholder="Enter your phone number">
+                        </div>
+
+                        <!-- Address -->
+                        <div class="col-xxl-3 col-xl-4 col-md-3">
+                            <h5>Address :</h5>
+                        </div>
+                        <div class="col-xxl-9 col-xl-8 col-md-9">
+                            <textarea class="form-control" name="address" rows="3" placeholder="Enter your address">123 Street, City, Country</textarea>
+                        </div>
+
+                        <!-- Profile Image -->
+                        <div class="col-xxl-3 col-xl-4 col-md-3">
+                            <h5>Profile Picture :</h5>
+                        </div>
+                        <div class="col-xxl-9 col-xl-8 col-md-9">
+                            <div class="image-select-list">
+                                <p data-bs-toggle="modal" data-bs-target="#select-img" title="Upload Image" tabindex="0">
+                                    <i class="ri-add-line"></i> Upload Profile Image
+                                </p>
+                            </div>
+                            <span>*Recommended size: 150x150px</span>
+                        </div>
+
+                        <!-- Submit Button -->
+                       <div class="col-12 text-end mt-4">
+    <button type="submit" class="btn btn-primary px-4">Save Changes</button>
+</div>
+
+<style>
+    .btn-primary {
+    background: linear-gradient(to right, #f2a93e, #f07054, #ff5cba);
+    border: none;
+    color: #fff;
+}
+
+</style>
                     </div>
                 </div>
             </div>
-            <!-- Settings Section End -->
         </div>
-        <!-- Page Body End-->
+    </div>
+</div>
 
-        <!-- footer start-->
-        <div class="container-fluid">
-            <footer class="footer">
-                <div class="row">
-                    <div class="col-md-12 footer-copyright text-center">
-                        <p class="mb-0">Copyright 2022 © Fastkart theme by pixelstrap</p>
+                                        <div class="tab-pane fade" id="reCaptcha" role="tabpanel"
+                                            aria-labelledby="reCaptcha-tab">
+                                            <div class="icon-state mb-3 align-items-center gap-5">
+                                                <label class="switch-xsm mb-0">
+                                                    <input type="checkbox" id="flexSwitchCheckDefault-21" checked><span
+                                                        class="slider round"></span>
+                                                </label>
+                                                <label class="form-check-label"
+                                                    for="flexSwitchCheckDefault-21">Status</label>
+                                            </div>
+                                            <div class="general-details">
+                                                <div class="general-box">
+                                                    <div class="row gy-md-4 gy-2 align-items-center">
+                                                        <div class="col-xxl-3 col-xl-4 col-md-3">
+                                                            <h5>Secret :</h5>
+                                                        </div>
+                                                        <div class="col-xxl-9 col-xl-8 col-md-9">
+                                                            <input type="text" name="text"
+                                                                placeholder="Enter Secret Key">
+                                                        </div>
+                                                        <div class="col-xxl-3 col-xl-4 col-md-3">
+                                                            <h5>Site Key :</h5>
+                                                        </div>
+                                                        <div class="col-xxl-9 col-xl-8 col-md-9">
+                                                            <input type="text" name="text" placeholder="Enter Site Key">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="maintenance" role="tabpanel"
+                                            aria-labelledby="maintenance-tab">
+                                            <div class="icon-state align-items-center gap-5 mb-4">
+                                                <label class="switch-xsm mb-0">
+                                                    <input type="checkbox" id="flexSwitchCheckDefault-17" checked><span
+                                                        class="slider round"></span>
+                                                </label>
+                                                <label class="form-check-label"
+                                                    for="flexSwitchCheckDefault-17">Maintenance Mode</label>
+                                            </div>
+                                            <div class="general-details">
+                                                <div class="row gy-md-4 gy-2 align-items-center">
+                                                    <div class="col-xxl-3 col-xl-4 col-md-3">
+                                                        <h5>Title :</h5>
+                                                    </div>
+                                                    <div class="col-xxl-9 col-xl-8 col-md-9">
+                                                        <input type="text" name="text" value="We'll be back Soon..">
+                                                    </div>
+                                                    <div class="col-xxl-3 col-xl-4 col-md-3">
+                                                        <h5>Description :</h5>
+                                                    </div>
+                                                    <div class="col-xxl-9 col-xl-8 col-md-9">
+                                                        <input type="text" name="text"
+                                                            value="We are busy to updating our store for you.">
+                                                    </div>
+                                                    <div class="col-xxl-3 col-xl-4 col-md-3">
+                                                        <h5>
+                                                            Light Logo :
+                                                        </h5>
+                                                    </div>
+                                                    <div class="col-xxl-9 col-xl-8 col-md-9">
+                                                        <div class="image-select-list">
+                                                            <p data-bs-toggle="modal" data-bs-target="#select-img"
+                                                                title="Quick View" tabindex="0">
+                                                                <i class="ri-add-line"></i>
+                                                                Upload Light Logo
+                                                            </p>
+                                                        </div>
+                                                        <span>*Upload image size 180x50px
+                                                            recommended</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- <button class="btn save-button" type="submit">Save</button> -->
                     </div>
                 </div>
-            </footer>
+            </div>
         </div>
-        <!-- footer End-->
+    </div>
+    </div>
+    <!-- Settings Section End -->
+    </div>
+    <!-- Page Body End-->
+
+    <!-- footer start-->
+    <div class="container-fluid">
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-12 footer-copyright text-center">
+                    <p class="mb-0">Copyright 2024 ©Zomo template by pixelstrap</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- footer End-->
     </div>
     <!-- page-wrapper End-->
 
     <!-- Modal Start -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal theme-modal fade" id="select-img" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-body">
-                    <h5 class="modal-title" id="staticBackdropLabel">Logging Out</h5>
-                    <p>Are you sure you want to log out?</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                    <div class="button-box">
-                        <button type="button" class="btn btn--no" data-bs-dismiss="modal">No</button>
-                        <button type="button" class="btn  btn--yes btn-primary">Yes</button>
+                <div class="modal-header">
+                    <h5>Insert Media</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="variant-box">
+                        <div class="variant-images">
+                            <input class="btn-check" id="option5" type="radio" name="options-base" checked="">
+                            <label class="btn" for="option5"><img class="img-fluid" src="./assets/images/modal/logo.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option6" type="radio" name="options-base">
+                            <label class="btn" for="option6"><img class="img-fluid" src="./assets/images/modal/p-18.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option7" type="radio" name="options-base">
+                            <label class="btn" for="option7"><img class="img-fluid"
+                                    src="./assets/images/modal/person2.png" alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option8" type="radio" name="options-base">
+                            <label class="btn" for="option8"><img class="img-fluid" src="./assets/images/modal/p-15.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option9" type="radio" name="options-base">
+                            <label class="btn" for="option9"><img class="img-fluid" src="./assets/images/modal/p-17.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option10" type="radio" name="options-base">
+                            <label class="btn" for="option10"><img class="img-fluid"
+                                    src="./assets/images/modal/person3.png" alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option11" type="radio" name="options-base">
+                            <label class="btn" for="option11"><img class="img-fluid" src="./assets/images/modal/p-2.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option12" type="radio" name="options-base">
+                            <label class="btn" for="option12"><img class="img-fluid" src="./assets/images/modal/p-6.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option13" type="radio" name="options-base">
+                            <label class="btn" for="option13"><img class="img-fluid" src="./assets/images/modal/1.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option14" type="radio" name="options-base">
+                            <label class="btn" for="option14"><img class="img-fluid" src="./assets/images/modal/p-1.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option15" type="radio" name="options-base">
+                            <label class="btn" for="option15"><img class="img-fluid" src="./assets/images/modal/p-2.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option16" type="radio" name="options-base">
+                            <label class="btn" for="option16"><img class="img-fluid"
+                                    src="./assets/images/modal/1-white.png" alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option17" type="radio" name="options-base">
+                            <label class="btn" for="option17"><img class="img-fluid" src="./assets/images/modal/p-5.png"
+                                    alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option18" type="radio" name="options-base">
+                            <label class="btn" for="option18"><img class="img-fluid"
+                                    src="./assets/images/modal/p-17.png" alt=""></label>
+                        </div>
+                        <div class="variant-images">
+                            <input class="btn-check" id="option19" type="radio" name="options-base">
+                            <label class="btn" for="option19"><img class="img-fluid" src="./assets/images/modal/p-3.png"
+                                    alt=""></label>
+                        </div>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cancel" type="button" data-bs-dismiss="modal"
+                        aria-label="Close">Cancel</button>
+                    <button class="btn btn-submit" type="submit" data-bs-dismiss="modal" aria-label="Close">Upload
+                        Image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal theme-modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Logging Out</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">Are you sure you want to log out?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cancel" type="button" data-bs-dismiss="modal" aria-label="Close">No</button>
+                    <button class="btn btn-submit" type="submit" data-bs-dismiss="modal" aria-label="Close"><a
+                            href="login.html">Yes</a></button>
                 </div>
             </div>
         </div>
@@ -668,6 +882,14 @@
     <script src="assets/js/config.js"></script>
     <!-- Plugins JS start-->
 
+
+    <!-- Apexchar js -->
+    <script src="assets/js/chart/apex-chart/apex-chart1.js"></script>
+    <script src="assets/js/chart/apex-chart/moment.min.js"></script>
+    <script src="assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="assets/js/chart/apex-chart/stock-prices.js"></script>
+    <script src="assets/js/chart/apex-chart/setting-page.js"></script>
+
     <!-- bootstrap tag-input JS start-->
     <script src="assets/js/bootstrap-tagsinput.min.js"></script>
     <script src="assets/js/sidebar-menu.js"></script>
@@ -679,10 +901,6 @@
     <!--Dropzon start-->
     <script src="assets/js/dropzone/dropzone.js"></script>
     <script src="assets/js/dropzone/dropzone-script.js"></script>
-
-    <!--Dropzon start-->
-    <script src="assets/js/notify/bootstrap-notify.min.js"></script>
-    <script src="assets/js/notify/index.js"></script>
     <!-- Plugins JS Ends-->
 
     <!-- Theme js-->

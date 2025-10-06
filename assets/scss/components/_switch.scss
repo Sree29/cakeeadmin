@@ -50,8 +50,8 @@
 .icon-state {
 	.switch-state {
 		&:after {
-			@include pos($pos: absolute, $content: "\efb8");
-			font-family: $font-ICO;
+			@include pos($pos: absolute, $content: "\eb99");
+			font-family: "remixicon";
 			left: 10px;
 			top: 10px;
 			color: $dark-color;
@@ -63,7 +63,7 @@
 	input {
 		&:checked+.switch-state {
 			&:after {
-				content: "\efad";
+				content: "\eb7b";
 				left: 36px;
 				opacity: 1;
 				transition: .4s;
@@ -163,7 +163,7 @@
 .switch-outline {
 	.switch-state {
 		background-color: $white;
-		border: 1px solid var(--theme-color);
+		border: 1px dashed var(--theme-color);
 		transition: .4s;
 
 		&:before {
@@ -181,7 +181,7 @@
 
 			&:checked+.switch-state {
 				background-color: $transparent-color;
-				border: 1px solid var(--theme-color);
+				border: 1px dashed var(--theme-color);
 
 				&:before {
 					background-color: var(--theme-color);
@@ -199,7 +199,7 @@
 
 .switch-outline {
 	.switch-state.bg-primary {
-		border: 1px solid var(--theme-color);
+		border: 1px dashed var(--theme-color);
 		background-color: $transparent-color !important;
 	}
 
@@ -207,7 +207,7 @@
 		input {
 			&:checked+.switch-state.bg-primary {
 				background-color: $transparent-color !important;
-				border: 1px solid var(--theme-color);
+				border: 1px dashed var(--theme-color);
 
 				&:before {
 					background-color: var(--theme-color);
@@ -217,7 +217,7 @@
 	}
 
 	.switch-state.bg-dark {
-		border: 1px solid $dark-color;
+		border: 1px dashed $dark-color;
 		background-color: $transparent-color !important;
 	}
 
@@ -225,7 +225,7 @@
 		input {
 			&:checked+.switch-state.bg-dark {
 				background-color: $transparent-color !important;
-				border: 1px solid $dark-color;
+				border: 1px dashed $dark-color;
 
 				&:before {
 					background-color: $dark-color;
@@ -235,7 +235,7 @@
 	}
 
 	.switch-state.bg-warning {
-		border: 1px solid $warning-color;
+		border: 1px dashed $warning-color;
 		background-color: $transparent-color !important;
 	}
 
@@ -243,7 +243,7 @@
 		input {
 			&:checked+.switch-state.bg-warning {
 				background-color: $transparent-color !important;
-				border: 1px solid $warning-color;
+				border: 1px dashed $warning-color;
 
 				&:before {
 					background-color: $warning-color;
@@ -253,7 +253,7 @@
 	}
 
 	.switch-state.bg-success {
-		border: 1px solid $success-color;
+		border: 1px dashed $success-color;
 		background-color: $transparent-color !important;
 	}
 
@@ -261,7 +261,7 @@
 		input {
 			&:checked+.switch-state.bg-success {
 				background-color: $transparent-color !important;
-				border: 1px solid $success-color;
+				border: 1px dashed $success-color;
 
 				&:before {
 					background-color: $success-color;
@@ -271,7 +271,7 @@
 	}
 
 	.switch-state.bg-info {
-		border: 1px solid $info-color;
+		border: 1px dashed $info-color;
 		background-color: $transparent-color !important;
 	}
 
@@ -279,7 +279,7 @@
 		input {
 			&:checked+.switch-state.bg-info {
 				background-color: $transparent-color !important;
-				border: 1px solid $info-color;
+				border: 1px dashed $info-color;
 
 				&:before {
 					background-color: $info-color;
@@ -289,7 +289,7 @@
 	}
 
 	.switch-state.bg-danger {
-		border: 1px solid $danger-color;
+		border: 1px dashed $danger-color;
 		background-color: $transparent-color !important;
 	}
 
@@ -297,7 +297,7 @@
 		input {
 			&:checked+.switch-state.bg-danger {
 				background-color: $transparent-color !important;
-				border: 1px solid $danger-color;
+				border: 1px dashed $danger-color;
 
 				&:before {
 					background-color: $danger-color;
@@ -307,7 +307,7 @@
 	}
 
 	.switch-state.bg-primary {
-		border: 1px solid var(--theme-color);
+		border: 1px dashed var(--theme-color);
 		background-color: $transparent-color !important;
 	}
 
@@ -315,7 +315,7 @@
 		input {
 			&:checked+.switch-state.bg-primary {
 				background-color: $transparent-color !important;
-				border: 1px solid var(--theme-color);
+				border: 1px dashed var(--theme-color);
 
 				&:before {
 					background-color: var(--theme-color);
@@ -325,7 +325,7 @@
 	}
 
 	.switch-state.bg-secondary {
-		border: 1px solid var(--theme-secondary);
+		border: 1px dashed var(--theme-secondary);
 		background-color: $transparent-color !important;
 	}
 
@@ -333,7 +333,7 @@
 		input {
 			&:checked+.switch-state.bg-secondary {
 				background-color: $transparent-color !important;
-				border: 1px solid var(--theme-secondary);
+				border: 1px dashed var(--theme-secondary);
 
 				&:before {
 					background-color: var(--theme-secondary);

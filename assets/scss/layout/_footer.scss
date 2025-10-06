@@ -10,6 +10,7 @@
     right: 0;
     width: calc(100vw - 280px);
     transition: 0.5s;
+    z-index: 1;
 
     @include mq-max(lg) {
         width: 100%;
@@ -28,6 +29,21 @@
 .footer-fix {
     width: calc(100% - 280px);
     position: fixed;
+}
+.page-wrapper {
+    .page-body-wrapper{
+        .sidebar-wrapper{
+            &.close_icon {
+                ~.page-body{
+                    div{
+                        .footer{
+                            width: calc(100vw - 90px);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /**=====================

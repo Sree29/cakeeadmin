@@ -124,7 +124,7 @@
   color: white;
   padding-bottom: .5em;
   margin-bottom: .5em;
-  border-bottom: .1em solid #4A5B65;
+  border-bottom: .1em dashed #4A5B65;
 }
 
 .H_rdo_title {
@@ -217,7 +217,7 @@
   content: " ";
   width: 0px;
   height: 0px;
-  border-style: solid;
+  border-style: dashed;
   position: absolute;
 }
 
@@ -451,8 +451,8 @@
 .H_context_menu_item_separator {
   height: 0;
   margin: 8px 10px;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #666;
+  border-top: 1px dashed #333;
+  border-bottom: 1px dashed #666;
   line-height: 0;
   font-size: 0;
 }
@@ -526,7 +526,7 @@
 }
 
 .H_tib p.H_tib_desc {
-  border-top: 1px solid #666;
+  border-top: 1px dashed #666;
   padding-top: .5em;
 }
 
@@ -618,7 +618,7 @@ svg.H_icon {
 }
 
 .H_overview .H_overview_map {
-  border: 1px solid black;
+  border: 1px dashed black;
   background-color: rgba(256, 256, 256, 0.6);
   box-sizing: border-box;
 }

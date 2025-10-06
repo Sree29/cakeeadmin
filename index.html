@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Fastkart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+        content="Zomo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
     <meta name="keywords"
-        content="admin template, Fastkart admin template, dashboard template, flat admin template, responsive admin template, web app">
+        content="admin template,Zomo admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <title>Fastkart - Dashboard</title>
+    <title>Cakee - Dashboard</title>
 
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +46,9 @@
     <!-- vector map css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vector-map.css">
 
+    <!-- swiper slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/swiper-bundle.min.css">
+
     <!-- Slick Slider Css -->
     <link rel="stylesheet" href="assets/css/vendors/slick.css">
 
@@ -56,9 +59,15 @@
 <body>
     <!-- tap on top start -->
     <div class="tap-top">
-        <span class="lnr lnr-chevron-up"></span>
+        <i class="ri-arrow-up-double-fill"></i>
     </div>
     <!-- tap on tap end -->
+
+    <!-- loader start -->
+    <div class="loader-wrapper"> 
+        <img src="./assets/images/loader.gif" alt="">
+    </div>
+    <!-- loader end -->
 
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
@@ -68,41 +77,35 @@
                 <div class="header-logo-wrapper p-0">
                     <div class="logo-wrapper">
                         <a href="index.html">
-                            <img class="img-fluid main-logo" src="assets/images/logo/1.png" alt="logo">
-                            <img class="img-fluid white-logo" src="assets/images/logo/1-white.png" alt="logo">
+                            <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
+                            <img class="img-fluid white-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
-                    <div class="toggle-sidebar">
+                     <div class="toggle-sidebar">
                         <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
                         <a href="index.html">
-                            <img src="assets/images/logo/1.png" class="img-fluid" alt="">
+                            <img class="img-fluid for-light" src="assets/images/logo/logo.png" alt="logo">
+                            <img class="img-fluid for-dark" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
-
-                <form class="form-inline search-full" action="javascript:void(0)" method="get">
-                    <div class="form-group w-100">
-                        <div class="Typeahead Typeahead--twitterUsers">
-                            <div class="u-posRelative">
-                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
-                                    placeholder="Search Fastkart .." name="q" title="" autofocus>
-                                <i class="close-search" data-feather="x"></i>
-                                <div class="spinner-border Typeahead-spinner" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                            </div>
-                            <div class="Typeahead-menu"></div>
-                        </div>
-                    </div>
-                </form>
-                <div class="nav-right col-6 pull-right right-header p-0">
+                <div class="welcome-title">
+                    <h5>
+                        Food that's you loved!
+                        <img src="./assets/images/header.gif" alt="">
+                    </h5>
+                    <span>
+                        Delight your taste with our most famous food !!
+                    </span>
+                </div>
+                <div class="nav-right col-xl-6 col-5 pull-right right-header p-0">
                     <ul class="nav-menus">
-                        <li>
+                        <li class="search-icon">
                             <span class="header-search">
                                 <i class="ri-search-line"></i>
                             </span>
                         </li>
-                        <li class="onhover-dropdown">
+                        <!-- <li class="onhover-dropdown">
                             <div class="notification-box">
                                 <i class="ri-notification-line"></i>
                                 <span class="badge rounded-pill badge-theme">4</span>
@@ -110,7 +113,7 @@
                             <ul class="notification-dropdown onhover-show-div">
                                 <li>
                                     <i class="ri-notification-line"></i>
-                                    <h6 class="f-18 mb-0">Notitications</h6>
+                                    <h4 class="mb-0">Notitications</h4>
                                 </li>
                                 <li>
                                     <p>
@@ -140,8 +143,65 @@
                                     <a class="btn btn-primary" href="javascript:void(0)">Check all notification</a>
                                 </li>
                             </ul>
-                        </li>
-
+                        </li> -->
+                        <!-- <li class="onhover-dropdown">
+                            <div class="messages-box">
+                                <i class="ri-message-3-line"></i>
+                            </div>
+                            <ul class="messages-dropdown onhover-show-div">
+                                <li>
+                                    <i class="ri-message-3-line"></i>
+                                    <h4 class="mb-0">Messages</h4>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/1.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/2.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/3.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/4.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor 
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="btn btn-primary" href="javascript:void(0)">Go to Inbox</a>
+                                </li>
+                            </ul>
+                        </li> -->
                         <li>
                             <div class="mode">
                                 <i class="ri-moon-line"></i>
@@ -168,12 +228,12 @@
                                         <span>Orders</span>
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="support-ticket.html">
                                         <i data-feather="phone"></i>
                                         <span>Spports Tickets</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="profile-setting.html">
                                         <i data-feather="settings"></i>
@@ -191,32 +251,34 @@
                         </li>
                     </ul>
                 </div>
+                <div class="input-box">
+                    <i class="ri-search-line"></i>
+                    <input class="search-box" type="search" placeholder="What are you looking for?">
+                    <i class="close-icon" data-feather="x"></i>
+                </div>
             </div>
-        </div>
+        </div> 
         <!-- Page Header Ends-->
 
         <!-- Page Body Start-->
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper">
-                <div id="sidebarEffect"></div>
                 <div>
                     <div class="logo-wrapper logo-wrapper-center">
                         <a href="index.html" data-bs-original-title="" title="">
-                            <img class="img-fluid for-white" src="assets/images/logo/full-white.png" alt="logo">
+                            <img class="img-fluid for-white" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                         <div class="back-btn">
                             <i class="fa fa-angle-left"></i>
                         </div>
                         <div class="toggle-sidebar">
-                            <i class="ri-apps-line status_toggle middle sidebar-toggle"></i>
+                            <i class="ri-apps-2-line status_toggle middle sidebar-toggle"></i>
                         </div>
                     </div>
                     <div class="logo-icon-wrapper">
                         <a href="index.html">
-                            <img class="img-fluid main-logo main-white" src="assets/images/logo/1-white.png" alt="logo">
-                            <img class="img-fluid main-logo main-dark" src="assets/images/logo/logo-white.png"
-                                alt="logo">
+                            <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
                     <nav class="sidebar-main">
@@ -229,7 +291,7 @@
                                 <li class="back-btn"></li>
 
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="index.html">
+                                    <a class="sidebar-link sidebar-title link-nav  active" href="index.html">
                                         <i class="ri-home-line"></i>
                                         <span>Dashboard</span>
                                     </a>
@@ -250,39 +312,7 @@
                                         </li>
                                     </ul>
                                 </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-list-check-2"></i>
-                                        <span>Category</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="category.html">Category List</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="add-new-category.html">Add New Category</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-list-settings-line"></i>
-                                        <span>Attributes</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="attributes.html">Attributes</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="add-new-attributes.html">Add Attributes</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
+                                
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-user-3-line"></i>
@@ -292,33 +322,19 @@
                                         <li>
                                             <a href="all-users.html">All users</a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="add-new-user.html">Add new user</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </li>
 
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
-                                        <span>Roles</span>
+                               
+                                <!-- <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
+                                        <i class="ri-road-map-line"></i>
+                                        <span>Live Traking</span>
                                     </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="role.html">All roles</a>
-                                        </li>
-                                        <li>
-                                            <a href="create-role.html">Create Role</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="media.html">
-                                        <i class="ri-price-tag-3-line"></i>
-                                        <span>Media</span>
-                                    </a>
-                                </li>
+                                </li> -->
 
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
@@ -340,22 +356,6 @@
 
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-focus-3-line"></i>
-                                        <span>Localization</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="translation.html">Translation</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="currency-rates.html">Currency Rates</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-price-tag-3-line"></i>
                                         <span>Coupons</span>
                                     </a>
@@ -371,25 +371,32 @@
                                 </li>
 
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="taxes.html">
-                                        <i class="ri-price-tag-3-line"></i>
-                                        <span>Tax</span>
-                                    </a>
-                                </li>
+    <a class="sidebar-link sidebar-title link-nav" href="testimonial.html">
+        <i class="ri-chat-quote-line"></i> <!-- testimonial icon -->
+        <span>Testimonial</span>
+    </a>
+</li>
 
-                                <li class="sidebar-list">
+<li class="sidebar-list">
+    <a class="sidebar-link sidebar-title link-nav" href="help.html">
+        <i class="ri-question-line"></i> <!-- help / support icon -->
+        <span>Help</span>
+    </a>
+</li>
+
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-line"></i>
                                         <span>Product Review</span>
                                     </a>
-                                </li>
+                                </li> -->
 
-                                <li class="sidebar-list">
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="support-ticket.html">
                                         <i class="ri-phone-line"></i>
                                         <span>Support Ticket</span>
                                     </a>
-                                </li>
+                                </li> -->
 
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
@@ -403,7 +410,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="sidebar-list">
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="reports.html">
                                         <i class="ri-file-chart-line"></i>
                                         <span>Reports</span>
@@ -415,7 +422,7 @@
                                         <i class="ri-list-check"></i>
                                         <span>List Page</span>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
 
@@ -425,836 +432,735 @@
                     </nav>
                 </div>
             </div>
+           <style>
+/* Active link text and icon */
+.sidebar-links li .sidebar-link.active span,
+.sidebar-links li .sidebar-link:hover span {
+    color: #ff5cba !important;
+}
+
+.sidebar-links li .sidebar-link.active i,
+.sidebar-links li .sidebar-link:hover i {
+    color: #ff5cba !important;
+}
+
+/* Active link background */
+.sidebar-links li .sidebar-link.active {
+    background-color: rgba(255, 92, 186, 0.1);
+    border-radius: 6px;
+}
+.customizer-links .rtl-btn {
+    background: #ff5cba;          /* solid pink background */
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;                  /* white text */
+    border-radius: 0 0 5px 5px;
+    padding: 6px 18px;
+}
+.page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a.active {
+    color: #ff5cba !important;
+}
+
+           </style>
             <!-- Page Sidebar Ends-->
 
             <!-- index body start -->
             <div class="page-body">
                 <div class="container-fluid">
                     <div class="row">
-                        <!-- chart caard section start -->
-                        <div class="col-sm-6 col-xxl-3 col-lg-6">
-                            <div class="main-tiles border-5 border-0  card-hover card o-hidden">
-                                <div class="custome-1-bg b-r-4 card-body">
-                                    <div class="media align-items-center static-top-widget">
-                                        <div class="media-body p-0">
-                                            <span class="m-0">Total Revenue</span>
-                                            <h4 class="mb-0 counter">$6659
-                                                <span class="badge badge-light-primary grow">
-                                                    <i data-feather="trending-up"></i>8.5%</span>
-                                            </h4>
-                                        </div>
-                                        <div class="align-self-center text-center">
-                                            <i class="ri-database-2-line"></i>
+                        <div class="col-xxl-3 col-xl-4 col-md-4 col-12">
+                            <div class="card p-0">
+                                <div class="cadr-body">
+                                    <div class="welcome-card">
+                                        <div>
+                                            <h5> Exclusive weekend discounts</h5>
+                                            <h3>Welcome To Zomo</h3>
+                                            <a href="category.html" class="btn btn-primary w-50 mx-auto">Check Menu</a>
+                                            <img class="offer" src="./assets/images/dashboard/offer.gif" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-sm-6 col-xxl-3 col-lg-6">
-                            <div class="main-tiles border-5 card-hover border-0 card o-hidden">
-                                <div class="custome-2-bg b-r-4 card-body">
-                                    <div class="media static-top-widget">
-                                        <div class="media-body p-0">
-                                            <span class="m-0">Total Orders</span>
-                                            <h4 class="mb-0 counter">9856
-                                                <span class="badge badge-light-danger grow">
-                                                    <i data-feather="trending-down"></i>8.5%</span>
-                                            </h4>
+                        <div class="col-xxl-9 col-xl-8 col-md-8 col-12">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Menu category</h5>
                                         </div>
-                                        <div class="align-self-center text-center">
-                                            <i class="ri-shopping-bag-3-line"></i>
+                                        <div class="card-body">
+                                            <div class="categories-section">
+                                                <div class="theme-arrow">
+                                                    <div class="swiper categories-slider categories-style">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/1.png" alt="p-1">
+                                                                    <h4 class="dark-text">Pizza</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/2.png" alt="p-2">
+                                                                    <h4 class="dark-text">Chicken</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/3.png" alt="p-3">
+                                                                    <h4 class="dark-text">Burger</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/4.png" alt="p-5">
+                                                                    <h4 class="dark-text">Fries</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/5.png" alt="p-6">
+                                                                    <h4 class="dark-text">Boritto</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/6.png" alt="p-7">
+                                                                    <h4 class="dark-text">Taco</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/7.png" alt="p-8">
+                                                                    <h4 class="dark-text">Muffin</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/8.png" alt="p-9">
+                                                                    <h4 class="dark-text">Meat</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/9.png" alt="p-5">
+                                                                    <h4 class="dark-text">Panner</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/10.png" alt="p-11">
+                                                                    <h4 class="dark-text">Hotdog</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/11.png" alt="p-12">
+                                                                    <h4 class="dark-text">Donuts</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/12.png" alt="p-13">
+                                                                    <h4 class="dark-text">Coffee</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/13.png" alt="p-14">
+                                                                    <h4 class="dark-text">Sandwich</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/14.png" alt="p-15">
+                                                                    <h4 class="dark-text">Noddle</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/15.png" alt="p-16">
+                                                                    <h4 class="dark-text">Pasta</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/16.png" alt="p-17">
+                                                                    <h4 class="dark-text">Meggi</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/17.png" alt="p-18">
+                                                                    <h4 class="dark-text">Momos</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/18.png" alt="p-19">
+                                                                    <h4 class="dark-text">Salad</h4>
+                                                                </a>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <a href="category.html" class="food-categories">
+                                                                    <img class="img-fluid categories-img" src="./assets/images/product/19.png" alt="p-20">
+                                                                    <h4 class="dark-text">Biryani</h4>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-button-next categories-next"></div>
+                                                    <div class="swiper-button-prev categories-prev"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6 ">
+                                    <div class="card widgets-card">
+                                        <div class="card-body">
+                                           <div class="row align-items-center">
+                                                <div class="col-lg-5 d-flex d-lg-block justify-content-between align-items-center">
+                                                        <h5>Total Sale</h5>
+                                                        <h2>$254.90</h2>
+                                                </div>
+                                                <div class="col-lg-7 col-12 p-0">
+                                                    <div id="daily-value"></div>
+                                                </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-sm-6 ">
+                                    <div class="card widgets-card">
+                                        <div class="card-body">
+                                           <div class="row align-items-center">
+                                                <div class="col-lg-5 d-flex d-lg-block justify-content-between align-items-center">
+                                                        <h5>Total Profit</h5>
+                                                        <h2>$254.90</h2>
+                                                </div>
+                                                <div class="col-lg-7 col-12 p-0">
+                                                    <div id="order-value"></div>
+                                                </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-6 d-none d-xxl-block">
+                                    <div class="card widgets-card">
+                                        <div class="card-body">
+                                           <div class="row align-items-center">
+                                                <div class="col-5">
+                                                        <h5>Customer rate</h5>
+                                                        <h2>5.12%</h2>
+                                                </div>
+                                                <div class="col-7 p-0">
+                                                    <div id="admissionRatio"></div>
+                                                </div>
+                                           </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-xl-7">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Order Reports</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive theme-scrollbar">
+                                        <div>
+                                            <table class="table user-table" id="table_id">
+                                                <thead>
+                                                    <tr>
+                                                        <th><input id="checkall​" class="custom-checkbox" type="checkbox" name="text"></th>
+                                                        <th>Food</th>
+                                                        <th>Customer</th>
+                                                        <th>Order Date</th>
+                                                        <th>Price</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
 
-                        <div class="col-sm-6 col-xxl-3 col-lg-6">
-                            <div class="main-tiles border-5 card-hover border-0  card o-hidden">
-                                <div class="custome-3-bg b-r-4 card-body">
-                                    <div class="media static-top-widget">
-                                        <div class="media-body p-0">
-                                            <span class="m-0">Total Products</span>
-                                            <h4 class="mb-0 counter">893
-                                                <a href="add-new-product.html" class="badge badge-light-secondary grow">
-                                                    ADD NEW</a>
-                                            </h4>
-                                        </div>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <div class="table-image">
+                                                                <img src="./assets/images/dashboard/product-2/1.jpg" class="img-fluid"
+                                                                    alt="">
+                                                                <h5>Fish Burger</h5>
+                                                            </div>
+                                                        </td>
+                                                        <td>Jessica Taylor</td>
+                                                        <td> 25/10/2024 </td>
 
-                                        <div class="align-self-center text-center">
-                                            <i class="ri-chat-3-line"></i>
+                                                        <td>$30.00</td>
+
+                                                        <td>
+                                                            <div class="pending">pending</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <div class="table-image">
+                                                                <img src="./assets/images/dashboard/product-2/2.jpg" class="img-fluid"
+                                                                    alt="">
+                                                                <h5>Pepperoni Pizza</h5>
+                                                            </div>
+                                                        </td>
+                                                        <td>Jane Cooper</td>
+                                                        <td> 20/1/2024 </td>
+
+                                                        <td>$57.20</td>
+
+                                                        <td>
+                                                            <div class="completed">completed</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <div class="table-image">
+                                                                <img src="./assets/images/dashboard/product-2/3.jpg" class="img-fluid"
+                                                                    alt="">
+                                                                <h5>Hot Dog</h5>
+                                                            </div>
+                                                        </td>
+                                                        <td>Olivia Anderson</td>
+                                                        <td> 18/10/2024 </td>
+
+                                                        <td>$40.00</td>
+
+                                                        <td>
+                                                            <div class="pending">pending</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <div class="table-image">
+                                                                <img src="./assets/images/dashboard/product-2/4.jpg" class="img-fluid"
+                                                                    alt="">
+                                                                <h5>Nachos</h5>
+                                                            </div>
+                                                        </td>
+                                                        <td>Sophia Garcia</td>
+                                                        <td> 02/08/2024 </td>
+
+                                                        <td>$30.25</td>
+
+                                                        <td>
+                                                            <div class="completed">completed</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <div class="table-image">
+                                                                <img src="./assets/images/dashboard/product-2/5.jpg" class="img-fluid"
+                                                                    alt="">
+                                                                <h5>Beef Burger</h5>
+                                                            </div>
+                                                        </td>
+                                                        <td>Michael Smith</td>
+                                                        <td> 05/05/2024 </td>
+
+                                                        <td>$50.00</td>
+                                                        <td>
+                                                            <div class="pending">pending</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            <div class="table-image">
+                                                                <img src="./assets/images/dashboard/product-2/6.jpg" class="img-fluid"
+                                                                    alt="">
+                                                                <h5>Japanese Ramen</h5>
+                                                            </div>
+                                                        </td>
+                                                        <td>David Wilson</td>
+                                                        <td> 26/07/2024 </td>
+
+                                                        <td>$71.010</td>
+
+                                                        <td>
+                                                            <div class="completed">completed</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-sm-6 col-xxl-3 col-lg-6">
-                            <div class="main-tiles border-5 card-hover border-0 card o-hidden">
-                                <div class="custome-4-bg b-r-4 card-body">
-                                    <div class="media static-top-widget">
-                                        <div class="media-body p-0">
-                                            <span class="m-0">Total Customers</span>
-                                            <h4 class="mb-0 counter">4.6k
-                                                <span class="badge badge-light-success grow">
-                                                    <i data-feather="trending-down"></i>8.5%</span>
-                                            </h4>
-                                        </div>
-
-                                        <div class="align-self-center text-center">
-                                            <i class="ri-user-add-line"></i>
-                                        </div>
+                        <div class="col-xl-5">
+                            <div class="card">
+                                <div class="card-header mb-0">
+                                    <h5>Sales Figures</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div id="earning-average"></div>
+                                    <div class="special-items-box">
+                                        <h5>Today's Special Dish</h5>
+                                        <div class="dish-img"> </div>
+                                        <h6>Spicy Burger with Extra Cheese</h6>
+                                        <ul>
+                                            <li>$10.53</li>
+                                            <li>
+                                                <i class="ri-heart-fill"></i>
+                                                200k</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-12">
-                            <div class="card o-hidden card-hover">
-                                <div class="card-header border-0 pb-1">
-                                    <div class="card-header-title p-0">
-                                        <h4>Category</h4>
-                                    </div>
+                            <div class="trending-orders">
+                                <div class="trnding-title">
+                                    <h5>Trending orders</h5>
+                                    <a href="media.html">View All
+                                        <i class="ri-arrow-right-s-line"></i>
+                                    </a>
                                 </div>
-                                <div class="card-body p-0">
-                                    <div class="category-slider no-arrow">
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/vegetable.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Vegetables & Fruit</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/cup.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Beverages</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/meats.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Meats & Seafood</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/breakfast.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Breakfast</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/frozen.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Frozen Foods</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/milk.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Milk & Dairies</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/pet.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Pet Food</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/vegetable.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Vegetables & Fruit</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/cup.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Beverages</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/meats.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Meats & Seafood</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/breakfast.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Breakfast</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/frozen.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Frozen Foods</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/milk.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Milk & Dairies</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div class="dashboard-category">
-                                                <a href="javascript:void(0)" class="category-image">
-                                                    <img src="assets/svg/pet.svg" class="img-fluid" alt="">
-                                                </a>
-                                                <a href="javascript:void(0)" class="category-name">
-                                                    <h6>Pet Food</h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- chart card section End -->
-
-
-                        <!-- Earning chart star-->
-                        <div class="col-xl-6">
-                            <div class="card o-hidden card-hover">
-                                <div class="card-header border-0 pb-1">
-                                    <div class="card-header-title">
-                                        <h4>Revenue Report</h4>
-                                    </div>
-                                </div>
-                                <div class="card-body p-0">
-                                    <div id="report-chart"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Earning chart  end-->
-
-
-                        <!-- Best Selling Product Start -->
-                        <div class="col-xl-6 col-md-12">
-                            <div class="card o-hidden card-hover">
-                                <div class="card-header card-header-top card-header--2 px-0 pt-0">
-                                    <div class="card-header-title">
-                                        <h4>Best Selling Product</h4>
-                                    </div>
-
-                                    <div class="best-selling-box d-sm-flex d-none">
-                                        <span>Short By:</span>
-                                        <div class="dropdown">
-                                            <button class="btn p-0 dropdown-toggle" type="button"
-                                                id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                                data-bs-auto-close="true">Today</button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-body p-0">
-                                    <div>
-                                        <div class="table-responsive">
-                                            <table class="best-selling-table w-image
-                                            w-image
-                                            w-image table border-0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="best-product-box">
-                                                                <div class="product-image">
-                                                                    <img src="assets/images/product/1.png"
-                                                                        class="img-fluid" alt="Product">
-                                                                </div>
-                                                                <div class="product-name">
-                                                                    <h5>Aata Buscuit</h5>
-                                                                    <h6>26-08-2022</h6>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Price</h6>
-                                                                <h5>$29.00</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Orders</h6>
-                                                                <h5>62</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Stock</h6>
-                                                                <h5>510</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Amount</h6>
-                                                                <h5>$1,798</h5>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="best-product-box">
-                                                                <div class="product-image">
-                                                                    <img src="assets/images/product/2.png"
-                                                                        class="img-fluid" alt="Product">
-                                                                </div>
-                                                                <div class="product-name">
-                                                                    <h5>Aata Buscuit</h5>
-                                                                    <h6>26-08-2022</h6>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Price</h6>
-                                                                <h5>$29.00</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Orders</h6>
-                                                                <h5>62</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Stock</h6>
-                                                                <h5>510</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Amount</h6>
-                                                                <h5>$1,798</h5>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="best-product-box">
-                                                                <div class="product-image">
-                                                                    <img src="assets/images/product/3.png"
-                                                                        class="img-fluid" alt="Product">
-                                                                </div>
-                                                                <div class="product-name">
-                                                                    <h5>Aata Buscuit</h5>
-                                                                    <h6>26-08-2022</h6>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Price</h6>
-                                                                <h5>$29.00</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Orders</h6>
-                                                                <h5>62</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Stock</h6>
-                                                                <h5>510</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Amount</h6>
-                                                                <h5>$1,798</h5>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Best Selling Product End -->
-
-
-                        <!-- Recent orders start-->
-                        <div class="col-xl-6">
-                            <div class="card o-hidden card-hover">
-                                <div class="card-header card-header-top card-header--2 px-0 pt-0">
-                                    <div class="card-header-title">
-                                        <h4>Recent Orders</h4>
-                                    </div>
-
-                                    <div class="best-selling-box d-sm-flex d-none">
-                                        <span>Short By:</span>
-                                        <div class="dropdown">
-                                            <button class="btn p-0 dropdown-toggle" type="button"
-                                                id="dropdownMenuButton2" data-bs-toggle="dropdown"
-                                                data-bs-auto-close="true">Today</button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-body p-0">
-                                    <div>
-                                        <div class="table-responsive">
-                                            <table class="best-selling-table table border-0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="best-product-box">
-                                                                <div class="product-name">
-                                                                    <h5>Aata Buscuit</h5>
-                                                                    <h6>#64548</h6>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Date Placed</h6>
-                                                                <h5>5/1/22</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Price</h6>
-                                                                <h5>$250.00</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Order Status</h6>
-                                                                <h5>Completed</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Payment</h6>
-                                                                <h5 class="text-danger">Unpaid</h5>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="best-product-box">
-                                                                <div class="product-name">
-                                                                    <h5>Aata Buscuit</h5>
-                                                                    <h6>26-08-2022</h6>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Date Placed</h6>
-                                                                <h5>5/1/22</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Price</h6>
-                                                                <h5>$250.00</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Order Status</h6>
-                                                                <h5>Completed</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Payment</h6>
-                                                                <h5 class="theme-color">Paid</h5>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="best-product-box">
-                                                                <div class="product-name">
-                                                                    <h5>Aata Buscuit</h5>
-                                                                    <h6>26-08-2022</h6>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Date Placed</h6>
-                                                                <h5>5/1/22</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Price</h6>
-                                                                <h5>$250.00</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Order Status</h6>
-                                                                <h5>Completed</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Payment</h6>
-                                                                <h5 class="theme-color">Paid</h5>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="best-product-box">
-                                                                <div class="product-name">
-                                                                    <h5>Aata Buscuit</h5>
-                                                                    <h6>26-08-2022</h6>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Date Placed</h6>
-                                                                <h5>5/1/22</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Price</h6>
-                                                                <h5>$250.00</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Order Status</h6>
-                                                                <h5>Completed</h5>
-                                                            </div>
-                                                        </td>
-
-                                                        <td>
-                                                            <div class="product-detail-box">
-                                                                <h6>Payment</h6>
-                                                                <h5 class="theme-color">Paid</h5>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Recent orders end-->
-
-                        <!-- Earning chart star-->
-                        <div class="col-xl-6">
-                            <div class="card o-hidden card-hover">
-                                <div class="card-header border-0 mb-0">
-                                    <div class="card-header-title">
-                                        <h4>Earning</h4>
-                                    </div>
-                                </div>
-                                <div class="card-body p-0">
-                                    <div id="bar-chart-earning"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Earning chart end-->
-
-
-                        <!-- Transactions start-->
-                        <div class="col-xxl-4 col-md-6">
-                            <div class="card o-hidden card-hover">
-                                <div class="card-header border-0">
-                                    <div class="card-header-title">
-                                        <h4>Transactions</h4>
-                                    </div>
-                                </div>
-
-                                <div class="card-body pt-0">
-                                    <div>
-                                        <div class="table-responsive">
-                                            <table class="user-table transactions-table table border-0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="transactions-icon">
-                                                                <i class="ri-shield-line"></i>
-                                                            </div>
-                                                            <div class="transactions-name">
-                                                                <h6>Wallets</h6>
-                                                                <p>Starbucks</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="lost">-$74</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-color-1">
-                                                            <div class="transactions-icon">
-                                                                <i class="ri-check-line"></i>
-                                                            </div>
-                                                            <div class="transactions-name">
-                                                                <h6>Bank Transfer</h6>
-                                                                <p>Add Money</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="success">+$125</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-color-2">
-                                                            <div class="transactions-icon">
-                                                                <i class="ri-exchange-dollar-line"></i>
-                                                            </div>
-                                                            <div class="transactions-name">
-                                                                <h6>Paypal</h6>
-                                                                <p>Add Money</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="lost">-$50</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-color-3">
-                                                            <div class="transactions-icon">
-                                                                <i class="ri-bank-card-line"></i>
-                                                            </div>
-                                                            <div class="transactions-name">
-                                                                <h6>Mastercard</h6>
-                                                                <p>Ordered Food</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="lost">-$40</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="td-color-4 pb-0">
-                                                            <div class="transactions-icon">
-                                                                <i class="ri-bar-chart-grouped-line"></i>
-                                                            </div>
-                                                            <div class="transactions-name">
-                                                                <h6>Transfer</h6>
-                                                                <p>Refund</p>
-                                                            </div>
-                                                        </td>
-
-                                                        <td class="success pb-0">+$90</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Transactions end-->
-
-                        <!-- visitors chart start-->
-                        <div class="col-xxl-4 col-md-6">
-                            <div class="h-100">
-                                <div class="card o-hidden card-hover">
-                                    <div class="card-header border-0">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="card-header-title">
-                                                <h4>Visitors</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body pt-0">
-                                        <div class="pie-chart">
-                                            <div id="pie-chart-visitors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- visitors chart end-->
-
-
-                        <!-- To Do List start-->
-                        <div class="col-xxl-4 col-md-6">
-                            <div class="card o-hidden card-hover">
-                                <div class="card-header border-0">
-                                    <div class="card-header-title">
-                                        <h4>To Do List</h4>
-                                    </div>
-                                </div>
-
-                                <div class="card-body pt-0">
-                                    <ul class="to-do-list">
-                                        <li class="to-do-item">
-                                            <div class="form-check user-checkbox">
-                                                <input class="checkbox_animated check-it" type="checkbox" value=""
-                                                    id="flexCheckDefault">
-                                            </div>
-                                            <div class="to-do-list-name">
-                                                <strong>Pick up kids from school</strong>
-                                                <p>8 Hours</p>
-                                            </div>
-                                        </li>
-                                        <li class="to-do-item">
-                                            <div class="form-check user-checkbox">
-                                                <input class="checkbox_animated check-it" type="checkbox" value=""
-                                                    id="flexCheckDefault1">
-                                            </div>
-                                            <div class="to-do-list-name">
-                                                <strong>Prepare or presentation.</strong>
-                                                <p>8 Hours</p>
-                                            </div>
-                                        </li>
-                                        <li class="to-do-item">
-                                            <div class="form-check user-checkbox">
-                                                <input class="checkbox_animated check-it" type="checkbox" value=""
-                                                    id="flexCheckDefault2">
-                                            </div>
-                                            <div class="to-do-list-name">
-                                                <strong>Create invoice</strong>
-                                                <p>8 Hours</p>
-                                            </div>
-                                        </li>
-                                        <li class="to-do-item">
-                                            <div class="form-check user-checkbox">
-                                                <input class="checkbox_animated check-it" type="checkbox" value=""
-                                                    id="flexCheckDefault3">
-                                            </div>
-                                            <div class="to-do-list-name">
-                                                <strong>Meeting with Alisa</strong>
-                                                <p>8 Hours</p>
-                                            </div>
-                                        </li>
-
-                                        <li class="to-do-item">
-                                            <form class="row g-2">
-                                                <div class="col-8">
-                                                    <input type="text" class="form-control" id="name"
-                                                        placeholder="Enter Task Name">
+                                <div class="swiper trending-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide trending-box">
+                                            <div class="card-body trending-items">
+                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/1.jpg" alt="">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5>Poultry Palace</h5>
+                                                    <h6>$20.00</h6>
                                                 </div>
-                                                <div class="col-4">
-                                                    <button type="submit" class="btn btn-primary w-100 h-100">Add
-                                                        task</button>
+                                                <p>Healthy Foods are nutrient-Dense Foods</p>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <h6>200
+                                                            <span>Sale</span>
+                                                        </h6>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="ri-star-fill"></i>
+                                                            4.5
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                               <div class="marquee-box">
+                                                    <ul class="marquee-discount">
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Month
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Month
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Month
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Month
+                                                        </li>
+                                                    </ul>
+                                               </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide trending-box">
+                                            <div class="card-body trending-items">
+                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/2.jpg" alt="">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5>Wing Mastern</h5>
+                                                    <h6>$30.00</h6>
                                                 </div>
-                                            </form>
-                                        </li>
-                                    </ul>
+                                                <p>Nutrient-dense with healthy choices</p>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <h6>200
+                                                            <span>Sale</span>
+                                                        </h6>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="ri-star-fill"></i>
+                                                            4.5
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                               <div class="marquee-box">
+                                                    <ul class="marquee-discount">
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                    </ul>
+                                               </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide trending-box">
+                                            <div class="card-body trending-items">
+                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/3.jpg" alt="">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5>Burger Barn</h5>
+                                                    <h6>$20.00</h6>
+                                                </div>
+                                                <p>offering numerous health benefits prevention.</p>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <h6>200
+                                                            <span>Sale</span>
+                                                        </h6>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="ri-star-fill"></i>
+                                                            4.5
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                               <div class="marquee-box">
+                                                    <ul class="marquee-discount">
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Year
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Year
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Year
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Year
+                                                        </li>
+                                                    </ul>
+                                               </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide trending-box">
+                                            <div class="card-body trending-items">
+                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/4.jpg" alt="">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5>Poultry Palace</h5>
+                                                    <h6>$15.00</h6>
+                                                </div>
+                                                <p>Healthy Foods are nutrient-Dense Foods</p>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <h6>200
+                                                            <span>Sale</span>
+                                                        </h6>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="ri-star-fill"></i>
+                                                            4.5
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                               <div class="marquee-box">
+                                                    <ul class="marquee-discount">
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Year
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Year
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Year
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Year
+                                                        </li>
+                                                    </ul>
+                                               </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide trending-box">
+                                            <div class="card-body trending-items">
+                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/5.jpg" alt="">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5>Mushroom</h5>
+                                                    <h6>$20.00</h6>
+                                                </div>
+                                                <p>Eggs are a nutrient powerhouse overall health.</p>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <h6>200
+                                                            <span>Sale</span>
+                                                        </h6>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="ri-star-fill"></i>
+                                                            4.5
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                               <div class="marquee-box">
+                                                    <ul class="marquee-discount">
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                    </ul>
+                                               </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide trending-box">
+                                            <div class="card-body trending-items">
+                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/6.jpg" alt="">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5>Ribeye Junction</h5>
+                                                    <h6>$20.00</h6>
+                                                </div>
+                                                <p>Healthy Foods are nutrient-Dense Foods</p>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <h6>200
+                                                            <span>Sale</span>
+                                                        </h6>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="ri-star-fill"></i>
+                                                            4.5
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                               <div class="marquee-box">
+                                                    <ul class="marquee-discount">
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Month
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Month
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Month
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Month
+                                                        </li>
+                                                    </ul>
+                                               </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="swiper-slide trending-box">
+                                            <div class="card-body trending-items">
+                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/7.jpg" alt="">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <h5>Latte Lounge</h5>
+                                                    <h6>$20.00</h6>
+                                                </div>
+                                                <p>Healthy Foods are nutrient-Dense Foods</p>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <h6>200
+                                                            <span>Sale</span>
+                                                        </h6>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="ri-star-fill"></i>
+                                                            4.5
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                               <div class="marquee-box">
+                                                    <ul class="marquee-discount">
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                        <li class="discount-info">
+                                                            <img src="./assets/images/dashboard/round.gif" alt="">
+                                                            Top Of Them Week
+                                                        </li>
+                                                    </ul>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- To Do List end-->
-
-
                     </div>
                 </div>
                 <!-- Container-fluid Ends-->
@@ -1264,7 +1170,7 @@
                     <footer class="footer">
                         <div class="row">
                             <div class="col-md-12 footer-copyright text-center">
-                                <p class="mb-0">Copyright 2022 © Fastkart theme by pixelstrap</p>
+                                <p class="mb-0">Copyright 2024 ©Zomo template by pixelstrap</p>
                             </div>
                         </div>
                     </footer>
@@ -1279,18 +1185,22 @@
     <!-- page-wrapper End-->
 
     <!-- Modal Start -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal theme-modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Logging Out</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
                 <div class="modal-body">
-                    <h5 class="modal-title" id="staticBackdropLabel">Logging Out</h5>
-                    <p>Are you sure you want to log out?</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="button-box">
-                        <button type="button" class="btn btn--no" data-bs-dismiss="modal">No</button>
-                        <button type="button" class="btn  btn--yes btn-primary">Yes</button>
-                    </div>
+                    <p class="mb-0">Are you sure you want to log out?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cancel" type="button" data-bs-dismiss="modal"
+                    aria-label="Close">No</button>
+                    <button class="btn btn-submit" type="submit" data-bs-dismiss="modal" aria-label="Close"><a href="login.html">Yes</a></button>
                 </div>
             </div>
         </div>
@@ -1317,11 +1227,8 @@
     <!-- tooltip init js -->
     <script src="assets/js/tooltip-init.js"></script>
 
-    <!-- Plugins JS -->
+     <!-- Plugins JS -->
     <script src="assets/js/sidebar-menu.js"></script>
-    <script src="assets/js/notify/bootstrap-notify.min.js"></script>
-    <script src="assets/js/notify/index.js"></script>
-
     <!-- Apexchar js -->
     <script src="assets/js/chart/apex-chart/apex-chart1.js"></script>
     <script src="assets/js/chart/apex-chart/moment.min.js"></script>
@@ -1329,10 +1236,9 @@
     <script src="assets/js/chart/apex-chart/stock-prices.js"></script>
     <script src="assets/js/chart/apex-chart/chart-custom1.js"></script>
 
-
-    <!-- slick slider js -->
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/custom-slick.js"></script>
+    <!-- swiper slider -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/custom-swiper.js"></script>
 
     <!-- customizer js -->
     <script src="assets/js/customizer.js"></script>
@@ -1340,11 +1246,23 @@
     <!-- ratio js -->
     <script src="assets/js/ratio.js"></script>
 
-    <!-- sidebar effect -->
-    <script src="assets/js/sidebareffect.js"></script>
-
     <!-- Theme js -->
     <script src="assets/js/script.js"></script>
+    <script>
+        $("#checkall").change(function () {
+      var checked = $(this).is(":checked");
+      if (checked) {
+          $(".custom-checkbox").each(function () {
+              $(this).prop("checked", true);
+          });
+  
+      } else {
+          $(".custom-checkbox").each(function () {
+              $(this).prop("checked", false);
+          });
+      }
+  });
+      </script>
 </body>
 
 </html>

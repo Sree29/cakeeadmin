@@ -243,8 +243,8 @@
 	top: 16px;
 	right: 100%;
 	@include pseudowh($width: 0, $height: 0);
-	border: 7px solid transparent;
-	border-left: 7px solid $light-color;
+	border: 7px dashed transparent;
+	border-left: 7px dashed $light-color;
 }
 
 @media only screen and(min-width: 768px) {

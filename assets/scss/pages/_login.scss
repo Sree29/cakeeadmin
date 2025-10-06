@@ -16,7 +16,7 @@
         @include pseudowh;
         top: 0;
         left: 0;
-        background-image: url(../images/bg.png);
+        background-image: url(../images/bg.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -44,7 +44,7 @@
 
     .log-in-box {
         background-color: $white;
-        padding: calc(16px + (50 - 16) * ((100vw - 320px) / (1920 - 320)));
+        padding: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
         border-radius: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
 
         .logo-name {
@@ -73,12 +73,11 @@
                 color: var(--theme-color);
                 font-weight: 600;
             }
-
-            h4,
             h5 {
-                color: $content-color;
+                color: $theme-font-color;
                 margin-top: 8px;
-                font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: 500;
+                font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
             }
         }
 
@@ -135,6 +134,7 @@
         .remember-box {
             display: flex;
             align-items: center;
+            gap: 6px;
 
             .check-box {
                 display: block;

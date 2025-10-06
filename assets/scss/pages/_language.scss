@@ -48,9 +48,9 @@
 	&:before {
 		width: 0;
 		height: 0;
-		border-left: 7px solid transparent;
-		border-right: 7px solid transparent;
-		border-bottom: 7px solid $white;
+		border-left: 7px dashed transparent;
+		border-right: 7px dashed transparent;
+		border-bottom: 7px dashed $white;
 		@include pos;
 		top: -7px;
 		right: 20px;
@@ -60,9 +60,9 @@
 	&:after {
 		width: 0;
 		height: 0;
-		border-left: 7px solid transparent;
-		border-right: 7px solid transparent;
-		border-bottom: 7px solid #bdc2c5;
+		border-left: 7px dashed transparent;
+		border-right: 7px dashed transparent;
+		border-bottom: 7px dashed #bdc2c5;
 		@include pos;
 		top: -7px;
 		right: 20px;
@@ -95,7 +95,7 @@
 	&.active {
 		.more_lang {
 			.lang {
-				border-bottom: 1px solid #eaeaea;
+				border-bottom: 1px dashed #eaeaea;
 			}
 		}
 	}

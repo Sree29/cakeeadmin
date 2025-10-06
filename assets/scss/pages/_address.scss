@@ -4,7 +4,7 @@
 
 .save-details-box {
     .save-details {
-        border: 1px solid $inner-bg;
+        border: 1px dashed $inner-bg;
         padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
         transition: all 0.5s ease-in-out;
         border-radius: 5px;
@@ -12,7 +12,7 @@
         position: relative;
 
         &.show {
-            border: 1px solid rgba(33, 37, 41, 0.2);
+            border: 1px dashed rgba(33, 37, 41, 0.2);
             box-shadow: 0 0px 10px rgba($black1, $alpha: 0.2);
         }
 

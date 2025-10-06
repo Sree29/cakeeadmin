@@ -7,33 +7,70 @@
           display: none !important;
      }
 }
-
-.slick-slider {
-     .slick-list {
-          margin: 0 -10px;
-
-          @include mq-max(sm) {
-               margin: 0 -6px;
-          }
-
-          .slick-slide {
-
-               >div,
-               >a {
-                    margin: 0 10px;
-
-                    [dir="rtl"] & {
-                         direction: rtl;
-                    }
-
-                    @include mq-max(sm) {
-                         margin: 0 6px;
-                    }
-               }
-          }
+.theme-arrow {
+     position: relative;
+ 
+     .swiper-button-next,
+     .swiper-button-prev {
+         position: absolute;
+         color: $theme-font-color;
+         background: $light-background;
+         border-radius: 100%;
+         border: 1px dashed $border-color;
+         bottom: 42px;
+         filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.07));
+         z-index: 1;
+         height: calc(28px + (35 - 28) * ((100vw - 320px) / (1920 - 320)));
+         width: calc(28px + (35 - 28) * ((100vw - 320px) / (1920 - 320)));
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         transition: 0.4s ease;
+ 
+         &::after {
+             font-family: remixicon !important;
+             font-size: 24px;
+         }
+ 
+         &:hover {
+             background: $gradient-fill;
+             color: $white;
+             transition: 0.4s ease;
+         }
      }
-
-     &.slick-dotted {
-          margin-bottom: 0;
+ 
+     .swiper-button-next {
+         right: 0px;
+         top: -26px;
+ 
+         [dir="rtl"] & {
+             right: unset;
+             left: calc(40px + (50 - 40) * ((100vw - 320px) / (1920 - 320)));
+         }
+         @media (max-width: 767px) {
+            top: -20px;
+         }
+ 
+         &::after {
+             content: "\ea6e";
+         }
      }
-}
+ 
+     .swiper-button-prev {
+         top: -26px;
+         right: 40px;
+         left: unset;
+ 
+         [dir="rtl"] & {
+             right: unset;
+             left: 0;
+         }
+
+         @media (max-width: 767px) {
+            top: -20px;
+         }
+         &::after {
+             content: "\ea64";
+         }
+     }
+ }

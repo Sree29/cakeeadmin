@@ -6,55 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Fastkart admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
+        content="Zomo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
     <meta name="keywords"
-        content="admin template, Fastkart admin template, dashboard template, flat admin template, responsive admin template, web app">
+        content="admin template,Zomo admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <title>Fastkart - Order Tracking</title>
+    <title>Cakee - Dashboard</title>
 
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Fontawesome css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
-
     <!-- Linear Icon css -->
     <link rel="stylesheet" href="assets/css/linearicon.css">
 
-    <!-- Themify icon css -->
+    <!-- fontawesome css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome.css">
+
+    <!-- Themify icon css-->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/themify.css">
 
-    <!--Dropzon css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/dropzone.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
+    <!-- ratio css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/ratio.css">
 
     <!-- remixicon css -->
     <link rel="stylesheet" type="text/css" href="assets/css/remixicon.css">
 
+    <!-- Feather icon css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/feather-icon.css">
+
     <!-- Plugins css -->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/animate.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/chartist.css">
 
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap.css">
 
-    <!-- Bootstrap-tag input css-->
-    <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap-tagsinput.css">
+    <!-- vector map css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vector-map.css">
+
+    <!-- swiper slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors/swiper-bundle.min.css">
+
+    <!-- Slick Slider Css -->
+    <link rel="stylesheet" href="assets/css/vendors/slick.css">
 
     <!-- App css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <style>
+/* Active link text and icon */
+.sidebar-links li .sidebar-link.active span,
+.sidebar-links li .sidebar-link:hover span {
+    color: #ff5cba !important;
+}
+
+.sidebar-links li .sidebar-link.active i,
+.sidebar-links li .sidebar-link:hover i {
+    color: #ff5cba !important;
+}
+
+/* Active link background */
+.sidebar-links li .sidebar-link.active {
+    background-color: rgba(255, 92, 186, 0.1);
+    border-radius: 6px;
+}
+
+           </style>
 </head>
 
 <body>
-    <!-- tap on top start-->
+    <!-- tap on top start -->
     <div class="tap-top">
-        <span class="lnr lnr-chevron-up"></span>
+        <i class="ri-arrow-up-double-fill"></i>
     </div>
-    <!-- tap on tap end-->
+    <!-- tap on tap end -->
+
+    <!-- loader start -->
+    <div class="loader-wrapper"> 
+        <img src="./assets/images/loader.gif" alt="">
+    </div>
+    <!-- loader end -->
 
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
@@ -64,41 +96,35 @@
                 <div class="header-logo-wrapper p-0">
                     <div class="logo-wrapper">
                         <a href="index.html">
-                            <img class="img-fluid main-logo" src="assets/images/logo/1.png" alt="logo">
-                            <img class="img-fluid white-logo" src="assets/images/logo/1-white.png" alt="logo">
+                            <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
+                            <img class="img-fluid white-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
-                    <div class="toggle-sidebar">
+                     <div class="toggle-sidebar">
                         <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
                         <a href="index.html">
-                            <img src="assets/images/logo/1.png" class="img-fluid" alt="">
+                            <img class="img-fluid for-light" src="assets/images/logo/logo.png" alt="logo">
+                            <img class="img-fluid for-dark" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
-
-                <form class="form-inline search-full" action="javascript:void(0)" method="get">
-                    <div class="form-group w-100">
-                        <div class="Typeahead Typeahead--twitterUsers">
-                            <div class="u-posRelative">
-                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
-                                    placeholder="Search Fastkart .." name="q" title="" autofocus>
-                                <i class="close-search" data-feather="x"></i>
-                                <div class="spinner-border Typeahead-spinner" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                            </div>
-                            <div class="Typeahead-menu"></div>
-                        </div>
-                    </div>
-                </form>
-                <div class="nav-right col-6 pull-right right-header p-0">
+                <div class="welcome-title">
+                    <h5>
+                        Food that's you loved!
+                        <img src="./assets/images/header.gif" alt="">
+                    </h5>
+                    <span>
+                        Delight your taste with our most famous food !!
+                    </span>
+                </div>
+                <div class="nav-right col-xl-6 col-5 pull-right right-header p-0">
                     <ul class="nav-menus">
-                        <li>
+                        <li class="search-icon">
                             <span class="header-search">
                                 <i class="ri-search-line"></i>
                             </span>
                         </li>
-                        <li class="onhover-dropdown">
+                        <!-- <li class="onhover-dropdown">
                             <div class="notification-box">
                                 <i class="ri-notification-line"></i>
                                 <span class="badge rounded-pill badge-theme">4</span>
@@ -106,7 +132,7 @@
                             <ul class="notification-dropdown onhover-show-div">
                                 <li>
                                     <i class="ri-notification-line"></i>
-                                    <h6 class="f-18 mb-0">Notitications</h6>
+                                    <h4 class="mb-0">Notitications</h4>
                                 </li>
                                 <li>
                                     <p>
@@ -136,8 +162,65 @@
                                     <a class="btn btn-primary" href="javascript:void(0)">Check all notification</a>
                                 </li>
                             </ul>
-                        </li>
-
+                        </li> -->
+                        <!-- <li class="onhover-dropdown">
+                            <div class="messages-box">
+                                <i class="ri-message-3-line"></i>
+                            </div>
+                            <ul class="messages-dropdown onhover-show-div">
+                                <li>
+                                    <i class="ri-message-3-line"></i>
+                                    <h4 class="mb-0">Messages</h4>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/1.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/2.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/3.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="./assets/images/user/4.jpg" alt="">
+                                        <div>
+                                            <h5>
+                                                Nullam tempor 
+                                            </h5>
+                                            <p>Curabitur facilisis erat viverra.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="btn btn-primary" href="javascript:void(0)">Go to Inbox</a>
+                                </li>
+                            </ul>
+                        </li> -->
                         <li>
                             <div class="mode">
                                 <i class="ri-moon-line"></i>
@@ -187,32 +270,34 @@
                         </li>
                     </ul>
                 </div>
+                <div class="input-box">
+                    <i class="ri-search-line"></i>
+                    <input class="search-box" type="search" placeholder="What are you looking for?">
+                    <i class="close-icon" data-feather="x"></i>
+                </div>
             </div>
-        </div>
+        </div> 
         <!-- Page Header Ends-->
 
         <!-- Page Body Start-->
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
             <div class="sidebar-wrapper">
-                <div id="sidebarEffect"></div>
                 <div>
                     <div class="logo-wrapper logo-wrapper-center">
                         <a href="index.html" data-bs-original-title="" title="">
-                            <img class="img-fluid for-white" src="assets/images/logo/full-white.png" alt="logo">
+                            <img class="img-fluid for-white" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                         <div class="back-btn">
                             <i class="fa fa-angle-left"></i>
                         </div>
                         <div class="toggle-sidebar">
-                            <i class="ri-apps-line status_toggle middle sidebar-toggle"></i>
+                            <i class="ri-apps-2-line status_toggle middle sidebar-toggle"></i>
                         </div>
                     </div>
                     <div class="logo-icon-wrapper">
                         <a href="index.html">
-                            <img class="img-fluid main-logo main-white" src="assets/images/logo/1-white.png" alt="logo">
-                            <img class="img-fluid main-logo main-dark" src="assets/images/logo/logo-white.png"
-                                alt="logo">
+                            <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
                     <nav class="sidebar-main">
@@ -246,39 +331,7 @@
                                         </li>
                                     </ul>
                                 </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-list-check-2"></i>
-                                        <span>Category</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="category.html">Category List</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="add-new-category.html">Add New Category</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-list-settings-line"></i>
-                                        <span>Attributes</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="attributes.html">Attributes</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="add-new-attributes.html">Add Attributes</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
+                                
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-user-3-line"></i>
@@ -288,33 +341,19 @@
                                         <li>
                                             <a href="all-users.html">All users</a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="add-new-user.html">Add new user</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </li>
 
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
-                                        <span>Roles</span>
+                               
+                                <!-- <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
+                                        <i class="ri-road-map-line"></i>
+                                        <span>Live Traking</span>
                                     </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="role.html">All roles</a>
-                                        </li>
-                                        <li>
-                                            <a href="create-role.html">Create Role</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="media.html">
-                                        <i class="ri-price-tag-3-line"></i>
-                                        <span>Media</span>
-                                    </a>
-                                </li>
+                                </li> -->
 
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
@@ -336,22 +375,6 @@
 
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-focus-3-line"></i>
-                                        <span>Localization</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="translation.html">Translation</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="currency-rates.html">Currency Rates</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-price-tag-3-line"></i>
                                         <span>Coupons</span>
                                     </a>
@@ -367,25 +390,32 @@
                                 </li>
 
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="taxes.html">
-                                        <i class="ri-price-tag-3-line"></i>
-                                        <span>Tax</span>
-                                    </a>
-                                </li>
+    <a class="sidebar-link sidebar-title link-nav" href="testimonial.html">
+        <i class="ri-chat-quote-line"></i> <!-- testimonial icon -->
+        <span>Testimonial</span>
+    </a>
+</li>
 
-                                <li class="sidebar-list">
+<li class="sidebar-list">
+    <a class="sidebar-link sidebar-title link-nav" href="help.html">
+        <i class="ri-question-line"></i> <!-- help / support icon -->
+        <span>Help</span>
+    </a>
+</li>
+
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-line"></i>
                                         <span>Product Review</span>
                                     </a>
-                                </li>
+                                </li> -->
 
-                                <li class="sidebar-list">
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="support-ticket.html">
                                         <i class="ri-phone-line"></i>
                                         <span>Support Ticket</span>
                                     </a>
-                                </li>
+                                </li> -->
 
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
@@ -399,7 +429,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="sidebar-list">
+                                <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="reports.html">
                                         <i class="ri-file-chart-line"></i>
                                         <span>Reports</span>
@@ -411,7 +441,7 @@
                                         <i class="ri-list-check"></i>
                                         <span>List Page</span>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
 
@@ -444,11 +474,10 @@
                                                         </div>
 
                                                         <div class="order-image-contain">
-                                                            <h4>Van Heusen Men's Solid Regular Fit Polo</h4>
+                                                            <h4>Ultimate Loaded Nacho Fiesta</h4>
                                                             <div class="tracker-number">
                                                                 <p>Order Number : <span>W765EWR8568871</span></p>
-                                                                <p>Brand : <span>Van Heusen</span></p>
-                                                                <p>Order Placed : <span>June 25, 2021</span></p>
+                                                                <p>Order Placed : <span>June 25, 2024</span></p>
                                                             </div>
                                                             <h5>Your items is on the way. Tracking information will be
                                                                 available within 24 hours.</h5>
@@ -481,8 +510,8 @@
 
                                                 <div class="col-12 overflow-visible">
                                                     <div class="tracker-table">
-                                                        <div class="table-responsive">
-                                                            <table class="table">
+                                                        <div class="table-responsive theme-scrollbar">
+                                                            <table class="table category-table dataTable no-footer">
                                                                 <thead>
                                                                     <tr class="table-head">
                                                                         <th scope="col">Date</th>
@@ -495,7 +524,7 @@
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
-                                                                            <h6>21/05/2021</h6>
+                                                                            <h6>21/05/2024</h6>
                                                                         </td>
                                                                         <td>
                                                                             <h6>12:21 AM</h6>
@@ -510,7 +539,7 @@
 
                                                                     <tr>
                                                                         <td>
-                                                                            <h6>15/04/2021</h6>
+                                                                            <h6>15/04/2024</h6>
                                                                         </td>
                                                                         <td>
                                                                             <h6>01:00 PM</h6>
@@ -526,7 +555,7 @@
 
                                                                     <tr>
                                                                         <td>
-                                                                            <h6>04/05/2021</h6>
+                                                                            <h6>04/05/2024</h6>
                                                                         </td>
                                                                         <td>
                                                                             <h6>03:58 AM</h6>
@@ -542,7 +571,7 @@
 
                                                                     <tr>
                                                                         <td>
-                                                                            <h6>30/04/2021</h6>
+                                                                            <h6>30/04/2024</h6>
                                                                         </td>
                                                                         <td>
                                                                             <h6>06:26 PM</h6>
@@ -557,7 +586,7 @@
 
                                                                     <tr>
                                                                         <td>
-                                                                            <h6>02/02/2021</h6>
+                                                                            <h6>02/02/2024</h6>
                                                                         </td>
                                                                         <td>
                                                                             <h6>03:45 PM</h6>
@@ -573,7 +602,7 @@
 
                                                                     <tr>
                                                                         <td>
-                                                                            <h6>14/01/2021</h6>
+                                                                            <h6>14/01/2024</h6>
                                                                         </td>
                                                                         <td>
                                                                             <h6>12:21 AM</h6>
@@ -610,7 +639,7 @@
                     <footer class="footer">
                         <div class="row">
                             <div class="col-md-12 footer-copyright text-center">
-                                <p class="mb-0">Copyright 2022 © Fastkart theme by pixelstrap</p>
+                                <p class="mb-0">Copyright 2024 ©Zomo template by pixelstrap</p>
                             </div>
                         </div>
                     </footer>
@@ -624,18 +653,22 @@
     <!-- page-wrapper End-->
 
     <!-- Modal Start -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-centered">
+    <div class="modal theme-modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Logging Out</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
                 <div class="modal-body">
-                    <h5 class="modal-title" id="staticBackdropLabel">Logging Out</h5>
-                    <p>Are you sure you want to log out?</p>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="button-box">
-                        <button type="button" class="btn btn--no" data-bs-dismiss="modal">No</button>
-                        <button type="button" class="btn  btn--yes btn-primary">Yes</button>
-                    </div>
+                    <p class="mb-0">Are you sure you want to log out?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cancel" type="button" data-bs-dismiss="modal"
+                    aria-label="Close">No</button>
+                    <button class="btn btn-submit" type="submit" data-bs-dismiss="modal" aria-label="Close"><a href="login.html">Yes</a></button>
                 </div>
             </div>
         </div>
@@ -647,7 +680,6 @@
 
     <!-- Bootstrap js -->
     <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/notify/bootstrap-notify.min.js"></script>
 
     <!-- feather icon js -->
     <script src="assets/js/icons/feather-icon/feather.min.js"></script>
@@ -671,13 +703,7 @@
 
     <!--Dropzon js -->
     <script src="assets/js/dropzone/dropzone.js"></script>
-    <script src="assets/js/dropzone/dropzone-script.js"></script>
-
-    <!-- Plugins js -->
-    <script src="assets/js/notify/index.js"></script>
-
-    <!-- sidebar effect -->
-    <script src="assets/js/sidebareffect.js"></script>
+    <script src="assets/js/dropzone/dropzone-script.js"></script> 
 
     <!-- Theme js -->
     <script src="assets/js/script.js"></script>

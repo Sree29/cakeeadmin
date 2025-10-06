@@ -4,7 +4,7 @@
 .checkbox_animated {
     cursor: pointer;
     position: relative;
-    margin: 0 16px 0 0;
+    margin: 0 12px 0 0;
     z-index: 0;
 
     &:before {
@@ -15,7 +15,7 @@
         top: 0.225rem;
         z-index: 1;
         @include pseudowh($width: 0.75rem, $height: 0.375rem);
-        border: 2px solid var(--theme-color);
+        border: 1px solid var(--theme-color);
         border-top-style: none;
         border-right-style: none;
     }
@@ -26,7 +26,7 @@
         left: 0;
         @include pseudowh($width: 1.3rem, $height: 1.3rem);
         background: $white;
-        border: 2px solid $gray-light;
+        border: 1px solid $gray-light;
         cursor: pointer;
     }
 
@@ -39,7 +39,10 @@
     padding-bottom: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
     position: relative;
     color: $dark-card-background;
-    font-size: 22px;
+    font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+    @media (max-width: 576px) {
+        display: block !important;
+    }
 
     a {
         font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
@@ -63,8 +66,8 @@
 
         .card-order-section {
             margin-top: 20px;
-            border-top: 1px solid rgba($color: $black1, $alpha: 0.15);
-            border-bottom: 1px solid rgba($color: $black1, $alpha: 0.15);
+            border-top: 1px dashed rgba($color: $black1, $alpha: 0.15);
+            border-bottom: 1px dashed rgba($color: $black1, $alpha: 0.15);
             padding: 10px 0;
 
             ul {
@@ -112,9 +115,12 @@
     }
 
     h5 {
-        font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
-        font-weight: 700;
+        font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 600;
         letter-spacing: 0.03em;
+        @media (max-width: 576px) {
+            margin-bottom: 8px !important;
+        }
 
         &:not(.mb-0),
         &:not(.m-0) {
@@ -125,15 +131,19 @@
 
     &.option-title {
         @include flex_common($dis: flex, $align: center, $justify: space-between);
+        .btn{
+            width: fit-content;
+        }
 
         @include mq-max(sm) {
             h5 {
-                display: inline-block;
+                display: block;
+                margin-bottom: 8px;
             }
 
             .selected-options {
                 position: fixed;
-                bottom: 60px;
+                bottom: 88px;
                 z-index: 1;
                 right: 20px;
             }
@@ -159,16 +169,35 @@
 
             ul {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 gap: calc(9px + (15 - 9) * ((100vw - 320px) / (1920 - 320)));
 
                 li {
                     &:last-child {
                         margin-left: auto;
+                        background: $gradient-fill;
+                        border-radius: 4px;
+                        @media (max-width: 480px) {
+                            margin-left: unset;
+                        }
                     }
                 }
             }
         }
+    }
+}
+.card-header-title {
+    h3 {
+        margin: 0;
+        font-weight: 800;
+        font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: $theme-font-color;
     }
 }
 
@@ -176,8 +205,9 @@
     margin-bottom: $card-margin-bottom;
     border: none;
     letter-spacing: 0.5px;
-    border-radius: 15px;
-    padding: 25px;
+    border-radius: 10px;
+    padding: 18px;
+    background: $white;
 
     &-table {
         padding: calc(14px + (25 - 14) * ((100vw - 320px) / (1920 - 320)));
@@ -194,7 +224,7 @@
     }
 
     &.card-tiles {
-        border: 1px solid #ddd;
+        border: 1px dashed #ddd;
     }
 
     .card-header {
@@ -203,169 +233,15 @@
         border-bottom: $card-border-color;
         position: relative;
         margin-bottom: 16px;
-
-        &--2 {
-            @include flex_common($dis: flex, $align: center, $justify: space-between);
-            padding: 40px;
-        }
-
-        &-1 {
-            margin: 40px 0 20px;
-            color: $dark-card-background;
-
-            h5 {
-                font-size: 20px;
-                font-weight: 700;
-            }
-        }
-
-        &-2 {
-            color: $dark-card-background;
-            margin-bottom: 30px;
-
-            h5 {
-                font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
-                font-weight: 700;
-            }
-        }
-
-        &-block {
-            display: block;
-            padding: 40px;
-
-            .card-order-section {
-                margin-top: 20px;
-                border-top: 1px solid rgba($color: $black1, $alpha: 0.15);
-                border-bottom: 1px solid rgba($color: $black1, $alpha: 0.15);
-                padding: 10px 0;
-
-                ul {
-                    margin: -8px;
-
-                    li {
-                        display: inline-block;
-                        margin: 8px;
-                        position: relative;
-
-                        &::before {
-                            @include pos($pos: absolute, $content: "/");
-                            top: 0;
-                            right: -10px;
-                            @include pseudowh($width: 0, $height: 100%);
-                        }
-
-                        &:last-child {
-                            &::before {
-                                content: none;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .custome-breadcrum {
-                .breadcrumb {
-                    .breadcrumb-item {
-                        a {
-                            color: $grey-13;
-                        }
-                    }
-                }
-            }
-        }
-
-        &-top {
-            padding: 16px;
+        h5 {
+            font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 600;
+            padding-bottom: 8px;
+            color: $theme-font-color;
         }
 
         &.card-no-border {
             border-bottom: none !important;
-        }
-
-        h5 {
-            font-size: 30px;
-            font-weight: 700;
-
-            &:not(.mb-0),
-            &:not(.m-0) {
-                margin-bottom: 0;
-                text-transform: $card-header-font-transform;
-            }
-        }
-
-        >span {
-            font-size: $card-header-span-size;
-            color: $card-header-span-color;
-            margin-top: 5px;
-            display: block;
-            letter-spacing: 1px;
-        }
-
-        .card-header-right {
-            border-radius: 0 0 0 7px;
-            right: 35px;
-            top: 33px;
-            display: inline-block;
-            padding: 8px 0;
-            position: absolute;
-            background-color: $white;
-            z-index: 1;
-
-            .card-option {
-                text-align: right;
-                @include pseudowh($width: 35px, $height: 20px);
-                overflow: hidden;
-                transition: 0.3s ease-in-out;
-
-                li {
-                    display: inline-block;
-
-                    &:first-child {
-                        i {
-                            transition: 1s;
-                            font-size: 16px;
-                            color: var(--theme-color);
-
-                            &.icofont {
-                                color: unset;
-                            }
-                        }
-                    }
-                }
-            }
-
-            i {
-                margin: 0 5px;
-                cursor: pointer;
-                color: $dark-color;
-                line-height: 20px;
-
-                &.icofont-refresh {
-                    font-size: 13px;
-                }
-            }
-        }
-
-        .best-selling-box {
-            display: flex;
-            align-items: center;
-
-            span {
-                margin-right: 6px;
-                font-weight: 700;
-                color: $title-color;
-
-                [dir="rtl"] & {
-                    margin-right: unset;
-                    margin-left: 6px;
-                }
-            }
-
-            .dropdown {
-                .dropdown-toggle {
-                    color: $content-color;
-                }
-            }
         }
     }
 
@@ -385,7 +261,7 @@
     }
 
     .sub-title {
-        border-bottom: 1px solid rgba($black, 0.1);
+        border-bottom: 1px dashed rgba($black, 0.1);
         padding-bottom: 5px;
         margin-bottom: 8px;
         font-size: 18px;
@@ -426,7 +302,7 @@
         box-shadow: none;
         right: 0;
         border-radius: 0;
-        border: 1px solid $light-semi-gray;
+        border: 1px dashed $light-semi-gray;
         @include pseudowh($width: calc(100vw - 12px), $height: calc(100vh));
 
         .card-body {
@@ -529,7 +405,7 @@
 
         >div {
             +div {
-                border-left: 1px solid $light-semi-gray;
+                border-left: 1px dashed $light-semi-gray;
             }
 
             padding: 15px;

@@ -1,6 +1,6 @@
 /*! -----------------------------------------------------------------------------------
-    Template Name: Fastkart Admin
-    Template URI: http://admin.pixelstrap.com/Fastkart/theme
+    Template Name: Zomo Admin
+    Template URI: http://admin.pixelstrap.com/Zomo/theme
     Description: This is Admin theme
     Author: Pixelstrap
     Author URI: https://themeforest.net/user/pixelstrap
@@ -11,7 +11,8 @@
 @import "utils/mixins";
 
 :root {
-    --theme-color: #0da487;
+    // --theme-color: #F2A93E;
+    --theme-color: #ff5cba;
 }
 
 // *** base ***
@@ -42,6 +43,8 @@
 @import "components/typeahead-search";
 @import "components/scrollbar";
 @import "components/modal";
+@import "components/setting";
+@import "components/restaurant";
 
 //	*** pages ***
 @import "pages/address";

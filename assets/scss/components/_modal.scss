@@ -31,8 +31,13 @@
             border: none;
 
             .modal-header {
-                border-bottom: none;
-                padding: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320))) calc(17px + (16 - 17) * ((100vw - 320px) / (1920 - 320)));
+                border-bottom-style: dashed;
+                padding: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320))) calc(17px + (16 - 17) * ((100vw - 320px) / (1920 - 320)));
+                h5 {
+                    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+                    color: $theme-font-color;
+                    font-weight: 500;
+                }
 
                 .modal-title {
                     font-weight: 600;
@@ -59,6 +64,9 @@
                     margin: 0;
                     padding: 8px;
                     z-index: 1;
+                    i {
+                        font-size: 22px;
+                    }
 
                     [dir="rtl"] & {
                         right: unset;
@@ -71,7 +79,8 @@
 
                     @include mq-max(sm) {
                         right: 13px;
-                        top: 13px;
+                        top: 7px;
+                        padding: 6px;
 
                         [dir="rtl"] & {
                             right: unset;
@@ -97,6 +106,42 @@
                     margin: 0;
                 }
             }
+            .modal-footer {
+                border-top: 1px dashed $border-color;
+                button {
+                    transition: all .4s ease-in-out;
+                    padding: 8px 20px !important;
+                    &:first-child{
+                        background-color: transparent;
+                        color: $theme-font-color;
+                        transition: all .4s ease-in-out;
+                        &:hover {
+                            background: linear-gradient(to right, rgba(#F2A93E, 1),rgba(#F07054, 1) );
+                            color: $theme-font-color;
+                        }
+                    }
+                    &:nth-child(2) {
+                        background: linear-gradient(to right, rgba(#F2A93E, 1),rgba(#F07054, 1) );
+                        color: $white;
+                        &:hover {
+                            color: $theme-font-color;
+                        }
+                        a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.add-hours{
+        .modal-body{
+            select {
+                margin: 20px 0 6px;
+                padding: 4px 8px;
+                width: 30%;
+                border-radius: 4px;
+            }
         }
     }
 }
@@ -107,6 +152,9 @@
             font-weight: 700;
             font-size: calc(17px + (25 - 17) * ((100vw - 320px) / (1920 - 320)));
             margin-bottom: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+        }
+        .remove-box{
+            padding-bottom: 12px;
         }
 
         .button-box {
@@ -185,6 +233,8 @@
 .order-offcanvas {
     .offcanvas-header {
         padding: 18px;
+        background-color: $light-background;
+        border-bottom: 1px dashed $border-color;
 
         .offcanvas-title {
             color: $title-color;
@@ -262,6 +312,13 @@
         }
     }
 }
+.status-list{
+    li {
+        a {
+            color: $theme-font-color;
+        }
+    }
+}
 
 // choose modal
 .media-modal {
@@ -270,7 +327,7 @@
     }
 
     .nav-tabs {
-        border-color: $border-color;
+        border-color: $v-light-silver;
 
         .nav-link {
             border-color: transparent;
@@ -281,18 +338,21 @@
             background-color: #f2f2f2;
         }
     }
-
+    .latitude-box {
+        background-color: $dark-body-background;
+    }
     .select-top-panel {
         margin-top: 20px;
         padding-bottom: 20px;
-        border-bottom: 1px solid $border-color;
         display: flex;
         gap: calc(9px + (25 - 9) * ((100vw - 320px) / (1920 - 320)));
         justify-content: space-between;
 
         >div {
             width: 50%;
-
+            input {
+                border-color: $v-light-silver;
+            }
             @include mq-max(md) {
                 width: 100%;
             }
@@ -313,7 +373,7 @@
 
         .card {
             padding: 8px;
-            border: 1px solid $border-color;
+            border: 1px dashed $border-color;
             border-radius: 3px;
 
             .option-btn {
