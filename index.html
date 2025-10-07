@@ -17,7 +17,9 @@
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Linear Icon css -->
     <link rel="stylesheet" href="assets/css/linearicon.css">
 
@@ -58,15 +60,23 @@
 
 <body>
     <!-- tap on top start -->
-    <div class="tap-top">
+    <!-- <div class="tap-top">
         <i class="ri-arrow-up-double-fill"></i>
-    </div>
+    </div> -->
     <!-- tap on tap end -->
 
     <!-- loader start -->
-    <div class="loader-wrapper"> 
+    <div class="loader-wrapper">
         <img src="./assets/images/loader.gif" alt="">
     </div>
+    <style>
+        .tap-top {
+            background-color: #000 !important;
+            /* button background */
+            color: #fff;
+            /* icon color */
+        }
+    </style>
     <!-- loader end -->
 
     <!-- page-wrapper Start-->
@@ -81,7 +91,7 @@
                             <img class="img-fluid white-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
-                     <div class="toggle-sidebar">
+                    <div class="toggle-sidebar">
                         <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
                         <a href="index.html">
                             <img class="img-fluid for-light" src="assets/images/logo/logo.png" alt="logo">
@@ -257,7 +267,7 @@
                     <i class="close-icon" data-feather="x"></i>
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- Page Header Ends-->
 
         <!-- Page Body Start-->
@@ -312,7 +322,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                
+
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-user-3-line"></i>
@@ -328,7 +338,7 @@
                                     </ul>
                                 </li>
 
-                               
+
                                 <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
                                         <i class="ri-road-map-line"></i>
@@ -371,19 +381,24 @@
                                 </li>
 
                                 <li class="sidebar-list">
-    <a class="sidebar-link sidebar-title link-nav" href="testimonial.html">
-        <i class="ri-chat-quote-line"></i> <!-- testimonial icon -->
-        <span>Testimonial</span>
-    </a>
-</li>
+                                    <a class="sidebar-link sidebar-title link-nav" href="testimonial.html">
+                                        <i class="ri-chat-quote-line"></i> <!-- testimonial icon -->
+                                        <span>Testimonial</span>
+                                    </a>
+                                </li>
 
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="help.html">
+                                        <i class="ri-question-line"></i> <!-- help / support icon -->
+                                        <span>Help</span>
+                                    </a>
+                                </li>
 <li class="sidebar-list">
-    <a class="sidebar-link sidebar-title link-nav" href="help.html">
-        <i class="ri-question-line"></i> <!-- help / support icon -->
-        <span>Help</span>
+    <a class="sidebar-link sidebar-title link-nav" href="reports.html">
+        <i class="ri-file-chart-line"></i> <!-- report / analytics icon -->
+        <span>Report</span>
     </a>
 </li>
-
                                 <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-line"></i>
@@ -432,38 +447,41 @@
                     </nav>
                 </div>
             </div>
-           <style>
-/* Active link text and icon */
-.sidebar-links li .sidebar-link.active span,
-.sidebar-links li .sidebar-link:hover span {
-    color: #ff5cba !important;
-}
+            <style>
+                /* Active link text and icon */
+                .sidebar-links li .sidebar-link.active span,
+                .sidebar-links li .sidebar-link:hover span {
+                    color: #ff5cba !important;
+                }
 
-.sidebar-links li .sidebar-link.active i,
-.sidebar-links li .sidebar-link:hover i {
-    color: #ff5cba !important;
-}
+                .sidebar-links li .sidebar-link.active i,
+                .sidebar-links li .sidebar-link:hover i {
+                    color: #ff5cba !important;
+                }
 
-/* Active link background */
-.sidebar-links li .sidebar-link.active {
-    background-color: rgba(255, 92, 186, 0.1);
-    border-radius: 6px;
-}
-.customizer-links .rtl-btn {
-    background: #ff5cba;          /* solid pink background */
-    border: none;
-    outline: none;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;                  /* white text */
-    border-radius: 0 0 5px 5px;
-    padding: 6px 18px;
-}
-.page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a.active {
-    color: #ff5cba !important;
-}
+                /* Active link background */
+                .sidebar-links li .sidebar-link.active {
+                    background-color: rgba(255, 92, 186, 0.1);
+                    border-radius: 6px;
+                }
 
-           </style>
+                .customizer-links .rtl-btn {
+                    background: #ff5cba;
+                    /* solid pink background */
+                    border: none;
+                    outline: none;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #fff;
+                    /* white text */
+                    border-radius: 0 0 5px 5px;
+                    padding: 6px 18px;
+                }
+
+                .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li .sidebar-submenu li a.active {
+                    color: #ff5cba !important;
+                }
+            </style>
             <!-- Page Sidebar Ends-->
 
             <!-- index body start -->
@@ -472,204 +490,178 @@
                     <div class="row">
                         <div class="col-xxl-3 col-xl-4 col-md-4 col-12">
                             <div class="card p-0">
-                                <div class="cadr-body">
-                                    <div class="welcome-card">
+                                <div class="card-body">
+                                    <div class="welcome-card text-center p-3">
                                         <div>
-                                            <h5> Exclusive weekend discounts</h5>
-                                            <h3>Welcome To Zomo</h3>
-                                            <a href="category.html" class="btn btn-primary w-50 mx-auto">Check Menu</a>
-                                            <img class="offer" src="./assets/images/dashboard/offer.gif" alt="">
+                                            <h5 class="text-muted">Delicious weekend treats</h5>
+                                            <h3 class="fw-bold text-uppercase">Welcome to Cakee</h3>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-xxl-9 col-xl-8 col-md-8 col-12">
                             <div class="row">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h5>Menu category</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="categories-section">
-                                                <div class="theme-arrow">
-                                                    <div class="swiper categories-slider categories-style">
-                                                        <div class="swiper-wrapper">
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/1.png" alt="p-1">
-                                                                    <h4 class="dark-text">Pizza</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/2.png" alt="p-2">
-                                                                    <h4 class="dark-text">Chicken</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/3.png" alt="p-3">
-                                                                    <h4 class="dark-text">Burger</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/4.png" alt="p-5">
-                                                                    <h4 class="dark-text">Fries</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/5.png" alt="p-6">
-                                                                    <h4 class="dark-text">Boritto</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/6.png" alt="p-7">
-                                                                    <h4 class="dark-text">Taco</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/7.png" alt="p-8">
-                                                                    <h4 class="dark-text">Muffin</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/8.png" alt="p-9">
-                                                                    <h4 class="dark-text">Meat</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/9.png" alt="p-5">
-                                                                    <h4 class="dark-text">Panner</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/10.png" alt="p-11">
-                                                                    <h4 class="dark-text">Hotdog</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/11.png" alt="p-12">
-                                                                    <h4 class="dark-text">Donuts</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/12.png" alt="p-13">
-                                                                    <h4 class="dark-text">Coffee</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/13.png" alt="p-14">
-                                                                    <h4 class="dark-text">Sandwich</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/14.png" alt="p-15">
-                                                                    <h4 class="dark-text">Noddle</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/15.png" alt="p-16">
-                                                                    <h4 class="dark-text">Pasta</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/16.png" alt="p-17">
-                                                                    <h4 class="dark-text">Meggi</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/17.png" alt="p-18">
-                                                                    <h4 class="dark-text">Momos</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/18.png" alt="p-19">
-                                                                    <h4 class="dark-text">Salad</h4>
-                                                                </a>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <a href="category.html" class="food-categories">
-                                                                    <img class="img-fluid categories-img" src="./assets/images/product/19.png" alt="p-20">
-                                                                    <h4 class="dark-text">Biryani</h4>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-button-next categories-next"></div>
-                                                    <div class="swiper-button-prev categories-prev"></div>
-                                                </div>
+
+                                <!-- Card 1 -->
+                                <div class="col-xxl-4 col-sm-6 mb-3">
+                                    <div class="card widgets-card">
+                                        <div class="card-body d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h5>Total Orders Today</h5>
+                                                <h4>75</h4>
+                                            </div>
+                                            <div class="icon-bg icon-bg-pink">
+                                                <i class="ri-shopping-cart-line"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xxl-4 col-sm-6 ">
+
+                                <!-- Card 2 -->
+                                <div class="col-xxl-4 col-sm-6 mb-3">
                                     <div class="card widgets-card">
-                                        <div class="card-body">
-                                           <div class="row align-items-center">
-                                                <div class="col-lg-5 d-flex d-lg-block justify-content-between align-items-center">
-                                                        <h5>Total Sale</h5>
-                                                        <h2>$254.90</h2>
-                                                </div>
-                                                <div class="col-lg-7 col-12 p-0">
-                                                    <div id="daily-value"></div>
-                                                </div>
-                                           </div>
+                                        <div class="card-body d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h5>Total Orders This Month</h5>
+                                                <h4>1200</h4>
+                                            </div>
+                                            <div class="icon-bg icon-bg-green">
+                                                <i class="ri-calendar-line"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xxl-4 col-sm-6 ">
+
+                                <!-- Card 3 -->
+                                <div class="col-xxl-4 col-sm-6 mb-3">
                                     <div class="card widgets-card">
-                                        <div class="card-body">
-                                           <div class="row align-items-center">
-                                                <div class="col-lg-5 d-flex d-lg-block justify-content-between align-items-center">
-                                                        <h5>Total Profit</h5>
-                                                        <h2>$254.90</h2>
-                                                </div>
-                                                <div class="col-lg-7 col-12 p-0">
-                                                    <div id="order-value"></div>
-                                                </div>
-                                           </div>
+                                        <div class="card-body d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h5>Total Orders</h5>
+                                                <h4>4500</h4>
+                                            </div>
+                                            <div class="icon-bg icon-bg-yellow">
+                                                <i class="ri-stack-line"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xxl-4 col-xl-6 d-none d-xxl-block">
+
+                                <!-- Card 4 -->
+                                <div class="col-xxl-4 col-sm-6 mb-3">
                                     <div class="card widgets-card">
-                                        <div class="card-body">
-                                           <div class="row align-items-center">
-                                                <div class="col-5">
-                                                        <h5>Customer rate</h5>
-                                                        <h2>5.12%</h2>
-                                                </div>
-                                                <div class="col-7 p-0">
-                                                    <div id="admissionRatio"></div>
-                                                </div>
-                                           </div>
+                                        <div class="card-body d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h5>Total Revenue</h5>
+                                                <h4>₹254,560</h4>
+                                            </div>
+                                            <div class="icon-bg icon-bg-blue">
+                                                <i class="ri-money-dollar-circle-line"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Card 5 -->
+                                <div class="col-xxl-4 col-sm-6 mb-3">
+                                    <div class="card widgets-card">
+                                        <div class="card-body d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h5>Total Customers</h5>
+                                                <h4>800</h4>
+                                            </div>
+                                            <div class="icon-bg icon-bg-orange">
+                                                <i class="ri-user-line"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6 -->
+                                <div class="col-xxl-4 col-sm-6 mb-3">
+                                    <div class="card widgets-card">
+                                        <div class="card-body d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h5>New Customers This Month</h5>
+                                                <h4>120</h4>
+                                            </div>
+                                            <div class="icon-bg icon-bg-red">
+                                                <i class="ri-user-add-line"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
+                        <style>
+                            .widgets-card {
+                                height: 150px;
+                                /* Increased height */
+                                border-radius: 12px;
+                                transition: transform 0.3s, box-shadow 0.3s;
+                                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                                cursor: pointer;
+                            }
+
+                            .widgets-card:hover {
+                                transform: translateY(-5px);
+                                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+                            }
+
+                            .widgets-card h5 {
+                                font-size: 1rem;
+                                color: #555;
+                            }
+
+                            .widgets-card h4 {
+                                font-size: 1.5rem;
+                                font-weight: 700;
+                                margin-top: 5px;
+                            }
+
+                            /* Icon background circles */
+                            .icon-bg {
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                font-size: 1.6rem;
+                                color: #fff;
+                            }
+
+                            .icon-bg-pink {
+                                background-color: #ff5cba;
+                            }
+
+                            .icon-bg-green {
+                                background-color: #34c759;
+                            }
+
+                            .icon-bg-yellow {
+                                background-color: #f5a623;
+                            }
+
+                            .icon-bg-blue {
+                                background-color: #007bff;
+                            }
+
+                            .icon-bg-orange {
+                                background-color: #ff9500;
+                            }
+
+                            .icon-bg-red {
+                                background-color: #ff3b30;
+                            }
+                        </style>
                         <div class="col-xl-7">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>Order Reports</h5>
+                                    <h5>Today's Order Reports</h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive theme-scrollbar">
@@ -677,7 +669,8 @@
                                             <table class="table user-table" id="table_id">
                                                 <thead>
                                                     <tr>
-                                                        <th><input id="checkall​" class="custom-checkbox" type="checkbox" name="text"></th>
+                                                        <th><input id="checkall" class="custom-checkbox" type="checkbox"
+                                                                name="text"></th>
                                                         <th>Food</th>
                                                         <th>Customer</th>
                                                         <th>Order Date</th>
@@ -689,478 +682,322 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                            <input class="custom-checkbox" type="checkbox" name="text">
                                                         </td>
-                                                        
                                                         <td>
                                                             <div class="table-image">
-                                                                <img src="./assets/images/dashboard/product-2/1.jpg" class="img-fluid"
-                                                                    alt="">
-                                                                <h5>Fish Burger</h5>
+                                                                <img src="./assets/images/cake/cake1.jpeg"
+                                                                    class="img-fluid" alt="Chocolate Truffle Cake">
+                                                                <h5>Chocolate Truffle Cake</h5>
                                                             </div>
                                                         </td>
-                                                        <td>Jessica Taylor</td>
-                                                        <td> 25/10/2024 </td>
-
-                                                        <td>$30.00</td>
-
+                                                        <td>Emma Johnson</td>
+                                                        <td>25/10/2024</td>
+                                                        <td>₹450.00</td>
                                                         <td>
                                                             <div class="pending">pending</div>
                                                         </td>
                                                     </tr>
+
                                                     <tr>
                                                         <td>
-                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                            <input class="custom-checkbox" type="checkbox" name="text">
                                                         </td>
-                                                        
                                                         <td>
                                                             <div class="table-image">
-                                                                <img src="./assets/images/dashboard/product-2/2.jpg" class="img-fluid"
-                                                                    alt="">
-                                                                <h5>Pepperoni Pizza</h5>
+                                                                <img src="./assets/images/cake/cake2.jpeg"
+                                                                    class="img-fluid" alt="Red Velvet Cupcake">
+                                                                <h5>Red Velvet Cupcake</h5>
                                                             </div>
                                                         </td>
-                                                        <td>Jane Cooper</td>
-                                                        <td> 20/1/2024 </td>
-
-                                                        <td>$57.20</td>
-
+                                                        <td>Liam Brown</td>
+                                                        <td>20/09/2024</td>
+                                                        <td>₹550.00</td>
                                                         <td>
                                                             <div class="completed">completed</div>
                                                         </td>
                                                     </tr>
+
                                                     <tr>
                                                         <td>
-                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                            <input class="custom-checkbox" type="checkbox" name="text">
                                                         </td>
-                                                        
                                                         <td>
                                                             <div class="table-image">
-                                                                <img src="./assets/images/dashboard/product-2/3.jpg" class="img-fluid"
-                                                                    alt="">
-                                                                <h5>Hot Dog</h5>
+                                                                <img src="./assets/images/cake/cake3.jpeg"
+                                                                    class="img-fluid" alt="Strawberry Cheesecake">
+                                                                <h5>Strawberry Cheesecake</h5>
                                                             </div>
                                                         </td>
-                                                        <td>Olivia Anderson</td>
-                                                        <td> 18/10/2024 </td>
-
-                                                        <td>$40.00</td>
-
+                                                        <td>Olivia Davis</td>
+                                                        <td>18/10/2024</td>
+                                                        <td>₹450.00</td>
                                                         <td>
                                                             <div class="pending">pending</div>
                                                         </td>
                                                     </tr>
+
                                                     <tr>
                                                         <td>
-                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                            <input class="custom-checkbox" type="checkbox" name="text">
                                                         </td>
-                                                        
                                                         <td>
                                                             <div class="table-image">
-                                                                <img src="./assets/images/dashboard/product-2/4.jpg" class="img-fluid"
-                                                                    alt="">
-                                                                <h5>Nachos</h5>
+                                                                <img src="./assets/images/cake/cake4.jpeg"
+                                                                    class="img-fluid" alt="Blueberry Muffin">
+                                                                <h5>Blueberry Muffin</h5>
                                                             </div>
                                                         </td>
-                                                        <td>Sophia Garcia</td>
-                                                        <td> 02/08/2024 </td>
-
-                                                        <td>$30.25</td>
-
+                                                        <td>Noah Williams</td>
+                                                        <td>02/08/2024</td>
+                                                        <td>₹225.00</td>
                                                         <td>
                                                             <div class="completed">completed</div>
                                                         </td>
                                                     </tr>
+
                                                     <tr>
                                                         <td>
-                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                            <input class="custom-checkbox" type="checkbox" name="text">
                                                         </td>
-                                                        
                                                         <td>
                                                             <div class="table-image">
-                                                                <img src="./assets/images/dashboard/product-2/5.jpg" class="img-fluid"
-                                                                    alt="">
-                                                                <h5>Beef Burger</h5>
+                                                                <img src="./assets/images/cake/cake1.jpeg"
+                                                                    class="img-fluid" alt="Caramel Brownie">
+                                                                <h5>Caramel Brownie</h5>
                                                             </div>
                                                         </td>
-                                                        <td>Michael Smith</td>
-                                                        <td> 05/05/2024 </td>
-
-                                                        <td>$50.00</td>
+                                                        <td>Charlotte Miller</td>
+                                                        <td>05/05/2024</td>
+                                                        <td>₹300.00</td>
                                                         <td>
                                                             <div class="pending">pending</div>
                                                         </td>
                                                     </tr>
+
                                                     <tr>
                                                         <td>
-                                                            <input class="custom-checkbox"  type="checkbox" name="text">
+                                                            <input class="custom-checkbox" type="checkbox" name="text">
                                                         </td>
-                                                        
                                                         <td>
                                                             <div class="table-image">
-                                                                <img src="./assets/images/dashboard/product-2/6.jpg" class="img-fluid"
-                                                                    alt="">
-                                                                <h5>Japanese Ramen</h5>
+                                                                <img src="./assets/images/cake/cake2.jpeg"
+                                                                    class="img-fluid" alt="Tiramisu Slice">
+                                                                <h5>Tiramisu Slice</h5>
                                                             </div>
                                                         </td>
-                                                        <td>David Wilson</td>
-                                                        <td> 26/07/2024 </td>
-
-                                                        <td>$71.010</td>
-
+                                                        <td>William Anderson</td>
+                                                        <td>26/07/2024</td>
+                                                        <td>₹550.00</td>
                                                         <td>
                                                             <div class="completed">completed</div>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5">
-                            <div class="card">
-                                <div class="card-header mb-0">
-                                    <h5>Sales Figures</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div id="earning-average"></div>
-                                    <div class="special-items-box">
-                                        <h5>Today's Special Dish</h5>
-                                        <div class="dish-img"> </div>
-                                        <h6>Spicy Burger with Extra Cheese</h6>
-                                        <ul>
-                                            <li>$10.53</li>
-                                            <li>
-                                                <i class="ri-heart-fill"></i>
-                                                200k</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       <div class="col-xl-5">
+    <div class="card">
+        <div class="card-header mb-0">
+            <h5>Top Selling Item Today</h5>
+        </div>
+        <div class="card-body">
+
+            <!-- Top Selling Item -->
+            <div id="earning-average" class="text-center p-3" style="border-bottom: 1px solid #eee;">
+                <!-- Content injected via JS -->
+            </div>
+
+            <!-- Top Customer Box -->
+            <div class="special-items-box text-center mt-3 p-3" style="background-color: #f9f9f9; border-radius: 10px;">
+                <h5 class="mb-2">Top Customer Today</h5>
+                <div class="customer-img mb-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png"
+                        alt="Customer"
+                        style="width:60px; height:60px; border-radius:50%; object-fit:cover; border:2px solid #ff5cba;">
+                </div>
+                <h6 class="mb-1">John Doe</h6>
+                <ul class="list-unstyled mb-2">
+                    <li>Total Orders: <strong>5</strong></li>
+                    <li>
+                        <i class="ri-money-dollar-circle-line"></i>
+                        Spent: <strong>₹12,000</strong>
+                    </li>
+                </ul>
+                <a href="order-list.html" class="btn btn-sm mt-2"
+                    style="background-color: #ff5cba; border-color: #ff5cba; color: #fff; padding: 4px 12px; font-size: 13px; text-align:center; border-radius: 50px;">
+                    View
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Sample sales data for today
+const todaySales = [
+    { item: 'Chocolate Cake', quantity: 25 },
+    { item: 'Vanilla Cupcake', quantity: 40 },
+    { item: 'Blueberry Muffin', quantity: 15 },
+    { item: 'Red Velvet Cake', quantity: 30 }
+];
+
+// Find the most selling item
+const mostSelling = todaySales.reduce((max, item) => item.quantity > max.quantity ? item : max, todaySales[0]);
+
+// Inject into #earning-average
+document.getElementById('earning-average').innerHTML = `
+    <h6 style="color:#ff5cba; margin-bottom:5px;">Top Selling Item</h6>
+    <p class="display-6 font-weight-bold mb-1">${mostSelling.item}</p>
+    <p style="color:#555;">Sold: <strong>${mostSelling.quantity} units</strong></p>
+`;
+</script>
+
                         <div class="col-12">
                             <div class="trending-orders">
                                 <div class="trnding-title">
-                                    <h5>Trending orders</h5>
-                                    <a href="media.html">View All
-                                        <i class="ri-arrow-right-s-line"></i>
-                                    </a>
+                                    <h5>Trending Cakes This Week</h5>
+                                    <!-- <a href="category.html">View All
+                <i class="ri-arrow-right-s-line"></i>
+            </a> -->
                                 </div>
                                 <div class="swiper trending-slider">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide trending-box">
-                                            <div class="card-body trending-items">
-                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/1.jpg" alt="">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <h5>Poultry Palace</h5>
-                                                    <h6>$20.00</h6>
-                                                </div>
-                                                <p>Healthy Foods are nutrient-Dense Foods</p>
-                                                <ul class="rating">
-                                                    <li>
-                                                        <h6>200
-                                                            <span>Sale</span>
-                                                        </h6>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <i class="ri-star-fill"></i>
-                                                            4.5
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                               <div class="marquee-box">
-                                                    <ul class="marquee-discount">
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Month
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Month
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Month
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Month
-                                                        </li>
-                                                    </ul>
-                                               </div>
-                                            </div>
 
-                                        </div>
+                                        <!-- Chocolate Truffle Cake -->
                                         <div class="swiper-slide trending-box">
                                             <div class="card-body trending-items">
-                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/2.jpg" alt="">
+                                                <img class="img-fluid product-img" src="assets/images/cake/cake1.jpeg"
+                                                    alt="Chocolate Truffle Cake">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <h5>Wing Mastern</h5>
-                                                    <h6>$30.00</h6>
+                                                    <h5>Chocolate Truffle Cake</h5>
+                                                    <h6>₹550.00</h6>
                                                 </div>
-                                                <p>Nutrient-dense with healthy choices</p>
+                                                <p>Rich chocolate layers with creamy ganache.</p>
                                                 <ul class="rating">
                                                     <li>
-                                                        <h6>200
-                                                            <span>Sale</span>
-                                                        </h6>
+                                                        <h6>350 <span>Sale</span></h6>
                                                     </li>
                                                     <li>
-                                                        <p>
-                                                            <i class="ri-star-fill"></i>
-                                                            4.5
-                                                        </p>
+                                                        <p><i class="ri-star-fill"></i> 4.8</p>
                                                     </li>
                                                 </ul>
-                                               <div class="marquee-box">
+                                                <div class="marquee-box">
                                                     <ul class="marquee-discount">
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
+                                                        <li class="discount-info"><img
+                                                                src="./assets/images/dashboard/round.gif" alt="">Top of
+                                                            the Month</li>
+                                                        <li class="discount-info"><img
+                                                                src="./assets/images/dashboard/round.gif" alt="">Top of
+                                                            the Month</li>
                                                     </ul>
-                                               </div>
+                                                </div>
                                             </div>
+                                        </div>
 
-                                        </div>
+                                        <!-- Blueberry Cheesecake -->
                                         <div class="swiper-slide trending-box">
                                             <div class="card-body trending-items">
-                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/3.jpg" alt="">
+                                                <img class="img-fluid product-img" src="assets/images/cake/cake2.jpeg"
+                                                    alt="Blueberry Cheesecake">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <h5>Burger Barn</h5>
-                                                    <h6>$20.00</h6>
+                                                    <h5>Blueberry Cheesecake</h5>
+                                                    <h6>₹680.00</h6>
                                                 </div>
-                                                <p>offering numerous health benefits prevention.</p>
+                                                <p>Fresh blueberry topping on smooth cheesecake.</p>
                                                 <ul class="rating">
                                                     <li>
-                                                        <h6>200
-                                                            <span>Sale</span>
-                                                        </h6>
+                                                        <h6>270 <span>Sale</span></h6>
                                                     </li>
                                                     <li>
-                                                        <p>
-                                                            <i class="ri-star-fill"></i>
-                                                            4.5
-                                                        </p>
+                                                        <p><i class="ri-star-fill"></i> 4.5</p>
                                                     </li>
                                                 </ul>
-                                               <div class="marquee-box">
+                                                <div class="marquee-box">
                                                     <ul class="marquee-discount">
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Year
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Year
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Year
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Year
-                                                        </li>
+                                                        <li class="discount-info"><img
+                                                                src="./assets/images/dashboard/round.gif" alt="">Top of
+                                                            the Week</li>
+                                                        <li class="discount-info"><img
+                                                                src="./assets/images/dashboard/round.gif" alt="">Top of
+                                                            the Week</li>
                                                     </ul>
-                                               </div>
+                                                </div>
                                             </div>
+                                        </div>
 
-                                        </div>
+                                        <!-- Tiramisu -->
                                         <div class="swiper-slide trending-box">
                                             <div class="card-body trending-items">
-                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/4.jpg" alt="">
+                                                <img class="img-fluid product-img" src="assets/images/cake/cake3.jpeg"
+                                                    alt="Tiramisu">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <h5>Poultry Palace</h5>
-                                                    <h6>$15.00</h6>
+                                                    <h5>Tiramisu</h5>
+                                                    <h6>₹600.00</h6>
                                                 </div>
-                                                <p>Healthy Foods are nutrient-Dense Foods</p>
+                                                <p>Italian coffee-flavored dessert with mascarpone.</p>
                                                 <ul class="rating">
                                                     <li>
-                                                        <h6>200
-                                                            <span>Sale</span>
-                                                        </h6>
+                                                        <h6>250 <span>Sale</span></h6>
                                                     </li>
                                                     <li>
-                                                        <p>
-                                                            <i class="ri-star-fill"></i>
-                                                            4.5
-                                                        </p>
+                                                        <p><i class="ri-star-fill"></i> 4.6</p>
                                                     </li>
                                                 </ul>
-                                               <div class="marquee-box">
+                                                <div class="marquee-box">
                                                     <ul class="marquee-discount">
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Year
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Year
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Year
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Year
-                                                        </li>
+                                                        <li class="discount-info"><img
+                                                                src="./assets/images/dashboard/round.gif" alt="">Top of
+                                                            the Month</li>
+                                                        <li class="discount-info"><img
+                                                                src="./assets/images/dashboard/round.gif" alt="">Top of
+                                                            the Month</li>
                                                     </ul>
-                                               </div>
+                                                </div>
                                             </div>
+                                        </div>
 
-                                        </div>
+                                        <!-- Cupcake Assortment -->
                                         <div class="swiper-slide trending-box">
                                             <div class="card-body trending-items">
-                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/5.jpg" alt="">
+                                                <img class="img-fluid product-img" src="assets/images/cake/cake4.jpeg"
+                                                    alt="Cupcake Assortment">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <h5>Mushroom</h5>
-                                                    <h6>$20.00</h6>
+                                                    <h5>Cupcake Assortment</h5>
+                                                    <h6>₹350.00</h6>
                                                 </div>
-                                                <p>Eggs are a nutrient powerhouse overall health.</p>
+                                                <p>Box of assorted cupcakes with creamy frosting.</p>
                                                 <ul class="rating">
                                                     <li>
-                                                        <h6>200
-                                                            <span>Sale</span>
-                                                        </h6>
+                                                        <h6>320 <span>Sale</span></h6>
                                                     </li>
                                                     <li>
-                                                        <p>
-                                                            <i class="ri-star-fill"></i>
-                                                            4.5
-                                                        </p>
+                                                        <p><i class="ri-star-fill"></i> 4.7</p>
                                                     </li>
                                                 </ul>
-                                               <div class="marquee-box">
+                                                <div class="marquee-box">
                                                     <ul class="marquee-discount">
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
+                                                        <li class="discount-info"><img
+                                                                src="./assets/images/dashboard/round.gif" alt="">Top of
+                                                            the Week</li>
+                                                        <li class="discount-info"><img
+                                                                src="./assets/images/dashboard/round.gif" alt="">Top of
+                                                            the Week</li>
                                                     </ul>
-                                               </div>
+                                                </div>
                                             </div>
+                                        </div>
 
-                                        </div>
-                                        <div class="swiper-slide trending-box">
-                                            <div class="card-body trending-items">
-                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/6.jpg" alt="">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <h5>Ribeye Junction</h5>
-                                                    <h6>$20.00</h6>
-                                                </div>
-                                                <p>Healthy Foods are nutrient-Dense Foods</p>
-                                                <ul class="rating">
-                                                    <li>
-                                                        <h6>200
-                                                            <span>Sale</span>
-                                                        </h6>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <i class="ri-star-fill"></i>
-                                                            4.5
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                               <div class="marquee-box">
-                                                    <ul class="marquee-discount">
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Month
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Month
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Month
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Month
-                                                        </li>
-                                                    </ul>
-                                               </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="swiper-slide trending-box">
-                                            <div class="card-body trending-items">
-                                                <img class="img-fluid product-img" src="./assets/images/dashboard/product/7.jpg" alt="">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <h5>Latte Lounge</h5>
-                                                    <h6>$20.00</h6>
-                                                </div>
-                                                <p>Healthy Foods are nutrient-Dense Foods</p>
-                                                <ul class="rating">
-                                                    <li>
-                                                        <h6>200
-                                                            <span>Sale</span>
-                                                        </h6>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <i class="ri-star-fill"></i>
-                                                            4.5
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                               <div class="marquee-box">
-                                                    <ul class="marquee-discount">
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                        <li class="discount-info">
-                                                            <img src="./assets/images/dashboard/round.gif" alt="">
-                                                            Top Of Them Week
-                                                        </li>
-                                                    </ul>
-                                               </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <!-- Container-fluid Ends-->
@@ -1170,8 +1007,9 @@
                     <footer class="footer">
                         <div class="row">
                             <div class="col-md-12 footer-copyright text-center">
-                                <p class="mb-0">Copyright 2024 ©Zomo template by pixelstrap</p>
+                                <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.</p>
                             </div>
+
                         </div>
                     </footer>
                 </div>
@@ -1198,9 +1036,9 @@
                     <p class="mb-0">Are you sure you want to log out?</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-cancel" type="button" data-bs-dismiss="modal"
-                    aria-label="Close">No</button>
-                    <button class="btn btn-submit" type="submit" data-bs-dismiss="modal" aria-label="Close"><a href="login.html">Yes</a></button>
+                    <button class="btn btn-cancel" type="button" data-bs-dismiss="modal" aria-label="Close">No</button>
+                    <button class="btn btn-submit" type="submit" data-bs-dismiss="modal" aria-label="Close"><a
+                            href="login.html">Yes</a></button>
                 </div>
             </div>
         </div>
@@ -1227,14 +1065,14 @@
     <!-- tooltip init js -->
     <script src="assets/js/tooltip-init.js"></script>
 
-     <!-- Plugins JS -->
+    <!-- Plugins JS -->
     <script src="assets/js/sidebar-menu.js"></script>
     <!-- Apexchar js -->
-    <script src="assets/js/chart/apex-chart/apex-chart1.js"></script>
+    <!-- <script src="assets/js/chart/apex-chart/apex-chart1.js"></script>
     <script src="assets/js/chart/apex-chart/moment.min.js"></script>
     <script src="assets/js/chart/apex-chart/apex-chart.js"></script>
     <script src="assets/js/chart/apex-chart/stock-prices.js"></script>
-    <script src="assets/js/chart/apex-chart/chart-custom1.js"></script>
+    <script src="assets/js/chart/apex-chart/chart-custom1.js"></script> -->
 
     <!-- swiper slider -->
     <script src="assets/js/swiper-bundle.min.js"></script>
@@ -1250,19 +1088,19 @@
     <script src="assets/js/script.js"></script>
     <script>
         $("#checkall").change(function () {
-      var checked = $(this).is(":checked");
-      if (checked) {
-          $(".custom-checkbox").each(function () {
-              $(this).prop("checked", true);
-          });
-  
-      } else {
-          $(".custom-checkbox").each(function () {
-              $(this).prop("checked", false);
-          });
-      }
-  });
-      </script>
+            var checked = $(this).is(":checked");
+            if (checked) {
+                $(".custom-checkbox").each(function () {
+                    $(this).prop("checked", true);
+                });
+
+            } else {
+                $(".custom-checkbox").each(function () {
+                    $(this).prop("checked", false);
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

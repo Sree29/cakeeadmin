@@ -10,14 +10,17 @@
     <meta name="keywords"
         content="admin template,Zomo admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="assets/images/logo/logo.png" type="image/png">
+<link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/png">
+
     <title>Cakee - Dashboard</title>
 
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Linear Icon css -->
     <link rel="stylesheet" href="assets/css/linearicon.css">
 
@@ -55,64 +58,73 @@
     <!-- App css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <style>
-/* Active link text and icon */
-.sidebar-links li .sidebar-link.active span,
-.sidebar-links li .sidebar-link:hover span {
-    color: #ff5cba !important;
-}
+        /* Active link text and icon */
+        .sidebar-links li .sidebar-link.active span,
+        .sidebar-links li .sidebar-link:hover span {
+            color: #ff5cba !important;
+        }
 
-.sidebar-links li .sidebar-link.active i,
-.sidebar-links li .sidebar-link:hover i {
-    color: #ff5cba !important;
-}
+        .sidebar-links li .sidebar-link.active i,
+        .sidebar-links li .sidebar-link:hover i {
+            color: #ff5cba !important;
+        }
 
-/* Active link background */
-.sidebar-links li .sidebar-link.active {
-    background-color: rgba(255, 92, 186, 0.1);
-    border-radius: 6px;
-}
-.setting-main-box li .nav-link.active {
-    background: -webkit-gradient(linear, left top, right top, from(#ff5cba), to(#ff5cba)) !important;
-    background: linear-gradient(to right, #ff5cba, #ff5cba) !important;
-    color: #fff !important;
-    border-color: transparent;
-}
-.save-button {
-    float: right;
-    background: #ff5cba !important; /* solid pink */
-    color: #fff;
-    font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
-    margin-top: 20px;
-    border: none;        /* optional, remove border if needed */
-    border-radius: 4px;  /* optional, for rounded corners */
-    padding: 8px 16px;   /* optional, adjust padding */
-}
-.customizer-links .rtl-btn {
-    background: #ff5cba;          /* solid pink background */
-    border: none;
-    outline: none;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;                  /* white text */
-    border-radius: 0 0 5px 5px;
-    padding: 6px 18px;
-}
-.page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-submenu li a.active {
-    color: #ff5cba !important;
-}
+        /* Active link background */
+        .sidebar-links li .sidebar-link.active {
+            background-color: rgba(255, 92, 186, 0.1);
+            border-radius: 6px;
+        }
 
-           </style>
+        .setting-main-box li .nav-link.active {
+            background: -webkit-gradient(linear, left top, right top, from(#ff5cba), to(#ff5cba)) !important;
+            background: linear-gradient(to right, #ff5cba, #ff5cba) !important;
+            color: #fff !important;
+            border-color: transparent;
+        }
+
+        .save-button {
+            float: right;
+            background: #ff5cba !important;
+            /* solid pink */
+            color: #fff;
+            font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
+            margin-top: 20px;
+            border: none;
+            /* optional, remove border if needed */
+            border-radius: 4px;
+            /* optional, for rounded corners */
+            padding: 8px 16px;
+            /* optional, adjust padding */
+        }
+
+        .customizer-links .rtl-btn {
+            background: #ff5cba;
+            /* solid pink background */
+            border: none;
+            outline: none;
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            /* white text */
+            border-radius: 0 0 5px 5px;
+            padding: 6px 18px;
+        }
+
+        .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li .sidebar-submenu li a.active {
+            color: #ff5cba !important;
+        }
+    </style>
 </head>
 
 <body>
     <!-- tap on top start -->
-    <div class="tap-top">
+    <!-- <div class="tap-top">
         <i class="ri-arrow-up-double-fill"></i>
-    </div>
+    </div> -->
     <!-- tap on tap end -->
 
     <!-- loader start -->
-    <div class="loader-wrapper"> 
+    <div class="loader-wrapper">
         <img src="./assets/images/loader.gif" alt="">
     </div>
     <!-- loader end -->
@@ -129,7 +141,7 @@
                             <img class="img-fluid white-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
-                     <div class="toggle-sidebar">
+                    <div class="toggle-sidebar">
                         <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
                         <a href="index.html">
                             <img class="img-fluid for-light" src="assets/images/logo/logo.png" alt="logo">
@@ -305,7 +317,7 @@
                     <i class="close-icon" data-feather="x"></i>
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- Page Header Ends-->
 
         <!-- Page Body Start-->
@@ -360,7 +372,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                
+
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-user-3-line"></i>
@@ -376,7 +388,7 @@
                                     </ul>
                                 </li>
 
-                               
+
                                 <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
                                         <i class="ri-road-map-line"></i>
@@ -419,19 +431,24 @@
                                 </li>
 
                                 <li class="sidebar-list">
-    <a class="sidebar-link sidebar-title link-nav" href="testimonial.html">
-        <i class="ri-chat-quote-line"></i> <!-- testimonial icon -->
-        <span>Testimonial</span>
-    </a>
-</li>
+                                    <a class="sidebar-link sidebar-title link-nav" href="testimonial.html">
+                                        <i class="ri-chat-quote-line"></i> <!-- testimonial icon -->
+                                        <span>Testimonial</span>
+                                    </a>
+                                </li>
 
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="help.html">
+                                        <i class="ri-question-line"></i> <!-- help / support icon -->
+                                        <span>Help</span>
+                                    </a>
+                                </li>
 <li class="sidebar-list">
-    <a class="sidebar-link sidebar-title link-nav" href="help.html">
-        <i class="ri-question-line"></i> <!-- help / support icon -->
-        <span>Help</span>
+    <a class="sidebar-link sidebar-title link-nav" href="reports.html">
+        <i class="ri-file-chart-line"></i> <!-- report / analytics icon -->
+        <span>Report</span>
     </a>
 </li>
-
                                 <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-line"></i>
@@ -547,6 +564,33 @@
                                                                 placeholder="On your next purchase">
                                                         </div>
                                                     </div>
+                                                    <!-- Valid Date -->
+                                                    <div class="col-xl-6">
+                                                        <div class="input-box">
+                                                            <h6>Valid Date</h6>
+                                                            <input type="date" class="form-control" id="deal_date">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Valid Time -->
+                                                    <div class="col-xl-6">
+                                                        <div class="input-box">
+                                                            <h6>Valid Time</h6>
+                                                            <input type="time" class="form-control" id="deal_time">
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-- Status -->
+                                                    <div class="col-xl-6">
+                                                        <div class="input-box">
+                                                            <h6>Status</h6>
+                                                            <select class="form-control">
+                                                                <option value="active">Active</option>
+                                                                <option value="inactive">Inactive</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -589,15 +633,26 @@
                                                     </div>
                                                     <div class="col-xl-6">
                                                         <div class="input-box">
-                                                            <h6>Valid On / Terms</h6>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="e.g., Min order ₹10">
+                                                            <h6>Valid On</h6>
+                                                            <input type="date" class="form-control">
                                                         </div>
                                                     </div>
+
                                                     <div class="col-xl-6">
                                                         <div class="input-box">
                                                             <h6>Image</h6>
                                                             <input type="file" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Status -->
+                                                    <div class="col-xl-6">
+                                                        <div class="input-box">
+                                                            <h6>Status</h6>
+                                                            <select class="form-control">
+                                                                <option value="active">Active</option>
+                                                                <option value="inactive">Inactive</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -620,8 +675,9 @@
                     <footer class="footer">
                         <div class="row">
                             <div class="col-md-12 footer-copyright text-center">
-                                <p class="mb-0">Copyright 2024 ©Zomo template by pixelstrap</p>
-                            </div>
+    <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.</p>
+</div>
+
                         </div>
                     </footer>
                 </div>

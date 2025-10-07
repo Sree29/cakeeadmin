@@ -10,8 +10,10 @@
     <meta name="keywords"
         content="admin template,Zomo admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Favicon for browser tab -->
+<link rel="icon" href="assets/images/logo/logo.png" type="image/png">
+<link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/png">
+
     <title>Cakee - Dashboard</title>
 
     <!-- Google font-->
@@ -90,9 +92,9 @@
 
 <body>
     <!-- tap on top start -->
-    <div class="tap-top">
+    <!-- <div class="tap-top">
         <i class="ri-arrow-up-double-fill"></i>
-    </div>
+    </div> -->
     <!-- tap on tap end -->
 
     <!-- loader start -->
@@ -415,6 +417,12 @@
         <span>Help</span>
     </a>
 </li>
+<li class="sidebar-list">
+    <a class="sidebar-link sidebar-title link-nav" href="reports.html">
+        <i class="ri-file-chart-line"></i> <!-- report / analytics icon -->
+        <span>Report</span>
+    </a>
+</li>
 
                                 <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
@@ -588,34 +596,62 @@
 
                             <!-- Product Price Card -->
                             <div class="card mb-3">
-                                <div class="card-header">
-                                    <h5>Product Price</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="input-items">
-                                        <div class="row gy-3">
-                                            <div class="col-xl-6">
-                                                <div class="input-box">
-                                                    <h6>Original Price</h6>
-                                                    <input type="number" class="form-control" name="original_price"
-                                                        placeholder="0">
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="input-box">
-                                                    <h6>Discount Price (Optional)</h6>
-                                                    <input type="number" class="form-control" name="discount_price"
-                                                        placeholder="0">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="card-header">
+        <h5>Product Price</h5>
+    </div>
+    <div class="card-body">
+        <div class="input-items">
+            <div class="row gy-3">
+                <!-- Original Price -->
+                <div class="col-xl-4">
+                    <div class="input-box">
+                        <h6>Original Price</h6>
+                        <input type="number" class="form-control" name="original_price" id="original_price"
+                            placeholder="0" oninput="calculateDiscountPrice()">
+                    </div>
+                </div>
+
+                <!-- Discount Percentage -->
+                <div class="col-xl-4">
+                    <div class="input-box">
+                        <h6>Discount %</h6>
+                        <input type="number" class="form-control" name="discount_percent" id="discount_percent"
+                            placeholder="0" oninput="calculateDiscountPrice()">
+                    </div>
+                </div>
+
+                <!-- Discount Price -->
+                <div class="col-xl-4">
+                    <div class="input-box">
+                        <h6>Discount Price</h6>
+                        <input type="text" class="form-control" id="discount_price" name="discount_price"
+                            placeholder="0" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function calculateDiscountPrice() {
+    const original = parseFloat(document.getElementById('original_price').value) || 0;
+    const percent = parseFloat(document.getElementById('discount_percent').value) || 0;
+    const discountPriceInput = document.getElementById('discount_price');
+
+    if (original > 0 && percent > 0 && percent < 100) {
+        const discounted = original - (original * percent / 100);
+        discountPriceInput.value = discounted.toFixed(2);
+    } else {
+        discountPriceInput.value = original > 0 ? original.toFixed(2) : '0';
+    }
+}
+</script>
+
 
                             <!-- Save Button -->
                             <div class="d-flex justify-content-end mb-4">
-    <button type="submit" class="btn" style="background-color: #ff5cba; border-color: #ff5cba; color: #fff;">
+    <button type="submit" class="btn" style="background-color: #ff5cba; border-color: #ff5cba; color: #fff;border-radius: 50px;">
         Save Product
     </button>
 </div>
@@ -632,8 +668,9 @@
                     <footer class="footer">
                         <div class="row">
                             <div class="col-md-12 footer-copyright text-center">
-                                <p class="mb-0">Copyright 2024 ©Zomo template by pixelstrap</p>
-                            </div>
+    <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.</p>
+</div>
+
                         </div>
                     </footer>
                 </div>
