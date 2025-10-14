@@ -92,6 +92,9 @@
             color: #ff5cba !important;
         }
     </style>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
 </head>
 
 <body>
@@ -298,6 +301,7 @@
         </div>
         <!-- Page Header Ends-->
 
+
         <!-- Page Body Start-->
         <div class="page-body-wrapper">
             <!-- Page Sidebar Start-->
@@ -310,22 +314,22 @@
                         <div class="back-btn">
                             <i class="fa fa-angle-left"></i>
                         </div>
-                        <div class="toggle-sidebar">
+                        <!-- <div class="toggle-sidebar">
                             <i class="ri-apps-2-line status_toggle middle sidebar-toggle"></i>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="logo-icon-wrapper">
                         <a href="index.html">
                             <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
-                    <nav class="sidebar-main">
+                   <nav class="sidebar-main">
                         <div class="left-arrow" id="left-arrow">
                             <i data-feather="arrow-left"></i>
                         </div>
 
                         <div id="sidebar-menu">
-                              <ul class="sidebar-links" id="simple-bar">
+                            <ul class="sidebar-links" id="simple-bar">
                                 <li class="back-btn"></li>
 
                                 <li class="sidebar-list">
@@ -334,45 +338,7 @@
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
-                                        <span>Users</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="all-users.html">All users</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-store-3-line"></i>
-                                        <span>Product</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="products.html">Prodcts</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="add-new-product.html">Add New Products</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-
-
-
-                                <!-- <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
-                                        <i class="ri-road-map-line"></i>
-                                        <span>Live Traking</span>
-                                    </a>
-                                </li> -->
-
-                                <li class="sidebar-list">
+                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-archive-line"></i>
                                         <span>Orders</span>
@@ -389,8 +355,22 @@
                                         </li>
                                     </ul>
                                 </li>
+                                 <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-store-3-line"></i>
+                                        <span>Products</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="products.html">Prodcts</a>
+                                        </li>
 
-                                <li class="sidebar-list">
+                                        <li>
+                                            <a href="add-new-product.html">Add New Products</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-price-tag-3-line"></i>
                                         <span>Coupons</span>
@@ -405,6 +385,26 @@
                                         </li>
                                     </ul>
                                 </li>
+                               <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="all-users.html">
+                                       <i class="ri-user-line me-2"></i>
+                                        <span> All Customers</span>
+                                    </a>
+                                </li>
+
+
+
+
+                                <!-- <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
+                                        <i class="ri-road-map-line"></i>
+                                        <span>Live Traking</span>
+                                    </a>
+                                </li> -->
+
+                               
+
+                               
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-smile-line"></i> <!-- review icon -->
@@ -500,14 +500,20 @@
                                             </a>
                                         </form>
                                     </div> -->
+  <div class="d-flex justify-content-end mb-2">
+    <button id="exportExcel" class="btn" 
+            style="background-color: #ff5cba; color: #fff; border: none; border-radius: 50px; padding: 0.5rem 1.5rem;">
+        Export as Excel
+    </button>
+</div>
 
                                     <div class="table-responsive theme-scrollbar table-product">
+                                        
                                         <table class="table category-table dataTable no-footer" id="table_id">
                                             <thead>
                                                 <tr>
                                                     <th>No.</th>
-                                                    <th>User</th>
-
+                                                  
                                                     <th>Name</th>
                                                     <th>Phone</th>
                                                     <th>Email</th>
@@ -520,13 +526,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="f-w-600">01.</td>
-                                                    <td>
-                                                        <div class="table-image">
-                                                            <img src="assets/images/users/1.jpg"
-                                                                class="img-fluid rounded" alt="">
-                                                        </div>
-                                                    </td>
-
+                                                 
                                                     <td>
                                                         <div class="user-name">
                                                             <span>Everett C. Green</span>
@@ -560,6 +560,8 @@
                         </div>
                     </div>
                 </div>
+                
+
                 <!-- All User Table Ends-->
                 <!-- Delete User Modal -->
                 <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUserModalLabel"
@@ -685,6 +687,13 @@
         </div>
     </div>
     <!-- Delete Modal Box End -->
+<script>
+document.getElementById('exportExcel').addEventListener('click', function() {
+    var table = document.getElementById('table_id');
+    var workbook = XLSX.utils.table_to_book(table, { sheet: "Users" });
+    XLSX.writeFile(workbook, 'All_Users.xlsx');
+});
+</script>
 
     <!-- latest js -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>

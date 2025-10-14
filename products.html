@@ -10,8 +10,8 @@
     <meta name="keywords"
         content="admin template,Zomo admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-   <link rel="icon" href="assets/images/logo/logo.png" type="image/png">
-<link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/png">
+    <link rel="icon" href="assets/images/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/png">
 
     <title>Cakee - Dashboard</title>
 
@@ -319,9 +319,9 @@
                         <div class="back-btn">
                             <i class="fa fa-angle-left"></i>
                         </div>
-                        <div class="toggle-sidebar">
+                        <!-- <div class="toggle-sidebar">
                             <i class="ri-apps-2-line status_toggle middle sidebar-toggle"></i>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="logo-icon-wrapper">
                         <a href="index.html">
@@ -334,7 +334,7 @@
                         </div>
 
                         <div id="sidebar-menu">
-                              <ul class="sidebar-links" id="simple-bar">
+                            <ul class="sidebar-links" id="simple-bar">
                                 <li class="back-btn"></li>
 
                                 <li class="sidebar-list">
@@ -343,44 +343,6 @@
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
-                                        <span>Users</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="all-users.html">All users</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-store-3-line"></i>
-                                        <span>Product</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="products.html">Prodcts</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="add-new-product.html">Add New Products</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-
-
-
-                                <!-- <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
-                                        <i class="ri-road-map-line"></i>
-                                        <span>Live Traking</span>
-                                    </a>
-                                </li> -->
-
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-archive-line"></i>
@@ -398,7 +360,21 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="ri-store-3-line"></i>
+                                        <span>Products</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a href="products.html">Prodcts</a>
+                                        </li>
 
+                                        <li>
+                                            <a href="add-new-product.html">Add New Products</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-price-tag-3-line"></i>
@@ -414,6 +390,25 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="all-users.html">
+                                        <i class="ri-user-line me-2"></i>
+                                        <span> All Customers</span>
+                                    </a>
+                                </li>
+
+
+
+                                <!-- <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
+                                        <i class="ri-road-map-line"></i>
+                                        <span>Live Traking</span>
+                                    </a>
+                                </li> -->
+
+
+
+
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-smile-line"></i> <!-- review icon -->
@@ -515,116 +510,64 @@
                                     <div>
                                         <div class="table-responsive theme-scrollbar">
                                             <table class="table category-table dataTable no-footer" id="table_id">
-                                                <thead>
-                                                    <tr>
-                                                        <th><input id="checkall" class="custom-checkbox"
-                                                                type="checkbox"></th>
-                                                        <th>Product Image</th>
-                                                        <th>Product Name</th>
-                                                        <th>Category</th>
-                                                        <th>Description</th>
-                                                        <th>Price</th>
-                                                        <th>Discount</th>
-                                                        <th>Final Price</th>
-                                                        <th>Tags / Labels</th>
-                                                        <th>Variants</th>
-                                                        <th>Location</th>
-                                                        <th>Time Needed</th>
-                                                        <th>Option</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <!-- Product Row Example 1 -->
-                                                    <tr>
-                                                        <td><input class="custom-checkbox" type="checkbox"></td>
-                                                        <td>
-                                                            <div class="table-image">
-                                                                <img src="assets/images/product/1.png" class="img-fluid"
-                                                                    alt="Chocolate Cake">
-                                                            </div>
-                                                        </td>
-                                                        <td>Chocolate Cake</td>
-                                                        <td>Cake</td>
-                                                        <td>Rich chocolate cake with cream</td>
-
-
-                                                        <td class="f-w-500">699</td>
-                                                        <td class="f-w-500" style="color: #28a745; font-weight: 500;">
-                                                            20% OFF</td>
-
-                                                        <td class="td-price">349</td>
-                                                        <td><span class="badge bg-light text-dark">Fresh</span> <span
-                                                                class="badge bg-light text-dark">Custom</span></td>
-                                                        <td>500g - 349, 1kg - 699</td>
-
-                                                        <td>New Jersey</td>
-                                                        <td>3 hrs</td>
-
-                                                        <td>
-                                                            <ul>
-                                                                <li>
-                                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                        data-bs-target="#editProductModal">
-                                                                        <i class="ri-pencil-line"></i>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                        data-bs-target="#deleteModal">
-                                                                        <i class="ri-delete-bin-line"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-
-                                                    <!-- Product Row Example 2 -->
-                                                    <tr>
-                                                        <td><input class="custom-checkbox" type="checkbox"></td>
-                                                        <td>
-                                                            <div class="table-image">
-                                                                <img src="assets/images/product/2.png" class="img-fluid"
-                                                                    alt="Black Forest">
-                                                            </div>
-                                                        </td>
+                                               <thead>
+    <tr>
+        <th><input id="checkall" class="custom-checkbox" type="checkbox"></th>
+        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Final Price</th>
+        <th>Options</th> <!-- New column for checkboxes -->
+        <th>Time Needed</th>
+        <th>Status</th>
+        <th>Option</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td><input class="custom-checkbox" type="checkbox"></td>
+        <td>
+            <div class="table-image">
+                <img src="assets/images/product/1.png" class="img-fluid" alt="Chocolate Cake">
+            </div>
+        </td>
+        <td>Chocolate Cake</td>
+        <td>Cake</td>
+        <td>Rich chocolate cake with cream</td>
+        <td class="f-w-500">699</td>
+        <td class="f-w-500" style="color: #28a745; font-weight: 500;">20% OFF</td>
+        <td class="td-price">349</td>
+        <td>
+           Egg        </td>
+        <td>3 hrs</td>
+        <td>
+            <!-- Toggle Switch -->
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="status1" checked>
+                <label class="form-check-label" for="status1"></label>
+            </div>
+        </td>
+        <td>
+            <ul>
+                <li>
+                    <a href="edit-product.html">
+                        <i class="ri-pencil-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                        <i class="ri-delete-bin-line"></i>
+                    </a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+</tbody>
 
 
-
-                                                        <td>Chocolate Cake</td>
-                                                        <td>Cake</td>
-                                                        <td>Delicious black forest with cherries</td>
-
-
-                                                        <td class="f-w-500">750</td>
-                                                        <td class="f-w-500" style="color: #28a745; font-weight: 500;">
-                                                            20% OFF</td>
-
-                                                        <td class="td-price">559</td>
-                                                        <td><span class="badge bg-light text-dark">Fresh</span> <span
-                                                                class="badge bg-light text-dark">Custom</span></td>
-                                                        <td>500g - 559, 1kg - 750</td>
-                                                        <td>New York</td>
-                                                        <td>3 hrs</td>
-
-                                                        <td>
-                                                            <ul>
-                                                                <li>
-                                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                        data-bs-target="#editProductModal">
-                                                                        <i class="ri-pencil-line"></i>
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                        data-bs-target="#deleteModal">
-                                                                        <i class="ri-delete-bin-line"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
                                             </table>
 
                                         </div>
@@ -636,142 +579,8 @@
                 </div>
             </div>
 
-            <!-- Edit Product Modal (Popup) -->
-            <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="editProductLabel">Edit Product</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            <div class="row g-3">
-
-                                <!-- 1️⃣ Name -->
-                                <div class="col-md-6">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" id="edit_name" placeholder="Product Name">
-                                </div>
-
-                                <!-- 2️⃣ Category -->
-                                <div class="col-md-6">
-                                    <label>Category</label>
-                                    <select id="edit_category" class="form-control">
-                                        <option value="cake">Cake</option>
-                                        <option value="dessert">Dessert</option>
-                                        <option value="special">Special</option>
-                                    </select>
-                                </div>
-
-                                <!-- 3️⃣ Description -->
-                                <div class="col-md-12">
-                                    <label>Description</label>
-                                    <textarea class="form-control" id="edit_description"
-                                        placeholder="Product Description"></textarea>
-                                </div>
-
-                                <!-- 4️⃣ Original Price -->
-                                <div class="col-md-4">
-                                    <label>Original Price</label>
-                                    <input type="number" class="form-control" id="edit_price"
-                                        placeholder="Original Price" oninput="updateDiscountPrice()">
-                                </div>
-
-                                <!-- 5️⃣ Discount % -->
-                                <div class="col-md-4">
-                                    <label>Discount %</label>
-                                    <input type="number" class="form-control" id="edit_discount_percent" placeholder="0"
-                                        oninput="updateDiscountPrice()">
-                                </div>
-
-                                <!-- 6️⃣ Final Price (auto-calculated) -->
-                                <div class="col-md-4">
-                                    <label>Final Price</label>
-                                    <input type="number" class="form-control" id="edit_discount_price"
-                                        placeholder="Final Price" oninput="updateDiscountPercent()">
-                                </div>
-
-                                <!-- 7️⃣ Tags -->
-                                <div class="col-md-6">
-                                    <label>Tags (comma separated)</label>
-                                    <input type="text" class="form-control" id="edit_tags"
-                                        placeholder="e.g., Fresh, Eggless">
-                                </div>
-
-                                <!-- 8️⃣ Variants -->
-                                <div class="col-md-6">
-                                    <label>Variants</label>
-                                    <input type="text" class="form-control" id="edit_variants"
-                                        placeholder="e.g., 500g - 349, 1kg - 699">
-                                </div>
-
-                                <!-- 9️⃣ Location -->
-                                <div class="col-md-6">
-                                    <label>Location</label>
-                                    <input type="text" class="form-control" id="edit_location"
-                                        placeholder="e.g., New Jersey">
-                                </div>
-
-                                <!-- 🔟 Time Needed -->
-                                <div class="col-md-6">
-                                    <label>Time Needed</label>
-                                    <input type="text" class="form-control" id="edit_time" placeholder="e.g., 3 hrs">
-                                </div>
-
-                                <!-- 1️⃣1️⃣ Image -->
-                                <div class="col-md-12">
-                                    <label>Main Image</label>
-                                    <input type="file" class="form-control" id="edit_image">
-                                    <img id="edit_image_preview" src="" class="img-fluid mt-2"
-                                        style="max-height:100px;">
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn"
-                                style="background-color: #ff5cba; border-color: #ff5cba; color: #fff; padding: 8px 16px; border-radius: 4px;">
-                                Save
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                function updateDiscountPrice() {
-                    const price = parseFloat(document.getElementById('edit_price').value) || 0;
-                    const percent = parseFloat(document.getElementById('edit_discount_percent').value) || 0;
-                    const discountInput = document.getElementById('edit_discount_price');
-
-                    if (price > 0 && percent > 0 && percent < 100) {
-                        const discounted = price - (price * percent / 100);
-                        discountInput.value = discounted.toFixed(2);
-                    } else {
-                        discountInput.value = '';
-                    }
-                }
-
-                function updateDiscountPercent() {
-                    const price = parseFloat(document.getElementById('edit_price').value) || 0;
-                    const discountPrice = parseFloat(document.getElementById('edit_discount_price').value) || 0;
-                    const percentInput = document.getElementById('edit_discount_percent');
-
-                    if (price > 0 && discountPrice > 0 && discountPrice < price) {
-                        const percent = ((price - discountPrice) / price) * 100;
-                        percentInput.value = percent.toFixed(2);
-                    } else {
-                        percentInput.value = '';
-                    }
-                }
-            </script>
-
+          
+            
 
             <!-- Delete Product Modal -->
             <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
@@ -801,9 +610,9 @@
                 <!-- footer start-->
                 <footer class="footer">
                     <div class="row">
-                       <div class="col-md-12 footer-copyright text-center">
-    <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.</p>
-</div>
+                        <div class="col-md-12 footer-copyright text-center">
+                            <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.</p>
+                        </div>
 
                     </div>
                 </footer>
