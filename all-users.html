@@ -11,7 +11,7 @@
         content="admin template,Zomo admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="assets/images/logo/logo.png" type="image/png">
-<link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/images/logo/logo.png" type="image/png">
 
     <title>Cakee - Dashboard</title>
 
@@ -93,7 +93,7 @@
         }
     </style>
 
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
 </head>
 
@@ -323,7 +323,7 @@
                             <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
-                   <nav class="sidebar-main">
+                    <nav class="sidebar-main">
                         <div class="left-arrow" id="left-arrow">
                             <i data-feather="arrow-left"></i>
                         </div>
@@ -338,13 +338,13 @@
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
-                                 <li class="sidebar-list">
+                                <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-archive-line"></i>
                                         <span>Orders</span>
                                     </a>
                                     <ul class="sidebar-submenu">
-                                         <li>
+                                        <li>
                                             <a href="add-new-order.html">Add New Order</a>
                                         </li>
                                         <li>
@@ -358,7 +358,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                 <li class="sidebar-list">
+                                <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-store-3-line"></i>
                                         <span>Products</span>
@@ -373,7 +373,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                 <li class="sidebar-list">
+                                <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-price-tag-3-line"></i>
                                         <span>Coupons</span>
@@ -388,14 +388,19 @@
                                         </li>
                                     </ul>
                                 </li>
-                               <li class="sidebar-list">
+                                <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="all-users.html">
-                                       <i class="ri-user-line me-2"></i>
+                                        <i class="ri-user-line me-2"></i>
                                         <span> All Customers</span>
                                     </a>
                                 </li>
 
-
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="category.html">
+                                        <i class="ri-layout-grid-line me-2"></i>
+                                        <span>Categories</span>
+                                    </a>
+                                </li>
 
 
                                 <!-- <li class="sidebar-list">
@@ -405,9 +410,9 @@
                                     </a>
                                 </li> -->
 
-                               
 
-                               
+
+
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-smile-line"></i> <!-- review icon -->
@@ -503,20 +508,20 @@
                                             </a>
                                         </form>
                                     </div> -->
-  <div class="d-flex justify-content-end mb-2">
-    <button id="exportExcel" class="btn" 
-            style="background-color: #ff5cba; color: #fff; border: none; border-radius: 50px; padding: 0.5rem 1.5rem;">
-        Export as Excel
-    </button>
-</div>
+                                    <div class="d-flex justify-content-end mb-2">
+                                        <button id="exportExcel" class="btn"
+                                            style="background-color: #ff5cba; color: #fff; border: none; border-radius: 50px; padding: 0.5rem 1.5rem;">
+                                            Export as Excel
+                                        </button>
+                                    </div>
 
                                     <div class="table-responsive theme-scrollbar table-product">
-                                        
+
                                         <table class="table category-table dataTable no-footer" id="table_id">
                                             <thead>
                                                 <tr>
                                                     <th>No.</th>
-                                                  
+
                                                     <th>Name</th>
                                                     <th>Phone</th>
                                                     <th>Email</th>
@@ -529,7 +534,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="f-w-600">01.</td>
-                                                 
+
                                                     <td>
                                                         <div class="user-name">
                                                             <span>Everett C. Green</span>
@@ -563,7 +568,7 @@
                         </div>
                     </div>
                 </div>
-                
+
 
                 <!-- All User Table Ends-->
                 <!-- Delete User Modal -->
@@ -600,9 +605,9 @@
                     <!-- footer start-->
                     <footer class="footer">
                         <div class="row">
-                           <div class="col-md-12 footer-copyright text-center">
-    <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.</p>
-</div>
+                            <div class="col-md-12 footer-copyright text-center">
+                                <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.</p>
+                            </div>
 
                         </div>
                     </footer>
@@ -690,13 +695,13 @@
         </div>
     </div>
     <!-- Delete Modal Box End -->
-<script>
-document.getElementById('exportExcel').addEventListener('click', function() {
-    var table = document.getElementById('table_id');
-    var workbook = XLSX.utils.table_to_book(table, { sheet: "Users" });
-    XLSX.writeFile(workbook, 'All_Users.xlsx');
-});
-</script>
+    <script>
+        document.getElementById('exportExcel').addEventListener('click', function () {
+            var table = document.getElementById('table_id');
+            var workbook = XLSX.utils.table_to_book(table, { sheet: "Users" });
+            XLSX.writeFile(workbook, 'All_Users.xlsx');
+        });
+    </script>
 
     <!-- latest js -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>

@@ -392,15 +392,13 @@
                                         <span> All Customers</span>
                                     </a>
                                 </li>
-
-
-
-                                <!-- <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
-                                        <i class="ri-road-map-line"></i>
-                                        <span>Live Traking</span>
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="category.html">
+                                        <i class="ri-layout-grid-line me-2"></i>
+                                        <span>Categories</span>
                                     </a>
-                                </li> -->
+                                </li>
+
 
 
 
@@ -483,229 +481,243 @@
             <!-- Page Sidebar Ends-->
 
 
-<div class="page-body">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12"> <!-- full width -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <h5>Create New Order</h5>
-          </div>
-          <div class="card-body">
-            <form id="adminOrderForm">
-              <div class="row g-3">
-
-                <!-- Customer Name -->
-                <div class="col-md-6">
-                  <label for="customerName" class="form-label">Customer Name</label>
-                  <input type="text" class="form-control" id="customerName" placeholder="Enter name">
-                </div>
-
-                <!-- Phone Number -->
-                <div class="col-md-6">
-                  <label for="phone" class="form-label">Phone Number</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
-                </div>
-
-                <!-- Product Type -->
-                <div class="col-md-6">
-                  <label for="productType" class="form-label">Product Type</label>
-                  <select class="form-select" id="productType">
-                    <option disabled selected>Select type</option>
-                    <option value="cake">Cake</option>
-                    <option value="dessert">Dessert</option>
-                    <option value="special">Special</option>
-                  </select>
-                </div>
-
-                <!-- Product Name -->
-                <!-- Product Name -->
-<div class="col-md-6">
-  <label for="productName" class="form-label">Product Name</label>
-  <select class="form-select" id="productName" disabled>
-    <option disabled selected>Select product</option>
-  </select>
-</div>
-
-               
-
-                <!-- Quantity -->
-                <div class="col-md-4">
-                  <label for="quantity" class="form-label">Quantity</label>
-                  <input type="number" class="form-control" id="quantity" min="1" value="1">
-                </div>
-
-                <!-- Price -->
-                <div class="col-md-4">
-                  <label for="price" class="form-label">Price (per item)</label>
-                  <input type="number" class="form-control" id="price" min="0" value="0" readonly>
-                </div>
-
-                <!-- Total Price -->
-                <div class="col-md-4">
-                  <label for="totalPrice" class="form-label">Total Price</label>
-                  <input type="number" class="form-control" id="totalPrice" value="0" readonly>
-                </div>
-
-                <!-- Delivery Date -->
-                <div class="col-md-6">
-                  <label for="deliveryDate" class="form-label">Delivery Date</label>
-                  <input type="date" class="form-control" id="deliveryDate">
-                </div>
-
-                <!-- Notes -->
-                <div class="col-12">
-                  <label for="notes" class="form-label">Notes / Instructions</label>
-                  <textarea class="form-control" id="notes" rows="3" placeholder="Any special instructions"></textarea>
-                </div>
-
-                <!-- Submit Button -->
-              <div class="col-12 text-end">
-  <button type="submit" class="btn" style="background-color: #ff5cba; color: #fff;">Create Order</button>
-</div>
-
-              </div>
-            </form>
-          </div>
-        </div>
-        <!-- End Admin Order Form Card -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-.card { 
-  border-radius: 12px; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-}
-.form-label { font-weight: 500; }
-.form-control, .form-select { border-radius: 8px; }
-</style>
-
-<script>
-const products = {
-  cake: [
-    { name: "Black Forest", price: 559 },
-    { name: "White Forest", price: 589 },
-    { name: "Butter Scotch", price: 749 }
-  ],
-  dessert: [
-    { name: "Brownie", price: 120 },
-    { name: "Chocolate Mousse", price: 150 },
-    { name: "Cupcake", price: 80 }
-  ],
-  special: [
-    { name: "Anniversary Cake", price: 999 },
-    { name: "Custom Cake", price: 1250 }
-  ]
-};
-
-const productTypeSelect = document.getElementById('productType');
-const productNameSelect = document.getElementById('productName');
-const priceInput = document.getElementById('price');
-const quantityInput = document.getElementById('quantity');
-const totalPriceInput = document.getElementById('totalPrice');
-
-// When product type changes
-productTypeSelect.addEventListener('change', () => {
-  const type = productTypeSelect.value;
-  productNameSelect.innerHTML = '<option disabled selected>Select product</option>';
-  productNameSelect.disabled = false;
-
-  if (products[type]) {
-    products[type].forEach(p => {
-      const option = document.createElement('option');
-      option.value = p.name;                // store product name
-      option.textContent = p.name;
-      option.setAttribute('data-price', p.price); // store price
-      productNameSelect.appendChild(option);
-    });
-  }
-
-  priceInput.value = 0;
-  totalPriceInput.value = 0;
-});
-
-// When product name changes
-productNameSelect.addEventListener('change', () => {
-  const selectedOption = productNameSelect.selectedOptions[0];
-  const price = parseFloat(selectedOption.getAttribute('data-price')) || 0;
-  priceInput.value = price;
-  updateTotal();
-});
-
-// Quantity input
-quantityInput.addEventListener('input', updateTotal);
-
-// Update total price
-function updateTotal() {
-  const q = parseFloat(quantityInput.value) || 0;
-  const p = parseFloat(priceInput.value) || 0;
-  totalPriceInput.value = (q * p).toFixed(2);
-}
-</script>
-
-
-                    <!-- Modal Start -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog  modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Logging Out</h5>
-                                    <p>Are you sure you want to log out?</p>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-
-                                    <div class="button-box">
-                                        <button type="button" class="btn btn--no" data-bs-dismiss="modal">No</button>
-                                        <button type="button" class="btn  btn--yes btn-primary">Yes</button>
-                                    </div>
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12"> <!-- full width -->
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5>Create New Order</h5>
                                 </div>
+                                <div class="card-body">
+                                    <form id="adminOrderForm">
+                                        <div class="row g-3">
+
+                                            <!-- Customer Name -->
+                                            <div class="col-md-6">
+                                                <label for="customerName" class="form-label">Customer Name</label>
+                                                <input type="text" class="form-control" id="customerName"
+                                                    placeholder="Enter name">
+                                            </div>
+
+                                            <!-- Phone Number -->
+                                            <div class="col-md-6">
+                                                <label for="phone" class="form-label">Phone Number</label>
+                                                <input type="tel" class="form-control" id="phone"
+                                                    placeholder="Enter phone number">
+                                            </div>
+
+                                            <!-- Product Type -->
+                                            <div class="col-md-6">
+                                                <label for="productType" class="form-label">Product Type</label>
+                                                <select class="form-select" id="productType">
+                                                    <option disabled selected>Select type</option>
+                                                    <option value="cake">Cake</option>
+                                                    <option value="dessert">Dessert</option>
+                                                    <option value="special">Special</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- Product Name -->
+                                            <!-- Product Name -->
+                                            <div class="col-md-6">
+                                                <label for="productName" class="form-label">Product Name</label>
+                                                <select class="form-select" id="productName" disabled>
+                                                    <option disabled selected>Select product</option>
+                                                </select>
+                                            </div>
+
+
+
+                                            <!-- Quantity -->
+                                            <div class="col-md-4">
+                                                <label for="quantity" class="form-label">Quantity</label>
+                                                <input type="number" class="form-control" id="quantity" min="1"
+                                                    value="1">
+                                            </div>
+
+                                            <!-- Price -->
+                                            <div class="col-md-4">
+                                                <label for="price" class="form-label">Price (per item)</label>
+                                                <input type="number" class="form-control" id="price" min="0" value="0"
+                                                    readonly>
+                                            </div>
+
+                                            <!-- Total Price -->
+                                            <div class="col-md-4">
+                                                <label for="totalPrice" class="form-label">Total Price</label>
+                                                <input type="number" class="form-control" id="totalPrice" value="0"
+                                                    readonly>
+                                            </div>
+
+                                            <!-- Delivery Date -->
+                                            <div class="col-md-6">
+                                                <label for="deliveryDate" class="form-label">Delivery Date</label>
+                                                <input type="date" class="form-control" id="deliveryDate">
+                                            </div>
+
+                                            <!-- Notes -->
+                                            <div class="col-12">
+                                                <label for="notes" class="form-label">Notes / Instructions</label>
+                                                <textarea class="form-control" id="notes" rows="3"
+                                                    placeholder="Any special instructions"></textarea>
+                                            </div>
+
+                                            <!-- Submit Button -->
+                                            <div class="col-12 text-end">
+                                                <button type="submit" class="btn"
+                                                    style="background-color: #ff5cba; color: #fff;">Create
+                                                    Order</button>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- End Admin Order Form Card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .card {
+                    border-radius: 12px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                }
+
+                .form-label {
+                    font-weight: 500;
+                }
+
+                .form-control,
+                .form-select {
+                    border-radius: 8px;
+                }
+            </style>
+
+            <script>
+                const products = {
+                    cake: [
+                        { name: "Black Forest", price: 559 },
+                        { name: "White Forest", price: 589 },
+                        { name: "Butter Scotch", price: 749 }
+                    ],
+                    dessert: [
+                        { name: "Brownie", price: 120 },
+                        { name: "Chocolate Mousse", price: 150 },
+                        { name: "Cupcake", price: 80 }
+                    ],
+                    special: [
+                        { name: "Anniversary Cake", price: 999 },
+                        { name: "Custom Cake", price: 1250 }
+                    ]
+                };
+
+                const productTypeSelect = document.getElementById('productType');
+                const productNameSelect = document.getElementById('productName');
+                const priceInput = document.getElementById('price');
+                const quantityInput = document.getElementById('quantity');
+                const totalPriceInput = document.getElementById('totalPrice');
+
+                // When product type changes
+                productTypeSelect.addEventListener('change', () => {
+                    const type = productTypeSelect.value;
+                    productNameSelect.innerHTML = '<option disabled selected>Select product</option>';
+                    productNameSelect.disabled = false;
+
+                    if (products[type]) {
+                        products[type].forEach(p => {
+                            const option = document.createElement('option');
+                            option.value = p.name;                // store product name
+                            option.textContent = p.name;
+                            option.setAttribute('data-price', p.price); // store price
+                            productNameSelect.appendChild(option);
+                        });
+                    }
+
+                    priceInput.value = 0;
+                    totalPriceInput.value = 0;
+                });
+
+                // When product name changes
+                productNameSelect.addEventListener('change', () => {
+                    const selectedOption = productNameSelect.selectedOptions[0];
+                    const price = parseFloat(selectedOption.getAttribute('data-price')) || 0;
+                    priceInput.value = price;
+                    updateTotal();
+                });
+
+                // Quantity input
+                quantityInput.addEventListener('input', updateTotal);
+
+                // Update total price
+                function updateTotal() {
+                    const q = parseFloat(quantityInput.value) || 0;
+                    const p = parseFloat(priceInput.value) || 0;
+                    totalPriceInput.value = (q * p).toFixed(2);
+                }
+            </script>
+
+
+            <!-- Modal Start -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog  modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h5 class="modal-title" id="staticBackdropLabel">Logging Out</h5>
+                            <p>Are you sure you want to log out?</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                            <div class="button-box">
+                                <button type="button" class="btn btn--no" data-bs-dismiss="modal">No</button>
+                                <button type="button" class="btn  btn--yes btn-primary">Yes</button>
                             </div>
                         </div>
                     </div>
-                    <!-- Modal End -->
+                </div>
+            </div>
+            <!-- Modal End -->
 
-                    <!-- latest js -->
-                    <script src="assets/js/jquery-3.6.0.min.js"></script>
+            <!-- latest js -->
+            <script src="assets/js/jquery-3.6.0.min.js"></script>
 
-                    <!-- Bootstrap js -->
-                    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+            <!-- Bootstrap js -->
+            <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
-                    <!-- feather icon js -->
-                    <script src="assets/js/icons/feather-icon/feather.min.js"></script>
-                    <script src="assets/js/icons/feather-icon/feather-icon.js"></script>
+            <!-- feather icon js -->
+            <script src="assets/js/icons/feather-icon/feather.min.js"></script>
+            <script src="assets/js/icons/feather-icon/feather-icon.js"></script>
 
-                    <!-- scrollbar simplebar js -->
-                    <script src="assets/js/scrollbar/simplebar.js"></script>
-                    <script src="assets/js/scrollbar/custom.js"></script>
+            <!-- scrollbar simplebar js -->
+            <script src="assets/js/scrollbar/simplebar.js"></script>
+            <script src="assets/js/scrollbar/custom.js"></script>
 
-                    <!-- Sidebar js -->
-                    <script src="assets/js/config.js"></script>
+            <!-- Sidebar js -->
+            <script src="assets/js/config.js"></script>
 
-                    <!-- bootstrap tag-input js -->
-                    <script src="assets/js/bootstrap-tagsinput.min.js"></script>
-                    <script src="assets/js/sidebar-menu.js"></script>
+            <!-- bootstrap tag-input js -->
+            <script src="assets/js/bootstrap-tagsinput.min.js"></script>
+            <script src="assets/js/sidebar-menu.js"></script>
 
-                    <!-- customizer js -->
-                    <script src="assets/js/customizer.js"></script>
+            <!-- customizer js -->
+            <script src="assets/js/customizer.js"></script>
 
-                    <!--Dropzon js -->
-                    <script src="assets/js/dropzone/dropzone.js"></script>
-                    <script src="assets/js/dropzone/dropzone-script.js"></script>
+            <!--Dropzon js -->
+            <script src="assets/js/dropzone/dropzone.js"></script>
+            <script src="assets/js/dropzone/dropzone-script.js"></script>
 
-                    <!-- ck editor js -->
-                    <script src="assets/js/ckeditor.js"></script>
-                    <script src="assets/js/ckeditor-custom.js"></script>
+            <!-- ck editor js -->
+            <script src="assets/js/ckeditor.js"></script>
+            <script src="assets/js/ckeditor-custom.js"></script>
 
-                    <!-- select2 js -->
-                    <script src="assets/js/select2.min.js"></script>
-                    <script src="assets/js/select2-custom.js"></script>
+            <!-- select2 js -->
+            <script src="assets/js/select2.min.js"></script>
+            <script src="assets/js/select2-custom.js"></script>
 
-                    <!-- Theme js -->
-                    <script src="assets/js/script.js"></script>
+            <!-- Theme js -->
+            <script src="assets/js/script.js"></script>
 </body>
 
 </html>

@@ -341,7 +341,7 @@
                                         <span>Orders</span>
                                     </a>
                                     <ul class="sidebar-submenu">
-                                         <li>
+                                        <li>
                                             <a href="add-new-order.html">Add New Order</a>
                                         </li>
                                         <li>
@@ -392,7 +392,12 @@
                                         <span> All Customers</span>
                                     </a>
                                 </li>
-
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="category.html">
+                                        <i class="ri-layout-grid-line me-2"></i>
+                                        <span>Categories</span>
+                                    </a>
+                                </li>
 
 
                                 <!-- <li class="sidebar-list">
@@ -482,7 +487,6 @@
             </div>
             <!-- Page Sidebar Ends-->
 
-            <!-- Page Sidebar Ends-->
 
             <div class="page-body">
 
@@ -500,6 +504,7 @@
                                     <div class="input-items">
                                         <div class="row gy-3">
 
+                                            <!-- Product Name -->
                                             <div class="col-xl-6">
                                                 <div class="input-box">
                                                     <h6>Product Name</h6>
@@ -508,6 +513,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Category -->
                                             <div class="col-xl-6">
                                                 <div class="input-box">
                                                     <h6>Category</h6>
@@ -548,6 +554,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Time Needed -->
                                             <div class="col-xl-6">
                                                 <div class="input-box">
                                                     <h6>Time Needed</h6>
@@ -570,10 +577,8 @@
                                     <div class="input-items">
                                         <div class="row gy-3">
                                             <div class="col-12">
-                                                <div class="input-box">
-                                                    <textarea class="form-control"
-                                                        placeholder="Enter product description..." rows="5"></textarea>
-                                                </div>
+                                                <textarea class="form-control"
+                                                    placeholder="Enter product description..." rows="5"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -588,7 +593,6 @@
                                         style="background-color: #ff5cba; border-color: #ff5cba; color: #fff; border-radius: 50px;">
                                         Add New Image
                                     </button>
-
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive theme-scrollbar">
@@ -602,7 +606,6 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <!-- Example initial row -->
                                                 <tr>
                                                     <td>1</td>
                                                     <td>
@@ -622,118 +625,46 @@
                                 </div>
                             </div>
 
-                            <!-- Product Price Card -->
+                            <!-- Product Price & Variants Card -->
                             <div class="card mb-3">
-                                <div class="card-header">
-                                    <h5>Product Price</h5>
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h5>Product Price & Variants</h5>
+                                    <button type="button" class="btn btn-sm" id="addVariantBtn"
+                                        style="background-color: #ff5cba; border-color: #ff5cba; color: #fff; border-radius: 50px;">
+                                        + Add Variant
+                                    </button>
                                 </div>
                                 <div class="card-body">
-                                    <div class="input-items">
-                                        <div class="row gy-3">
-                                            <div class="col-xl-4">
-                                                <div class="input-box">
-                                                    <h6>Original Price</h6>
-                                                    <input type="number" class="form-control" name="original_price"
-                                                        id="original_price" placeholder="0"
-                                                        oninput="calculateDiscountPrice()">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-xl-4">
-                                                <div class="input-box">
-                                                    <h6>Discount %</h6>
-                                                    <input type="number" class="form-control" name="discount_percent"
-                                                        id="discount_percent" placeholder="0"
-                                                        oninput="calculateDiscountPrice()">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-xl-4">
-                                                <div class="input-box">
-                                                    <h6>Discount Price</h6>
-                                                    <input type="text" class="form-control" id="discount_price"
-                                                        name="discount_price" placeholder="0" readonly>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="variantsTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sl. No.</th>
+                                                    <th>Qty / Weight</th>
+                                                    <th>Actual Price</th>
+                                                    <th>Selling Price</th>
+                                                    <th>Discount (%)</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="text" class="form-control" placeholder="500g"></td>
+                                                    <td><input type="number" class="form-control actualPrice"
+                                                            placeholder="0"></td>
+                                                    <td><input type="number" class="form-control sellingPrice"
+                                                            placeholder="0"></td>
+                                                    <td><input type="text" class="form-control discount" readonly></td>
+                                                    <td><button
+                                                            class="btn btn-sm btn-danger deleteVariant">Delete</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
-
-                            <script>
-                                function calculateDiscountPrice() {
-                                    const original = parseFloat(document.getElementById('original_price').value) || 0;
-                                    const percent = parseFloat(document.getElementById('discount_percent').value) || 0;
-                                    const discountPriceInput = document.getElementById('discount_price');
-
-                                    if (original > 0 && percent > 0 && percent < 100) {
-                                        const discounted = original - (original * percent / 100);
-                                        discountPriceInput.value = discounted.toFixed(2);
-                                    } else {
-                                        discountPriceInput.value = original > 0 ? original.toFixed(2) : '0';
-                                    }
-                                }
-
-                                // Product Images Table Logic
-                                let imageCount = document.querySelectorAll('#imagesTable tbody tr').length;
-
-                                document.getElementById('addImageBtn').addEventListener('click', function () {
-                                    imageCount++;
-                                    const table = document.getElementById('imagesTable').getElementsByTagName('tbody')[0];
-                                    const row = table.insertRow();
-
-                                    // Sl No
-                                    const cell1 = row.insertCell(0);
-                                    cell1.innerText = imageCount;
-
-                                    // Image Preview
-                                    const cell2 = row.insertCell(1);
-                                    const imgInput = document.createElement('input');
-                                    imgInput.type = 'file';
-                                    imgInput.accept = 'image/*';
-                                    imgInput.className = 'form-control';
-                                    imgInput.onchange = function (event) {
-                                        let previewImg = row.querySelector('img');
-                                        if (!previewImg) {
-                                            previewImg = document.createElement('img');
-                                            previewImg.style.width = '80px';
-                                            cell2.appendChild(previewImg);
-                                        }
-                                        previewImg.src = URL.createObjectURL(event.target.files[0]);
-                                    }
-                                    cell2.appendChild(imgInput);
-
-                                    // Alt Text
-                                    const cell3 = row.insertCell(2);
-                                    const altInput = document.createElement('input');
-                                    altInput.type = 'text';
-                                    altInput.placeholder = 'Alt Text';
-                                    altInput.className = 'form-control';
-                                    cell3.appendChild(altInput);
-
-                                    // Action
-                                    const cell4 = row.insertCell(3);
-                                    const delBtn = document.createElement('button');
-                                    delBtn.className = 'btn btn-sm btn-danger deleteRow';
-                                    delBtn.innerText = 'Delete';
-                                    cell4.appendChild(delBtn);
-                                });
-
-                                // Delete row
-                                document.addEventListener('click', function (e) {
-                                    if (e.target && e.target.classList.contains('deleteRow')) {
-                                        const row = e.target.closest('tr');
-                                        row.parentNode.removeChild(row);
-
-                                        // Update serial numbers
-                                        const tbody = document.getElementById('imagesTable').getElementsByTagName('tbody')[0];
-                                        Array.from(tbody.rows).forEach((r, i) => {
-                                            r.cells[0].innerText = i + 1;
-                                        });
-                                        imageCount = tbody.rows.length;
-                                    }
-                                });
-                            </script>
 
                             <!-- Save Button -->
                             <div class="d-flex justify-content-end mb-4">
@@ -748,7 +679,189 @@
                 </div>
 
 
-                <!-- New Product Add End -->
+                <!-- Scripts for Discounts, Images & Variants -->
+                <script>
+                    // Discount Price Calculation
+                    function calculateDiscountPrice() {
+                        const original = parseFloat(document.getElementById('original_price')?.value) || 0;
+                        const percent = parseFloat(document.getElementById('discount_percent')?.value) || 0;
+                        const discountPriceInput = document.getElementById('discount_price');
+
+                        if (original > 0 && percent > 0 && percent < 100) {
+                            const discounted = original - (original * percent / 100);
+                            if (discountPriceInput) discountPriceInput.value = discounted.toFixed(2);
+                        } else {
+                            if (discountPriceInput) discountPriceInput.value = original > 0 ? original.toFixed(2) : '0';
+                        }
+                    }
+
+                    // Product Images Table Logic
+                    let imageCount = document.querySelectorAll('#imagesTable tbody tr').length;
+
+                    document.getElementById('addImageBtn').addEventListener('click', function () {
+                        imageCount++;
+                        const table = document.getElementById('imagesTable').getElementsByTagName('tbody')[0];
+                        const row = table.insertRow();
+
+                        const cell1 = row.insertCell(0);
+                        cell1.innerText = imageCount;
+
+                        const cell2 = row.insertCell(1);
+                        const imgInput = document.createElement('input');
+                        imgInput.type = 'file';
+                        imgInput.accept = 'image/*';
+                        imgInput.className = 'form-control';
+                        imgInput.onchange = function (event) {
+                            let previewImg = row.querySelector('img');
+                            if (!previewImg) {
+                                previewImg = document.createElement('img');
+                                previewImg.style.width = '80px';
+                                cell2.appendChild(previewImg);
+                            }
+                            previewImg.src = URL.createObjectURL(event.target.files[0]);
+                        }
+                        cell2.appendChild(imgInput);
+
+                        const cell3 = row.insertCell(2);
+                        const altInput = document.createElement('input');
+                        altInput.type = 'text';
+                        altInput.placeholder = 'Alt Text';
+                        altInput.className = 'form-control';
+                        cell3.appendChild(altInput);
+
+                        const cell4 = row.insertCell(3);
+                        const delBtn = document.createElement('button');
+                        delBtn.className = 'btn btn-sm btn-danger deleteRow';
+                        delBtn.innerText = 'Delete';
+                        cell4.appendChild(delBtn);
+                    });
+
+                    // Delete Image Row
+                    document.addEventListener('click', function (e) {
+                        if (e.target && e.target.classList.contains('deleteRow')) {
+                            const row = e.target.closest('tr');
+                            row.parentNode.removeChild(row);
+                            const tbody = document.getElementById('imagesTable').getElementsByTagName('tbody')[0];
+                            Array.from(tbody.rows).forEach((r, i) => r.cells[0].innerText = i + 1);
+                            imageCount = tbody.rows.length;
+                        }
+                    });
+
+                    // Product Variants Table Logic
+                    let variantCount = document.querySelectorAll('#variantsTable tbody tr').length;
+
+                    function calculateDiscount(row) {
+                        const actualPrice = parseFloat(row.querySelector('.actualPrice').value) || 0;
+                        const sellingPrice = parseFloat(row.querySelector('.sellingPrice').value) || 0;
+                        const discountInput = row.querySelector('.discount');
+
+                        if (actualPrice > 0 && sellingPrice > 0 && actualPrice >= sellingPrice) {
+                            const discountPercent = ((actualPrice - sellingPrice) / actualPrice) * 100;
+                            discountInput.value = discountPercent.toFixed(2);
+                        } else {
+                            discountInput.value = '0';
+                        }
+                    }
+
+                    document.getElementById('addVariantBtn').addEventListener('click', function () {
+                        variantCount++;
+                        const table = document.getElementById('variantsTable').getElementsByTagName('tbody')[0];
+                        const row = table.insertRow();
+
+                        row.insertCell(0).innerText = variantCount;
+
+                        const qtyCell = row.insertCell(1);
+                        const qtyInput = document.createElement('input');
+                        qtyInput.type = 'text';
+                        qtyInput.className = 'form-control';
+                        qtyInput.placeholder = '500g';
+                        qtyCell.appendChild(qtyInput);
+
+                        const actualCell = row.insertCell(2);
+                        const actualInput = document.createElement('input');
+                        actualInput.type = 'number';
+                        actualInput.className = 'form-control actualPrice';
+                        actualInput.placeholder = '0';
+                        actualCell.appendChild(actualInput);
+
+                        const sellingCell = row.insertCell(3);
+                        const sellingInput = document.createElement('input');
+                        sellingInput.type = 'number';
+                        sellingInput.className = 'form-control sellingPrice';
+                        sellingInput.placeholder = '0';
+                        sellingCell.appendChild(sellingInput);
+
+                        const discountCell = row.insertCell(4);
+                        const discountInput = document.createElement('input');
+                        discountInput.type = 'text';
+                        discountInput.className = 'form-control discount';
+                        discountInput.readOnly = true;
+                        discountCell.appendChild(discountInput);
+
+                        const actionCell = row.insertCell(5);
+                        const delBtn = document.createElement('button');
+                        delBtn.className = 'btn btn-sm btn-danger deleteVariant';
+                        delBtn.innerText = 'Delete';
+                        actionCell.appendChild(delBtn);
+
+                        actualInput.addEventListener('input', () => calculateDiscount(row));
+                        sellingInput.addEventListener('input', () => calculateDiscount(row));
+                    });
+
+                    document.addEventListener('click', function (e) {
+                        if (e.target && e.target.classList.contains('deleteVariant')) {
+                            const row = e.target.closest('tr');
+                            row.parentNode.removeChild(row);
+                            const tbody = document.getElementById('variantsTable').getElementsByTagName('tbody')[0];
+                            Array.from(tbody.rows).forEach((r, i) => r.cells[0].innerText = i + 1);
+                            variantCount = tbody.rows.length;
+                        }
+                    });
+                </script>
+                <script>
+                    // Function to calculate discount for a row
+                    function calculateDiscount(row) {
+                        const actualPrice = parseFloat(row.querySelector('.actualPrice').value) || 0;
+                        const sellingPrice = parseFloat(row.querySelector('.sellingPrice').value) || 0;
+                        const discountInput = row.querySelector('.discount');
+
+                        if (actualPrice > 0 && sellingPrice > 0 && actualPrice >= sellingPrice) {
+                            const discountPercent = ((actualPrice - sellingPrice) / actualPrice) * 100;
+                            discountInput.value = discountPercent.toFixed(2);
+                        } else {
+                            discountInput.value = '0';
+                        }
+                    }
+
+                    // Attach input listeners to all existing rows
+                    document.querySelectorAll('#variantsTable tbody tr').forEach(row => {
+                        const actualInput = row.querySelector('.actualPrice');
+                        const sellingInput = row.querySelector('.sellingPrice');
+                        if (actualInput && sellingInput) {
+                            actualInput.addEventListener('input', () => calculateDiscount(row));
+                            sellingInput.addEventListener('input', () => calculateDiscount(row));
+                        }
+                    });
+                </script>
+
+                <style>
+                    /* Remove borders and background for variant input fields */
+                    #variantsTable input.form-control {
+                        border: none;
+                        box-shadow: none;
+                        background-color: transparent;
+                        padding: 0.25rem 0.5rem;
+                        /* optional, to reduce height */
+                        height: auto;
+                    }
+
+                    /* Optional: make the text vertically centered */
+                    #variantsTable td {
+                        vertical-align: middle;
+                    }
+                </style>
+
+
 
                 <!-- footer Start -->
                 <div class="container-fluid">

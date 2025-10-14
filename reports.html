@@ -291,7 +291,7 @@
                             <img class="img-fluid main-logo" src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
-                   <nav class="sidebar-main">
+                    <nav class="sidebar-main">
                         <div class="left-arrow" id="left-arrow">
                             <i data-feather="arrow-left"></i>
                         </div>
@@ -306,13 +306,13 @@
                                         <span>Dashboard</span>
                                     </a>
                                 </li>
-                                 <li class="sidebar-list">
+                                <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-archive-line"></i>
                                         <span>Orders</span>
                                     </a>
                                     <ul class="sidebar-submenu">
-                                         <li>
+                                        <li>
                                             <a href="add-new-order.html">Add New Order</a>
                                         </li>
                                         <li>
@@ -326,7 +326,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                 <li class="sidebar-list">
+                                <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-store-3-line"></i>
                                         <span>Products</span>
@@ -341,7 +341,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                 <li class="sidebar-list">
+                                <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-price-tag-3-line"></i>
                                         <span>Coupons</span>
@@ -356,13 +356,18 @@
                                         </li>
                                     </ul>
                                 </li>
-                              <li class="sidebar-list">
+                                <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="all-users.html">
-                                       <i class="ri-user-line me-2"></i>
+                                        <i class="ri-user-line me-2"></i>
                                         <span> All Customers</span>
                                     </a>
                                 </li>
-
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="category.html">
+                                        <i class="ri-layout-grid-line me-2"></i>
+                                        <span>Categories</span>
+                                    </a>
+                                </li>
 
                                 <!-- <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="live-traking.html">
@@ -371,9 +376,9 @@
                                     </a>
                                 </li> -->
 
-                               
 
-                               
+
+
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="product-review.html">
                                         <i class="ri-star-smile-line"></i> <!-- review icon -->
@@ -506,76 +511,76 @@
                         </div>
 
                         <!-- Chart.js CDN -->
-                       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    // Sample sales data (replace with your actual sales)
-    const sales = [
-        { amount: 500, date: '2025-10-06' },
-        { amount: 1500, date: '2025-10-07' },
-        { amount: 800, date: '2025-10-07' },
-        { amount: 1200, date: '2025-10-08' },
-        { amount: 700, date: '2025-10-09' },
-    ];
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            // Sample sales data (replace with your actual sales)
+                            const sales = [
+                                { amount: 500, date: '2025-10-06' },
+                                { amount: 1500, date: '2025-10-07' },
+                                { amount: 800, date: '2025-10-07' },
+                                { amount: 1200, date: '2025-10-08' },
+                                { amount: 700, date: '2025-10-09' },
+                            ];
 
-    // Get current week (Monday → Sunday)
-    const now = new Date();
-    const firstDayOfWeek = new Date(now);
-    firstDayOfWeek.setDate(now.getDate() - now.getDay() + 1); // Monday
-    const lastDayOfWeek = new Date(firstDayOfWeek);
-    lastDayOfWeek.setDate(firstDayOfWeek.getDate() + 6);
+                            // Get current week (Monday → Sunday)
+                            const now = new Date();
+                            const firstDayOfWeek = new Date(now);
+                            firstDayOfWeek.setDate(now.getDate() - now.getDay() + 1); // Monday
+                            const lastDayOfWeek = new Date(firstDayOfWeek);
+                            lastDayOfWeek.setDate(firstDayOfWeek.getDate() + 6);
 
-    // Initialize daily sales array (Mon → Sun)
-    const dailySales = Array(7).fill(0);
+                            // Initialize daily sales array (Mon → Sun)
+                            const dailySales = Array(7).fill(0);
 
-    // Map each sale to the correct day of the week
-    sales.forEach(s => {
-        const saleDate = new Date(s.date);
-        if (saleDate >= firstDayOfWeek && saleDate <= lastDayOfWeek) {
-            const dayIndex = saleDate.getDay() === 0 ? 6 : saleDate.getDay() - 1; // Mon=0, Sun=6
-            dailySales[dayIndex] += s.amount;
-        }
-    });
+                            // Map each sale to the correct day of the week
+                            sales.forEach(s => {
+                                const saleDate = new Date(s.date);
+                                if (saleDate >= firstDayOfWeek && saleDate <= lastDayOfWeek) {
+                                    const dayIndex = saleDate.getDay() === 0 ? 6 : saleDate.getDay() - 1; // Mon=0, Sun=6
+                                    dailySales[dayIndex] += s.amount;
+                                }
+                            });
 
-    // Labels for days of the week
-    const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+                            // Labels for days of the week
+                            const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-    // Create responsive bar chart with blue bars
-    const ctx = document.getElementById('saler-summary-week').getContext('2d');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Daily Sales (₹)',
-                data: dailySales,
-                backgroundColor: '#007BFF', // Blue bars
-                borderRadius: 5 // rounded bars
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, // allow chart to fill container
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    callbacks: {
-                        label: function (context) {
-                            return `₹ ${context.raw.toLocaleString()}`;
-                        }
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        stepSize: 500
-                    }
-                }
-            }
-        }
-    });
-</script>
+                            // Create responsive bar chart with blue bars
+                            const ctx = document.getElementById('saler-summary-week').getContext('2d');
+                            new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: labels,
+                                    datasets: [{
+                                        label: 'Daily Sales (₹)',
+                                        data: dailySales,
+                                        backgroundColor: '#007BFF', // Blue bars
+                                        borderRadius: 5 // rounded bars
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false, // allow chart to fill container
+                                    plugins: {
+                                        legend: { display: false },
+                                        tooltip: {
+                                            callbacks: {
+                                                label: function (context) {
+                                                    return `₹ ${context.raw.toLocaleString()}`;
+                                                }
+                                            }
+                                        }
+                                    },
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true,
+                                            ticks: {
+                                                stepSize: 500
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
 
 
 
@@ -766,8 +771,9 @@
                             <footer class="footer">
                                 <div class="row">
                                     <div class="col-md-12 footer-copyright text-center">
-    <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.</p>
-</div>
+                                        <p class="mb-0">Copyright © 2025 <strong>Cognetz</strong>. All Rights Reserved.
+                                        </p>
+                                    </div>
 
                                 </div>
                             </footer>
